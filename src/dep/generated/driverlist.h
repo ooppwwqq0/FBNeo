@@ -19653,6 +19653,9 @@ DRV     BurnDrvolds100asrp;
 DRV     BurnDrvolds100aylzx;
 DRV     BurnDrvoldsplushmf;
 DRV     BurnDrvorlegndcmm;
+DRV     BurnDrvCpsddsoma4pp;
+DRV     BurnDrvCpsddtodp;
+DRV     BurnDrvCpsavspp;
 #undef DRV
 
 // Structure containing addresses of all drivers
@@ -39309,4 +39312,7 @@ static struct BurnDriver* pDriver[] = {
     &BurnDrvolds100aylzx,                   //BurnDrvolds100aylzx
     &BurnDrvoldsplushmf,                    //BurnDrvoldsplushmf
     &BurnDrvorlegndcmm,                     //BurnDrvorlegndcmm
+    &BurnDrvCpsddsoma4pp,                     //BurnDrvCpsddsoma4pp
+    &BurnDrvCpsddtodp,                     //BurnDrvCpsddtodp
+    &BurnDrvCpsavspp,                     //BurnDrvCpsavsp
 };
