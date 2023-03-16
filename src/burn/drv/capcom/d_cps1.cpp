@@ -16471,6 +16471,49 @@ static const struct GameConfig ConfigTable[] =
 	{ "sfzech"        , CPS_B_21_DEF, mapper_SFZ63B, 0, NULL                },
 	{ "sfzhch"        , CPS_B_21_DEF, mapper_SFZ63B, 0, NULL                },
 
+    // extra Hacks
+    { "wofdr"        , CPS_B_21_QS1, mapper_TK263B, 0, wof_decode          },
+    { "wofr19"       , CPS_B_21_DEF, mapper_TK263B, 0, wof_decode          },
+    { "wofjps"       , CPS_B_21_QS1, mapper_TK263B, 0, wof_decode          },
+    { "wof1v3"       , CPS_B_21_DEF, mapper_TK263B, 0, wof_decode          },
+    { "wofmz"        , CPS_B_21_QS1, mapper_TK263B, 0, wof_decode          },
+    { "wofzl"        , CPS_B_21_QS1, mapper_TK263B, 0, wof_decode          },
+    { "wofdwp"       , CPS_B_21_QS1, mapper_TK263B, 0, wof_decode          },
+    { "wof3m"        , CPS_B_21_QS1, mapper_TK263B, 0, wof_decode          },
+    { "captcommrds"  , CPS_B_21_BT3, mapper_CC63B , 0, NULL                },
+    { "captcommr1bs" , CPS_B_21_BT3, mapper_CC63B , 0, NULL                },
+    { "captcommpzs"  , CPS_B_21_BT3, mapper_CC63B , 0, NULL                },
+    { "captcommr1dw" , CPS_B_21_BT3, mapper_CC63B , 0, NULL                },
+    { "dinoxzb"      , CPS_B_21_QS2, mapper_CD63B , 0, dino_decode         },
+    { "dinojps"      , CPS_B_21_QS2, mapper_CD63B , 0, dino_decode         },
+    { "dinowtw"      , CPS_B_21_QS2, mapper_CD63B , 0, dino_decode         },
+    { "dinowj"       , CPS_B_21_QS2, mapper_CD63B , 0, dino_decode         },
+    { "dinojds"      , CPS_B_21_QS2, mapper_CD63B , 0, dino_decode         },
+    { "dinows2019"   , CPS_B_21_QS2, mapper_CD63B , 0, dino_decode         },
+    { "kod1v3"       , CPS_B_21_BT2, mapper_KD29B , 0, NULL                },
+    { "kodbs"        , CPS_B_21_BT2, mapper_KD29B , 0, NULL                },
+    { "koddw"        , CPS_B_21_BT2, mapper_KD29B , 0, NULL                },
+    { "ffightj2u"    , CPS_B_02    , mapper_S224B , 0, NULL                },
+    { "ffight1v2"    , CPS_B_01    , mapper_S224B , 0, NULL                },
+    { "captcommr1v4" , CPS_B_21_BT3, mapper_CC63B , 0, NULL                },
+    { "captcommp"    , CPS_B_21_BT3, mapper_CC63B , 0, NULL                },
+    { "dinoplus"     , CPS_B_21_QS2, mapper_CD63B , 0, dino_decode         },
+    { "dinoyz"       , CPS_B_21_QS2, mapper_CD63B , 0, dino_decode         },
+    { "dino1v3"      , CPS_B_21_QS2, mapper_CD63B , 0, dino_decode         },
+    { "dinodw"       , CPS_B_21_QS2, mapper_CD63B , 0, dino_decode         },
+    { "knightsp"     , CPS_B_21_BT4, mapper_KR63B , 0, NULL                },
+    { "punisher1v2"  , CPS_B_21_QS3, mapper_PS63B , 0, punisher_decode     },
+    { "punisherdw"   , CPS_B_21_QS3, mapper_PS63B , 0, punisher_decode     },
+    { "punisherbs"   , CPS_B_21_QS3, mapper_PS63B , 0, punisher_decode     },
+    { "dinolbws"     , CPS_B_21_QS2, mapper_CD63B , 0, dino_decode         },
+    { "dino2015ws"   , CPS_B_21_QS2, mapper_CD63B , 0, dino_decode         },
+    { "dinotfzn"     , CPS_B_21_QS2, mapper_CD63B , 0, dino_decode         },
+    { "dinoslicews"  , CPS_B_21_QS2, mapper_CD63B , 0, dino_decode         },
+    { "dinowszh"     , CPS_B_21_QS2, mapper_CD63B , 0, dino_decode         },
+    { "dinoxa"       , CPS_B_21_QS2, mapper_CD63B , 0, dino_decode         },
+    { "dino2011ws"   , CPS_B_21_QS2, mapper_CD63B , 0, dino_decode         },
+    { "dinoxc"       , CPS_B_21_DEF, mapper_CD63B , 0, NULL                },
+
 	{ 0               , 0           , 0            , 0, 0                   }
 };
 
@@ -25403,7 +25446,8 @@ struct BurnDriver BurnDrvCpsCaptcommp4 = {
 // GOTVG 20210428
 
 static struct BurnRomInfo CaptcommpwxRomDesc[] = {
-	{ "cce_pwx.bin",	0x300000, 0x765ad7bf, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_NO_BYTESWAP },
+//	{ "cce_pwx.bin",	0x300000, 0x765ad7bf, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_NO_BYTESWAP },
+    { "mj.mj",    0x302532, 0x9d863e1d, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_NO_BYTESWAP },  //P ROM is a little larger than 3MB. Nasty protection!
 
 	{ "cc-5m.3a",		0x080000, 0x7261d8ba, BRF_GRA | CPS1_TILES },
 	{ "cc-7m.5a",		0x080000, 0x6a60f949, BRF_GRA | CPS1_TILES },
@@ -26049,7 +26093,7 @@ struct BurnDriver BurnDrvCpssf2mix = {
 };
 
 // The Punisherly (Flame Edition, Hack)
-// Hacked by �λ����
+// Hacked by �λ����
 // GOTVG 2018/08/13
 
 static struct BurnRomInfo PunisherlyRomDesc[] = {
@@ -26106,7 +26150,7 @@ struct BurnDriver BurnDrvCpsPunisherly = {
 };
 
 // The Punisherhr (Flame Edition, Hack)
-// Hacked by �λ����
+// Hacked by �λ����
 // GOTVG 2018/08/11
 
 static struct BurnRomInfo PunisherhrRomDesc[] = {
@@ -26311,7 +26355,7 @@ struct BurnDriver BurnDrvCpsKnightsc = {
 };
 
 // Sangokushi II (T-Chi)
-// Modified by �ե��˥å���
+// Modified by �ե��˥å���
 
 static struct BurnRomInfo WofacRomDesc[] = {
 	{ "tk2ac_23c.8f",	0x080000, 0x2d70231a, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_NO_BYTESWAP },
@@ -26359,6 +26403,1680 @@ struct BurnDriver BurnDrvCpsWofac = {
 	TwelveMhzInit, DrvExit, Cps1Frame, CpsRedraw, CpsAreaScan,
 	&CpsRecalcPal, 0x1000, 384, 224, 4, 3
 };
+
+
+// FBA4DROID 三国志2 达人版	Tenchi wo Kurau II - Sekiheki no Tatakai (Master Version 20190221)
+static struct BurnRomInfo WofdrRomDesc[] = {
+        { "wofjdr.bin",    0x200000, 0xc7b9345e, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_NO_BYTESWAP },
+
+        { "tk2_01.3a",     0x080000, 0x0d9cb9bf, BRF_GRA | CPS1_TILES },
+        { "tk2_02.4a",     0x080000, 0x45227027, BRF_GRA | CPS1_TILES },
+        { "tk2_03.5a",     0x080000, 0xc5ca2460, BRF_GRA | CPS1_TILES },
+        { "tk2_04.6a",     0x080000, 0xe349551c, BRF_GRA | CPS1_TILES },
+        { "tk2_05.7a",     0x080000, 0xe4a44d53, BRF_GRA | CPS1_TILES },
+        { "tk2_06.8a",     0x080000, 0x58066ba8, BRF_GRA | CPS1_TILES },
+        { "tk2_07.9a",     0x080000, 0xd706568e, BRF_GRA | CPS1_TILES },
+        { "tk2_08.10a",    0x080000, 0xd4a19a02, BRF_GRA | CPS1_TILES },
+
+        { "tk2_qa.5k",     0x020000, 0xc9183a0d, BRF_PRG | CPS1_Z80_PROGRAM },
+
+        { "tk2-q1.1k",     0x080000, 0x611268cf, BRF_SND | CPS1_QSOUND_SAMPLES },
+        { "tk2-q2.2k",     0x080000, 0x20f55ca9, BRF_SND | CPS1_QSOUND_SAMPLES },
+        { "tk2-q3.3k",     0x080000, 0xbfcf6f52, BRF_SND | CPS1_QSOUND_SAMPLES },
+        { "tk2-q4.4k",     0x080000, 0x36642e88, BRF_SND | CPS1_QSOUND_SAMPLES },
+
+        A_BOARD_QSOUND_PLDS
+
+        { "tk263b.1a",     0x000117, 0xc4b0349b, BRF_OPT },
+        { "iob1.12d",      0x000117, 0x3abc0700, BRF_OPT },
+        { "bprg1.11d",     0x000117, 0x31793da7, BRF_OPT },
+
+        { "ioc1.ic1",      0x000104, 0xa399772d, BRF_OPT },
+
+        { "d7l1.7l",       0x000117, 0x27b7410d, BRF_OPT },
+        { "d8l1.8l",       0x000117, 0x539fc7da, BRF_OPT },
+        { "d9k1.9k",       0x000117, 0x00000000, BRF_OPT | BRF_NODUMP },
+        { "d10f1.10f",     0x000117, 0x6619c494, BRF_OPT },
+};
+
+STD_ROM_PICK(Wofdr)
+STD_ROM_FN(Wofdr)
+
+struct BurnDriver BurnDrvCpsWofdr = {
+        "wofdr", "wof", NULL, NULL, "2019",
+        "Tenchi wo Kurau II - Sekiheki no Tatakai (Master Version 20190221)\0", NULL, "BinDi", "CPS1 / QSound",
+        NULL, NULL, NULL, NULL,
+        BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 3, HARDWARE_CAPCOM_CPS1_QSOUND, GBF_SCRFIGHT, 0,
+        NULL, WofdrRomInfo, WofdrRomName, NULL, NULL, NULL, NULL, WofInputInfo, WofDIPInfo,
+        TwelveMhzInit, DrvExit, Cps1Frame, CpsRedraw, CpsAreaScan,
+        &CpsRecalcPal, 0x1000, 384, 224, 4, 3
+};
+
+
+//FBA4DROID 三国志2 剑甲无双2019 Tenchi wo Kurau II (Unique Sword Armor 20190113)
+static struct BurnRomInfo Wofr19RomDesc[] = {
+        { "23.bin",   0x080000, 0x11051718, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_NO_BYTESWAP },
+        { "22.bin",   0x080000, 0x85665664, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_NO_BYTESWAP },
+
+        { "tk2-1m.3a",     0x080000, 0x0d9cb9bf, BRF_GRA | CPS1_TILES },
+        { "tk2-3m.5a",     0x080000, 0x45227027, BRF_GRA | CPS1_TILES },
+        { "tk2-2m.4a",     0x080000, 0xc5ca2460, BRF_GRA | CPS1_TILES },
+        { "tk2-4m.6a",     0x080000, 0xe349551c, BRF_GRA | CPS1_TILES },
+        { "tk2-5m.7a",     0x080000, 0x291f0f0b, BRF_GRA | CPS1_TILES },
+        { "tk2-7m.9a",     0x080000, 0x3edeb949, BRF_GRA | CPS1_TILES },
+        { "tk2-6m.8a",     0x080000, 0x1abd14d6, BRF_GRA | CPS1_TILES },
+        { "tk2-8m.10a",    0x080000, 0xb27948e3, BRF_GRA | CPS1_TILES },
+
+        { "tk2_qa.5k",     0x020000, 0xc9183a0d, BRF_PRG | CPS1_Z80_PROGRAM },
+
+        { "tk2-q1.1k",     0x080000, 0x611268cf, BRF_SND | CPS1_QSOUND_SAMPLES },
+        { "tk2-q2.2k",     0x080000, 0x20f55ca9, BRF_SND | CPS1_QSOUND_SAMPLES },
+        { "tk2-q3.3k",     0x080000, 0xbfcf6f52, BRF_SND | CPS1_QSOUND_SAMPLES },
+        { "tk2-q4.4k",     0x080000, 0x36642e88, BRF_SND | CPS1_QSOUND_SAMPLES },
+
+        A_BOARD_QSOUND_PLDS
+
+        { "tk263b.1a",     0x000117, 0xc4b0349b, BRF_OPT },	// b-board PLDs
+        { "iob1.12d",      0x000117, 0x3abc0700, BRF_OPT },
+        { "bprg1.11d",     0x000117, 0x31793da7, BRF_OPT },
+
+        { "ioc1.ic1",      0x000104, 0xa399772d, BRF_OPT },	// c-board PLDs
+
+        { "d7l1.7l",       0x000117, 0x27b7410d, BRF_OPT },	// d-board PLDs
+        { "d8l1.8l",       0x000117, 0x539fc7da, BRF_OPT },
+        { "d9k1.9k",       0x000117, 0x00000000, BRF_OPT | BRF_NODUMP },
+        { "d10f1.10f",     0x000117, 0x6619c494, BRF_OPT },
+};
+
+STD_ROM_PICK(Wofr19)
+STD_ROM_FN(Wofr19)
+
+struct BurnDriver BurnDrvCpsWofr19 = {
+        "wofr19", "wof", NULL, NULL, "2019",
+        "Tenchi wo Kurau II (Unique Sword Armor 20190113)\0", NULL, "Capcom", "CPS1 / QSound",
+        NULL, NULL, NULL, NULL,
+        BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 3, HARDWARE_CAPCOM_CPS1_QSOUND, GBF_SCRFIGHT, 0,
+        NULL, Wofr19RomInfo, Wofr19RomName, NULL, NULL, NULL, NULL, WofInputInfo, WofDIPInfo,
+        TwelveMhzInit, DrvExit, Cps1Frame, CpsRedraw, CpsAreaScan,
+        &CpsRecalcPal, 0x1000, 384, 224, 4, 3
+};
+
+
+// FBA4DROID 三国志2 仿PS版 Tenchi wo Kurau II - Sekiheki no Tatakai (Imitation of Playstation Version 20091209)
+// In HBMAME, its name is tk2h12.
+static struct BurnRomInfo WofjpsRomDesc[] = {
+        { "tk2j23c.bin",   0x080000, 0x6e392dd2, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_NO_BYTESWAP },
+        { "tk2j22c.bin",   0x080000, 0x838dff10, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_NO_BYTESWAP },
+
+        { "tk2_01.3a",     0x080000, 0x0d9cb9bf, BRF_GRA | CPS1_TILES },
+        { "tk2_02.4a",     0x080000, 0x45227027, BRF_GRA | CPS1_TILES },
+        { "tk2_03.5a",     0x080000, 0xc5ca2460, BRF_GRA | CPS1_TILES },
+        { "tk2_04.6a",     0x080000, 0xe349551c, BRF_GRA | CPS1_TILES },
+        { "tk2_05.7a",     0x080000, 0xe4a44d53, BRF_GRA | CPS1_TILES },
+        { "tk2_06.8a",     0x080000, 0x58066ba8, BRF_GRA | CPS1_TILES },
+        { "tk2_07.9a",     0x080000, 0xd706568e, BRF_GRA | CPS1_TILES },
+        { "tk2_08.10a",    0x080000, 0xd4a19a02, BRF_GRA | CPS1_TILES },
+
+        { "tk2_qa.5k",     0x020000, 0xc9183a0d, BRF_PRG | CPS1_Z80_PROGRAM },
+
+        { "tk2-q1.1k",     0x080000, 0x611268cf, BRF_SND | CPS1_QSOUND_SAMPLES },
+        { "tk2-q2.2k",     0x080000, 0x20f55ca9, BRF_SND | CPS1_QSOUND_SAMPLES },
+        { "tk2-q3.3k",     0x080000, 0xbfcf6f52, BRF_SND | CPS1_QSOUND_SAMPLES },
+        { "tk2-q4.4k",     0x080000, 0x36642e88, BRF_SND | CPS1_QSOUND_SAMPLES },
+
+        A_BOARD_QSOUND_PLDS
+
+        { "tk263b.1a",     0x000117, 0xc4b0349b, BRF_OPT },	// b-board PLDs
+        { "iob1.12d",      0x000117, 0x3abc0700, BRF_OPT },
+        { "bprg1.11d",     0x000117, 0x31793da7, BRF_OPT },
+
+        { "ioc1.ic1",      0x000104, 0xa399772d, BRF_OPT },	// c-board PLDs
+
+        { "d7l1.7l",       0x000117, 0x27b7410d, BRF_OPT },	// d-board PLDs
+        { "d8l1.8l",       0x000117, 0x539fc7da, BRF_OPT },
+        { "d9k1.9k",       0x000117, 0x00000000, BRF_OPT | BRF_NODUMP },
+        { "d10f1.10f",     0x000117, 0x6619c494, BRF_OPT },
+};
+
+STD_ROM_PICK(Wofjps)
+STD_ROM_FN(Wofjps)
+
+struct BurnDriver BurnDrvCpsWofjps = {
+        "wofjps", "wof", NULL, NULL, "2009",
+        "Tenchi wo Kurau II - Sekiheki no Tatakai (Imitation of Playstation Version 20091209)\0", NULL, "Rockywall", "CPS1 / QSound",
+        NULL, NULL, NULL, NULL,
+        BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 3, HARDWARE_CAPCOM_CPS1_QSOUND, GBF_SCRFIGHT, 0,
+        NULL, WofjpsRomInfo, WofjpsRomName, NULL, NULL, NULL, NULL, WofInputInfo, WofDIPInfo,
+        TwelveMhzInit, DrvExit, Cps1Frame, CpsRedraw, CpsAreaScan,
+        &CpsRecalcPal, 0x1000, 384, 224, 4, 3
+};
+
+
+// GOTVG 三国志2 1V3版 Tenchi wo Kurau II (1VS3 20130405)
+// wofs05 in HBMAME.
+static struct BurnRomInfo wof1v3RomDesc[] = {
+        { "tk2e_23b.rom",   0x080000, 0xc436ef13, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_NO_BYTESWAP },
+        { "tk2e_22b.rom",   0x080000, 0x0894db63, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_NO_BYTESWAP },
+
+        { "tk2-1m.3a",     0x080000, 0x0d9cb9bf, BRF_GRA | CPS1_TILES },
+        { "tk2-3m.5a",     0x080000, 0x45227027, BRF_GRA | CPS1_TILES },
+        { "tk2-2m.4a",     0x080000, 0xc5ca2460, BRF_GRA | CPS1_TILES },
+        { "tk2-4m.6a",     0x080000, 0xe349551c, BRF_GRA | CPS1_TILES },
+        { "tk205.bin",     0x080000, 0xe4a44d53, BRF_GRA | CPS1_TILES },
+        { "tk206.bin",     0x080000, 0x58066ba8, BRF_GRA | CPS1_TILES },
+        { "tk207.bin",     0x080000, 0xd706568e, BRF_GRA | CPS1_TILES },
+        { "tk208.bin",     0x080000, 0xd4a19a02, BRF_GRA | CPS1_TILES },
+
+        { "tk2_qa.5k",     0x020000, 0xc9183a0d, BRF_PRG | CPS1_Z80_PROGRAM },
+
+        { "tk2-q1.1k",     0x080000, 0x611268cf, BRF_SND | CPS1_QSOUND_SAMPLES },
+        { "tk2-q2.2k",     0x080000, 0x20f55ca9, BRF_SND | CPS1_QSOUND_SAMPLES },
+        { "tk2-q3.3k",     0x080000, 0xbfcf6f52, BRF_SND | CPS1_QSOUND_SAMPLES },
+        { "tk2-q4.4k",     0x080000, 0x36642e88, BRF_SND | CPS1_QSOUND_SAMPLES },
+};
+
+STD_ROM_PICK(wof1v3)
+STD_ROM_FN(wof1v3)
+
+struct BurnDriver BurnDrvCpswof1v3 = {
+        "wof1v3", "wof", NULL, NULL, "2013",
+        "Sangokushi II (1VS3 20130405)\0", NULL, "MaZhuHouLongSeng", "CPS1 / QSound",
+        NULL, NULL, NULL, NULL,
+        BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 3, HARDWARE_CAPCOM_CPS1_QSOUND, GBF_SCRFIGHT, 0,
+        NULL, wof1v3RomInfo, wof1v3RomName, NULL, NULL, NULL, NULL, WofInputInfo, WofDIPInfo,
+        TwelveMhzInit, DrvExit, Cps1Frame, CpsRedraw, CpsAreaScan,
+        &CpsRecalcPal, 0x1000, 384, 224, 4, 3
+};
+
+
+// GOTVG 三国志2 马战版 Tenchi wo Kurau II (War On Horseback 20171120)
+static struct BurnRomInfo wofmzRomDesc[] = {
+        { "tk2j23c.bin",   0x080000, 0x0719fb38, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_NO_BYTESWAP },
+        { "tk2j22c.bin",   0x080000, 0x22cb59f1, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_NO_BYTESWAP },
+
+        { "tk2-1m.3a",     0x080000, 0x0d9cb9bf, BRF_GRA | CPS1_TILES },
+        { "tk2-3m.5a",     0x080000, 0x45227027, BRF_GRA | CPS1_TILES },
+        { "tk2-2m.4a",     0x080000, 0xc5ca2460, BRF_GRA | CPS1_TILES },
+        { "tk2-4m.6a",     0x080000, 0xe349551c, BRF_GRA | CPS1_TILES },
+        { "tk205.bin",     0x080000, 0xe4a44d53, BRF_GRA | CPS1_TILES },
+        { "tk206.bin",     0x080000, 0x58066ba8, BRF_GRA | CPS1_TILES },
+        { "tk207.bin",     0x080000, 0xd706568e, BRF_GRA | CPS1_TILES },
+        { "tk208.bin",     0x080000, 0xd4a19a02, BRF_GRA | CPS1_TILES },
+
+        { "tk2_qa.5k",     0x020000, 0xc9183a0d, BRF_PRG | CPS1_Z80_PROGRAM },
+
+        { "tk2-q1.1k",     0x080000, 0x611268cf, BRF_SND | CPS1_QSOUND_SAMPLES },
+        { "tk2-q2.2k",     0x080000, 0x20f55ca9, BRF_SND | CPS1_QSOUND_SAMPLES },
+        { "tk2-q3.3k",     0x080000, 0xbfcf6f52, BRF_SND | CPS1_QSOUND_SAMPLES },
+        { "tk2-q4.4k",     0x080000, 0x36642e88, BRF_SND | CPS1_QSOUND_SAMPLES },
+};
+
+STD_ROM_PICK(wofmz)
+STD_ROM_FN(wofmz)
+
+struct BurnDriver BurnDrvCpswofmz = {
+        "wofmz", "wof", NULL, NULL, "2017",
+        "Tenchi wo Kurau II (War On Horseback 20171120)\0", NULL, "aiYouYou", "CPS1 / QSound",
+        NULL, NULL, NULL, NULL,
+        BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 3, HARDWARE_CAPCOM_CPS1_QSOUND, GBF_SCRFIGHT, 0,
+        NULL, wofmzRomInfo, wofmzRomName, NULL, NULL, NULL, NULL, WofInputInfo, WofDIPInfo,
+        TwelveMhzInit, DrvExit, Cps1Frame, CpsRedraw, CpsAreaScan,
+        &CpsRecalcPal, 0x1000, 384, 224, 4, 3
+};
+
+
+// GOTVG 三国志2 战狼版 Tenchi wo Kurau II (Warwolf 20171223)
+// tk2h101 in HBMAME. Strange codes in HBMAME. Need more investigation.
+static struct BurnRomInfo wofzlRomDesc[] = {
+        //{ "tk2e_23c.8f",   0x080000, 0x0d708505, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_NO_BYTESWAP },
+        //{ "tk2e_22c.7f",   0x080000, 0x608c17e3, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_NO_BYTESWAP },
+        { "tk2j_23c.8f",   0x080000, 0x74c37c24, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_NO_BYTESWAP },
+        { "tk2j_22c.7f",   0x080000, 0x8c15d367, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_NO_BYTESWAP },
+
+        { "tk2-1m.3a",     0x080000, 0x0d9cb9bf, BRF_GRA | CPS1_TILES },
+        { "tk2-3m.5a",     0x080000, 0x45227027, BRF_GRA | CPS1_TILES },
+        { "tk2-2m.4a",     0x080000, 0xc5ca2460, BRF_GRA | CPS1_TILES },
+        { "tk2-4m.6a",     0x080000, 0xe349551c, BRF_GRA | CPS1_TILES },
+        { "tk205.bin",     0x080000, 0xe4a44d53, BRF_GRA | CPS1_TILES },
+        { "tk206.bin",     0x080000, 0x58066ba8, BRF_GRA | CPS1_TILES },
+        { "tk207.bin",     0x080000, 0xd706568e, BRF_GRA | CPS1_TILES },
+        { "tk208.bin",     0x080000, 0xd4a19a02, BRF_GRA | CPS1_TILES },
+
+        { "tk2_qa.5k",     0x020000, 0xc9183a0d, BRF_PRG | CPS1_Z80_PROGRAM },
+
+        { "tk2-q1.1k",     0x080000, 0x611268cf, BRF_SND | CPS1_QSOUND_SAMPLES },
+        { "tk2-q2.2k",     0x080000, 0x20f55ca9, BRF_SND | CPS1_QSOUND_SAMPLES },
+        { "tk2-q3.3k",     0x080000, 0xbfcf6f52, BRF_SND | CPS1_QSOUND_SAMPLES },
+        { "tk2-q4.4k",     0x080000, 0x36642e88, BRF_SND | CPS1_QSOUND_SAMPLES },
+};
+
+STD_ROM_PICK(wofzl)
+STD_ROM_FN(wofzl)
+
+struct BurnDriver BurnDrvCpswofzl = {
+        "wofzl", "wof", NULL, NULL, "2017",
+        "Tenchi wo Kurau II (Warwolf 20171223)\0", NULL, "BinDi", "CPS1 / QSound",
+        NULL, NULL, NULL, NULL,
+        BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 3, HARDWARE_CAPCOM_CPS1_QSOUND, GBF_SCRFIGHT, 0,
+        NULL, wofzlRomInfo, wofzlRomName, NULL, NULL, NULL, NULL, WofInputInfo, WofDIPInfo,
+        TwelveMhzInit, DrvExit, Cps1Frame, CpsRedraw, CpsAreaScan,
+        &CpsRecalcPal, 0x1000, 384, 224, 4, 3
+};
+
+// GOTVG 三国志2 无双加强版 Tenchi wo Kurau II (Unrivalled Plus Version 20140718)
+// tk2h116 in HBMAME.
+static struct BurnRomInfo wofdwpRomDesc[] = {
+        { "tk2j23c.bin",   0x080000, 0xc8b7f43c, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_NO_BYTESWAP },
+        { "tk2j22c.bin",   0x080000, 0xf7c7acdb, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_NO_BYTESWAP },
+
+        { "tk2-1m.3a",     0x080000, 0x0d9cb9bf, BRF_GRA | CPS1_TILES },
+        { "tk2-3m.5a",     0x080000, 0x45227027, BRF_GRA | CPS1_TILES },
+        { "tk2-2m.4a",     0x080000, 0xc5ca2460, BRF_GRA | CPS1_TILES },
+        { "tk2-4m.6a",     0x080000, 0xe349551c, BRF_GRA | CPS1_TILES },
+        { "tk205.bin",     0x080000, 0xe4a44d53, BRF_GRA | CPS1_TILES },
+        { "tk206.bin",     0x080000, 0x58066ba8, BRF_GRA | CPS1_TILES },
+        { "tk207.bin",     0x080000, 0xd706568e, BRF_GRA | CPS1_TILES },
+        { "tk208.bin",     0x080000, 0xd4a19a02, BRF_GRA | CPS1_TILES },
+
+        { "tk2_qa.5k",     0x020000, 0xc9183a0d, BRF_PRG | CPS1_Z80_PROGRAM },
+
+        { "tk2-q1.1k",     0x080000, 0x611268cf, BRF_SND | CPS1_QSOUND_SAMPLES },
+        { "tk2-q2.2k",     0x080000, 0x20f55ca9, BRF_SND | CPS1_QSOUND_SAMPLES },
+        { "tk2-q3.3k",     0x080000, 0xbfcf6f52, BRF_SND | CPS1_QSOUND_SAMPLES },
+        { "tk2-q4.4k",     0x080000, 0x36642e88, BRF_SND | CPS1_QSOUND_SAMPLES },
+};
+
+STD_ROM_PICK(wofdwp)
+STD_ROM_FN(wofdwp)
+
+struct BurnDriver BurnDrvCpswofdwp = {
+        "wofdwp", "wof", NULL, NULL, "2014",
+        "Tenchi wo Kurau II (Unrivalled Plus Version 20140718)\0", NULL, "tok", "CPS1 / QSound",
+        NULL, NULL, NULL, NULL,
+        BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 3, HARDWARE_CAPCOM_CPS1_QSOUND, GBF_SCRFIGHT, 0,
+        NULL, wofdwpRomInfo, wofdwpRomName, NULL, NULL, NULL, NULL, WofInputInfo, WofDIPInfo,
+        TwelveMhzInit, DrvExit, Cps1Frame, CpsRedraw, CpsAreaScan,
+        &CpsRecalcPal, 0x1000, 384, 224, 4, 3
+};
+
+// PPXCLUB 三国志2 三美螺旋的逆袭 测试版103号 Tenchi wo Kurau II (Sanmei Spiral Counterattack Beta 103)
+// http://f.ppxclub.com/forum.php?mod=viewthread&tid=609564&highlight=%C2%DD%D0%FD
+// tk2h10 in HBMAME. Wrong GFX ROM in HBMAME. GOTVG's ROM(wofzsm) is a mess.
+static struct BurnRomInfo wof3mRomDesc[] = {
+        { "wof3m.23",   0x080000, 0x6dba1d2f, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_NO_BYTESWAP },
+        { "wof3m.22",   0x080000, 0x7630fd8a, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_NO_BYTESWAP },
+
+        { "tk2_01.3a",     0x080000, 0x0d9cb9bf, BRF_GRA | CPS1_TILES },
+        { "tk2_02.4a",     0x080000, 0x45227027, BRF_GRA | CPS1_TILES },
+        { "tk2_03.5a",     0x080000, 0xc5ca2460, BRF_GRA | CPS1_TILES },
+        { "tk2_04.6a",     0x080000, 0xe349551c, BRF_GRA | CPS1_TILES },
+        { "tk2_05.7a",     0x080000, 0xe4a44d53, BRF_GRA | CPS1_TILES },
+        { "tk2_06.8a",     0x080000, 0x58066ba8, BRF_GRA | CPS1_TILES },
+        { "tk2_07.9a",     0x080000, 0xd706568e, BRF_GRA | CPS1_TILES },
+        { "tk2_08.10a",    0x080000, 0xd4a19a02, BRF_GRA | CPS1_TILES },
+
+        { "tk2_qa.5k",     0x020000, 0xc9183a0d, BRF_PRG | CPS1_Z80_PROGRAM },
+
+        { "tk2-q1.1k",     0x080000, 0x611268cf, BRF_SND | CPS1_QSOUND_SAMPLES },
+        { "tk2-q2.2k",     0x080000, 0x20f55ca9, BRF_SND | CPS1_QSOUND_SAMPLES },
+        { "tk2-q3.3k",     0x080000, 0xbfcf6f52, BRF_SND | CPS1_QSOUND_SAMPLES },
+        { "tk2-q4.4k",     0x080000, 0x36642e88, BRF_SND | CPS1_QSOUND_SAMPLES },
+};
+
+STD_ROM_PICK(wof3m)
+STD_ROM_FN(wof3m)
+
+struct BurnDriver BurnDrvCpswof3m = {
+        "wof3m", "wof", NULL, NULL, "2014",
+        "Tenchi wo Kurau II (Sanmei Spiral Counterattack Beta 103)\0", NULL, "axdx", "CPS1 / QSound",
+        NULL, NULL, NULL, NULL,
+        BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 3, HARDWARE_CAPCOM_CPS1_QSOUND, GBF_SCRFIGHT, 0,
+        NULL, wof3mRomInfo, wof3mRomName, NULL, NULL, NULL, NULL, WofInputInfo, WofDIPInfo,
+        TwelveMhzInit, DrvExit, Cps1Frame, CpsRedraw, CpsAreaScan,
+        &CpsRecalcPal, 0x1000, 384, 224, 4, 3
+};
+
+
+// GOTVG 名将 99打手版	Captain Commando (99 Beater Version 20190102)
+static struct BurnRomInfo CaptcommrdsRomDesc[] = {
+        { "mj.mj",    0x302532, 0x7ad37dcb, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_NO_BYTESWAP }, //P ROM is a little larger than 3MB. Nasty protection!
+
+        { "cc-5m.3a",      0x080000, 0x7261d8ba, BRF_GRA | CPS1_TILES },
+        { "cc-7m.5a",      0x080000, 0x6a60f949, BRF_GRA | CPS1_TILES },
+        { "cc-1m.4a",      0x080000, 0x00637302, BRF_GRA | CPS1_TILES },
+        { "cc-3m.6a",      0x080000, 0xcc87cf61, BRF_GRA | CPS1_TILES },
+        { "cc-6m.7a",      0x080000, 0x28718bed, BRF_GRA | CPS1_TILES },
+        { "cc-8m.9a",      0x080000, 0xd4acc53a, BRF_GRA | CPS1_TILES },
+        { "cc-2m.8a",      0x080000, 0x0c69f151, BRF_GRA | CPS1_TILES },
+        { "cc-4m.10a",     0x080000, 0x1f9ebb97, BRF_GRA | CPS1_TILES },
+
+        { "cc_09.11a",     0x010000, 0x698e8b58, BRF_PRG | CPS1_Z80_PROGRAM },
+
+        { "cc_18.11c",     0x020000, 0x6de2c2db, BRF_SND | CPS1_OKIM6295_SAMPLES },
+        { "cc_19.12c",     0x020000, 0xb99091ae, BRF_SND | CPS1_OKIM6295_SAMPLES },
+
+        A_BOARD_PLDS
+
+        { "cc63b.1a",      0x000117, 0xcae8f0f9, BRF_OPT },
+        { "iob1.12d",      0x000117, 0x3abc0700, BRF_OPT },
+        { "ccprg.11d",     0x000117, 0xe1c225c4, BRF_OPT },
+        { "ioc1.ic7",      0x000104, 0xa399772d, BRF_OPT },
+        { "c632.ic1",      0x000117, 0x0fbd9270, BRF_OPT },
+};
+
+STD_ROM_PICK(Captcommrds)
+STD_ROM_FN(Captcommrds)
+
+struct BurnDriver BurnDrvCpsCaptcommrds = {
+        "captcommrds", "captcomm", NULL, NULL, "2019",
+        "Captain Commando (99 Beater Version 20190102)\0", NULL, "BinDi", "CPS1",
+        NULL, NULL, NULL, NULL,
+        BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 4, HARDWARE_CAPCOM_CPS1, GBF_SCRFIGHT, 0,
+        NULL, CaptcommrdsRomInfo, CaptcommrdsRomName, NULL, NULL, NULL, NULL, CaptcommInputInfo, CaptcommDIPInfo,
+        DrvInit, DrvExit, Cps1Frame, CpsRedraw, CpsAreaScan,
+        &CpsRecalcPal, 0x1000, 384, 224, 4, 3
+};
+
+// GOTVG 名将 变身版	Captain Commando (Shape Shifting Version 20190101)
+static struct BurnRomInfo Captcommr1bsRomDesc[] = {
+        { "mj.bs",    0x300000, 0xde6260b6, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_NO_BYTESWAP },
+
+        { "cc-5m.3a",      0x080000, 0x7261d8ba, BRF_GRA | CPS1_TILES },
+        { "cc-7m.5a",      0x080000, 0x6a60f949, BRF_GRA | CPS1_TILES },
+        { "cc-1m.4a",      0x080000, 0x00637302, BRF_GRA | CPS1_TILES },
+        { "cc-3m.6a",      0x080000, 0xcc87cf61, BRF_GRA | CPS1_TILES },
+        { "cc-6m.7a",      0x080000, 0x28718bed, BRF_GRA | CPS1_TILES },
+        { "cc-8m.9a",      0x080000, 0xd4acc53a, BRF_GRA | CPS1_TILES },
+        { "cc-2m.8a",      0x080000, 0x0c69f151, BRF_GRA | CPS1_TILES },
+        { "cc-4m.10a",     0x080000, 0x1f9ebb97, BRF_GRA | CPS1_TILES },
+
+        { "cc_09.11a",     0x010000, 0x698e8b58, BRF_PRG | CPS1_Z80_PROGRAM },
+
+        { "cc_18.11c",     0x020000, 0x6de2c2db, BRF_SND | CPS1_OKIM6295_SAMPLES },
+        { "cc_19.12c",     0x020000, 0xb99091ae, BRF_SND | CPS1_OKIM6295_SAMPLES },
+
+        A_BOARD_PLDS
+
+        { "cc63b.1a",      0x000117, 0xcae8f0f9, BRF_OPT },
+        { "iob1.12d",      0x000117, 0x3abc0700, BRF_OPT },
+        { "ccprg.11d",     0x000117, 0xe1c225c4, BRF_OPT },
+        { "ioc1.ic7",      0x000104, 0xa399772d, BRF_OPT },
+        { "c632.ic1",      0x000117, 0x0fbd9270, BRF_OPT },
+};
+
+STD_ROM_PICK(Captcommr1bs)
+STD_ROM_FN(Captcommr1bs)
+
+struct BurnDriver BurnDrvCpsCaptcommr1bs = {
+        "captcommr1bs", "captcomm", NULL, NULL, "2019",
+        "Captain Commando (Shape Shifting Version 20190101)\0", NULL, "BinDi", "CPS1",
+        NULL, NULL, NULL, NULL,
+        BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 4, HARDWARE_CAPCOM_CPS1, GBF_SCRFIGHT, 0,
+        NULL, Captcommr1bsRomInfo, Captcommr1bsRomName, NULL, NULL, NULL, NULL, CaptcommInputInfo, CaptcommDIPInfo,
+        DrvInit, DrvExit, Cps1Frame, CpsRedraw, CpsAreaScan,
+        &CpsRecalcPal, 0x1000, 384, 224, 4, 3
+};
+
+// GOTVG 名将 战神版	Captain Commando (Warlord Version 20190107)
+static struct BurnRomInfo CaptcommpzsRomDesc[] = {
+        { "mj.mj",    0x302532, 0x9c6b0773, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_NO_BYTESWAP }, //P ROM is a little larger than 3MB. Nasty protection!
+
+        { "cc-5m.3a",      0x080000, 0x7261d8ba, BRF_GRA | CPS1_TILES },
+        { "cc-7m.5a",      0x080000, 0x6a60f949, BRF_GRA | CPS1_TILES },
+        { "cc-1m.4a",      0x080000, 0x00637302, BRF_GRA | CPS1_TILES },
+        { "cc-3m.6a",      0x080000, 0xcc87cf61, BRF_GRA | CPS1_TILES },
+        { "cc-6m.7a",      0x080000, 0x28718bed, BRF_GRA | CPS1_TILES },
+        { "cc-8m.9a",      0x080000, 0xd4acc53a, BRF_GRA | CPS1_TILES },
+        { "cc-2m.8a",      0x080000, 0x0c69f151, BRF_GRA | CPS1_TILES },
+        { "cc-4m.10a",     0x080000, 0x1f9ebb97, BRF_GRA | CPS1_TILES },
+
+        { "cc_09.11a",     0x010000, 0x698e8b58, BRF_PRG | CPS1_Z80_PROGRAM },
+
+        { "cc_18.11c",     0x020000, 0x6de2c2db, BRF_SND | CPS1_OKIM6295_SAMPLES },
+        { "cc_19.12c",     0x020000, 0xb99091ae, BRF_SND | CPS1_OKIM6295_SAMPLES },
+
+        A_BOARD_PLDS
+
+        { "cc63b.1a",      0x000117, 0xcae8f0f9, BRF_OPT },
+        { "iob1.12d",      0x000117, 0x3abc0700, BRF_OPT },
+        { "ccprg.11d",     0x000117, 0xe1c225c4, BRF_OPT },
+        { "ioc1.ic7",      0x000104, 0xa399772d, BRF_OPT },
+        { "c632.ic1",      0x000117, 0x0fbd9270, BRF_OPT },
+};
+
+STD_ROM_PICK(Captcommpzs)
+STD_ROM_FN(Captcommpzs)
+
+struct BurnDriver BurnDrvCpsCaptcommpzs = {
+        "captcommpzs", "captcomm", NULL, NULL, "2019",
+        "Captain Commando (Warlord Version 20190107)\0", NULL, "TouJingGaiErDeZei", "CPS1",
+        NULL, NULL, NULL, NULL,
+        BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 4, HARDWARE_CAPCOM_CPS1, GBF_SCRFIGHT, 0,
+        NULL, CaptcommpzsRomInfo, CaptcommpzsRomName, NULL, NULL, NULL, NULL, CaptcommInputInfo, CaptcommDIPInfo,
+        DrvInit, DrvExit, Cps1Frame, CpsRedraw, CpsAreaScan,
+        &CpsRecalcPal, 0x1000, 384, 224, 4, 3
+};
+
+
+// GOTVG 名将 无双版 Captain Commando (Unrivalled Version 20181101)
+static struct BurnRomInfo Captcommr1dwRomDesc[] = {
+        { "mj.mj",    0x302532, 0x65a99c58, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_NO_BYTESWAP }, //P ROM is a little larger than 3MB. Nasty protection!
+
+        { "cc-5m.3a",      0x080000, 0x7261d8ba, BRF_GRA | CPS1_TILES },
+        { "cc-7m.5a",      0x080000, 0x6a60f949, BRF_GRA | CPS1_TILES },
+        { "cc-1m.4a",      0x080000, 0x00637302, BRF_GRA | CPS1_TILES },
+        { "cc-3m.6a",      0x080000, 0xcc87cf61, BRF_GRA | CPS1_TILES },
+        { "cc-6m.7a",      0x080000, 0x28718bed, BRF_GRA | CPS1_TILES },
+        { "cc-8m.9a",      0x080000, 0xd4acc53a, BRF_GRA | CPS1_TILES },
+        { "cc-2m.8a",      0x080000, 0x0c69f151, BRF_GRA | CPS1_TILES },
+        { "cc-4m.10a",     0x080000, 0x1f9ebb97, BRF_GRA | CPS1_TILES },
+
+        { "cc_09.11a",     0x010000, 0x698e8b58, BRF_PRG | CPS1_Z80_PROGRAM },
+
+        { "cc_18.11c",     0x020000, 0x6de2c2db, BRF_SND | CPS1_OKIM6295_SAMPLES },
+        { "cc_19.12c",     0x020000, 0xb99091ae, BRF_SND | CPS1_OKIM6295_SAMPLES },
+
+        A_BOARD_PLDS
+
+        { "cc63b.1a",      0x000117, 0xcae8f0f9, BRF_OPT },
+        { "iob1.12d",      0x000117, 0x3abc0700, BRF_OPT },
+        { "ccprg.11d",     0x000117, 0xe1c225c4, BRF_OPT },
+        { "ioc1.ic7",      0x000104, 0xa399772d, BRF_OPT },
+        { "c632.ic1",      0x000117, 0x0fbd9270, BRF_OPT },
+};
+
+STD_ROM_PICK(Captcommr1dw)
+STD_ROM_FN(Captcommr1dw)
+
+struct BurnDriver BurnDrvCpsCaptcommr1dw = {
+        "captcommr1dw", "captcomm", NULL, NULL, "2018",
+        "Captain Commando (Unrivalled Version 20181101)\0", NULL, "TouJingGaiErDeZei", "CPS1",
+        NULL, NULL, NULL, NULL,
+        BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 4, HARDWARE_CAPCOM_CPS1, GBF_SCRFIGHT, 0,
+        NULL, Captcommr1dwRomInfo, Captcommr1dwRomName, NULL, NULL, NULL, NULL, CaptcommInputInfo, CaptcommDIPInfo,
+        DrvInit, DrvExit, Cps1Frame, CpsRedraw, CpsAreaScan,
+        &CpsRecalcPal, 0x1000, 384, 224, 4, 3
+};
+
+
+// GOTVG 恐龙快打 战神版【原血战版】	Cadillacs & Dinosaurs (Warlord Version 20190119)
+static struct BurnRomInfo DinoxzbRomDesc[] = {
+        { "23.rom",    0x080000, 0x90710d71, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_NO_BYTESWAP },
+        { "22.rom",    0x080000, 0x3239cca6, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_NO_BYTESWAP },
+        { "21.rom",    0x080000, 0x1907c3a7, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_NO_BYTESWAP },
+
+        { "cd-1m.3a",      0x080000, 0x8da4f917, BRF_GRA | CPS1_TILES },
+        { "cd-3m.5a",      0x080000, 0x6c40f603, BRF_GRA | CPS1_TILES },
+        { "cd-2m.4a",      0x080000, 0x09c8fc2d, BRF_GRA | CPS1_TILES },
+        { "cd-4m.6a",      0x080000, 0x637ff38f, BRF_GRA | CPS1_TILES },
+        { "cd-5m.7a",      0x080000, 0x470befee, BRF_GRA | CPS1_TILES },
+        { "cd-7m.9a",      0x080000, 0x22bfb7a3, BRF_GRA | CPS1_TILES },
+        { "cd-6m.8a",      0x080000, 0xe7599ac4, BRF_GRA | CPS1_TILES },
+        { "cd-8m.10a",     0x080000, 0x211b4b15, BRF_GRA | CPS1_TILES },
+
+        { "cd_q.5k",       0x020000, 0x605fdb0b, BRF_PRG | CPS1_Z80_PROGRAM },
+
+        { "cd-q1.1k",      0x080000, 0x60927775, BRF_SND | CPS1_QSOUND_SAMPLES },
+        { "cd-q2.2k",      0x080000, 0x770f4c47, BRF_SND | CPS1_QSOUND_SAMPLES },
+        { "cd-q3.3k",      0x080000, 0x2f273ffc, BRF_SND | CPS1_QSOUND_SAMPLES },
+        { "cd-q4.4k",      0x080000, 0x2c67821d, BRF_SND | CPS1_QSOUND_SAMPLES },
+
+        A_BOARD_QSOUND_PLDS
+
+        { "cd63b.1a",      0x000117, 0xef72e902, BRF_OPT },	// b-board PLDs
+        { "iob1.12d",      0x000117, 0x3abc0700, BRF_OPT },
+        { "bprg1.11d",     0x000117, 0x31793da7, BRF_OPT },
+        { "ioc1.ic1",      0x000104, 0xa399772d, BRF_OPT },	// c-board PLDs
+        { "d7l1.7l",       0x000117, 0x27b7410d, BRF_OPT },	// d-board PLDs
+        { "d8l1.8l",       0x000117, 0x539fc7da, BRF_OPT },
+        { "d9k2.9k",       0x000117, 0xcd85a156, BRF_OPT },
+        { "d10f1.10f",     0x000117, 0x6619c494, BRF_OPT },
+};
+
+STD_ROM_PICK(Dinoxzb)
+STD_ROM_FN(Dinoxzb)
+
+struct BurnDriver BurnDrvCpsDinoxzb = {
+        "dinoxzb", "dino", NULL, NULL, "2019",
+        "Cadillacs & Dinosaurs (Warlord Version 20190119)\0", NULL, "BinDi", "CPS1 / QSound",
+        NULL, NULL, NULL, NULL,
+        BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 3, HARDWARE_CAPCOM_CPS1_QSOUND, GBF_SCRFIGHT, 0,
+        NULL, DinoxzbRomInfo, DinoxzbRomName, NULL, NULL, NULL, NULL, DinoInputInfo, DinoDIPInfo,
+        TwelveMhzInit, DrvExit, Cps1Frame, CpsRedraw, CpsAreaScan,
+        &CpsRecalcPal, 0x1000, 384, 224, 4, 3
+};
+
+// GOTVG 恐龙快打 竞技版【原杜瓦版】	Cadillacs & Dinosaurs (Arena Version 20190123)
+static struct BurnRomInfo DinojpsRomDesc[] = {
+        { "kl.ww",    0x400000, 0x4b4d2f30, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_NO_BYTESWAP },
+
+        { "cd-1m.3a",      0x080000, 0x8da4f917, BRF_GRA | CPS1_TILES },
+        { "cd-3m.5a",      0x080000, 0x6c40f603, BRF_GRA | CPS1_TILES },
+        { "cd-2m.4a",      0x080000, 0x09c8fc2d, BRF_GRA | CPS1_TILES },
+        { "cd-4m.6a",      0x080000, 0x637ff38f, BRF_GRA | CPS1_TILES },
+        { "cd-5m.7a",      0x080000, 0x470befee, BRF_GRA | CPS1_TILES },
+        { "cd-7m.9a",      0x080000, 0x22bfb7a3, BRF_GRA | CPS1_TILES },
+        { "cd-6m.8a",      0x080000, 0xe7599ac4, BRF_GRA | CPS1_TILES },
+        { "cd-8m.10a",     0x080000, 0x211b4b15, BRF_GRA | CPS1_TILES },
+
+        { "cd_q.5k",       0x020000, 0x605fdb0b, BRF_PRG | CPS1_Z80_PROGRAM },
+
+        { "cd-q1.1k",      0x080000, 0x60927775, BRF_SND | CPS1_QSOUND_SAMPLES },
+        { "cd-q2.2k",      0x080000, 0x770f4c47, BRF_SND | CPS1_QSOUND_SAMPLES },
+        { "cd-q3.3k",      0x080000, 0x2f273ffc, BRF_SND | CPS1_QSOUND_SAMPLES },
+        { "cd-q4.4k",      0x080000, 0x2c67821d, BRF_SND | CPS1_QSOUND_SAMPLES },
+
+        A_BOARD_QSOUND_PLDS
+
+        { "cd63b.1a",      0x000117, 0xef72e902, BRF_OPT },	// b-board PLDs
+        { "iob1.12d",      0x000117, 0x3abc0700, BRF_OPT },
+        { "bprg1.11d",     0x000117, 0x31793da7, BRF_OPT },
+        { "ioc1.ic1",      0x000104, 0xa399772d, BRF_OPT },	// c-board PLDs
+        { "d7l1.7l",       0x000117, 0x27b7410d, BRF_OPT },	// d-board PLDs
+        { "d8l1.8l",       0x000117, 0x539fc7da, BRF_OPT },
+        { "d9k2.9k",       0x000117, 0xcd85a156, BRF_OPT },
+        { "d10f1.10f",     0x000117, 0x6619c494, BRF_OPT },
+};
+
+STD_ROM_PICK(Dinojps)
+STD_ROM_FN(Dinojps)
+
+struct BurnDriver BurnDrvCpsDinojps = {
+        "dinojps", "dino", NULL, NULL, "2019",
+        "Cadillacs & Dinosaurs (Arena Version 20190123)\0", NULL, "BinDi", "CPS1 / QSound",
+        NULL, NULL, NULL, NULL,
+        BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 3, HARDWARE_CAPCOM_CPS1_QSOUND, GBF_SCRFIGHT, 0,
+        NULL, DinojpsRomInfo, DinojpsRomName, NULL, NULL, NULL, NULL, DinoInputInfo, DinoDIPInfo,
+        TwelveMhzInit, DrvExit, Cps1Frame, CpsRedraw, CpsAreaScan,
+        &CpsRecalcPal, 0x1000, 384, 224, 4, 3
+};
+
+// GOTVG 恐龙快打 天王版	Cadillacs & Dinosaurs (Sky King 20190114)
+static struct BurnRomInfo DinowtwRomDesc[] = {
+        { "kl.ww",    0x400000, 0xfcd50c77, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_NO_BYTESWAP },
+
+        { "cd-1m.3a",      0x080000, 0x8da4f917, BRF_GRA | CPS1_TILES },
+        { "cd-3m.5a",      0x080000, 0x6c40f603, BRF_GRA | CPS1_TILES },
+        { "cd-2m.4a",      0x080000, 0x09c8fc2d, BRF_GRA | CPS1_TILES },
+        { "cd-4m.6a",      0x080000, 0x637ff38f, BRF_GRA | CPS1_TILES },
+        { "cd-5m.7a",      0x080000, 0x470befee, BRF_GRA | CPS1_TILES },
+        { "cd-7m.9a",      0x080000, 0x22bfb7a3, BRF_GRA | CPS1_TILES },
+        { "cd-6m.8a",      0x080000, 0xe7599ac4, BRF_GRA | CPS1_TILES },
+        { "cd-8m.10a",     0x080000, 0x211b4b15, BRF_GRA | CPS1_TILES },
+
+        { "cd_q.5k",       0x020000, 0x605fdb0b, BRF_PRG | CPS1_Z80_PROGRAM },
+
+        { "cd-q1.1k",      0x080000, 0x60927775, BRF_SND | CPS1_QSOUND_SAMPLES },
+        { "cd-q2.2k",      0x080000, 0x770f4c47, BRF_SND | CPS1_QSOUND_SAMPLES },
+        { "cd-q3.3k",      0x080000, 0x2f273ffc, BRF_SND | CPS1_QSOUND_SAMPLES },
+        { "cd-q4.4k",      0x080000, 0x2c67821d, BRF_SND | CPS1_QSOUND_SAMPLES },
+
+        A_BOARD_QSOUND_PLDS
+
+        { "cd63b.1a",      0x000117, 0xef72e902, BRF_OPT },	// b-board PLDs
+        { "iob1.12d",      0x000117, 0x3abc0700, BRF_OPT },
+        { "bprg1.11d",     0x000117, 0x31793da7, BRF_OPT },
+        { "ioc1.ic1",      0x000104, 0xa399772d, BRF_OPT },	// c-board PLDs
+        { "d7l1.7l",       0x000117, 0x27b7410d, BRF_OPT },	// d-board PLDs
+        { "d8l1.8l",       0x000117, 0x539fc7da, BRF_OPT },
+        { "d9k2.9k",       0x000117, 0xcd85a156, BRF_OPT },
+        { "d10f1.10f",     0x000117, 0x6619c494, BRF_OPT },
+};
+
+STD_ROM_PICK(Dinowtw)
+STD_ROM_FN(Dinowtw)
+
+struct BurnDriver BurnDrvCpsDinowtw = {
+        "dinowtw", "dino", NULL, NULL, "2019",
+        "Cadillacs & Dinosaurs (Sky King 20190114)\0", NULL, "NanGongSheng", "CPS1 / QSound",
+        NULL, NULL, NULL, NULL,
+        BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 3, HARDWARE_CAPCOM_CPS1_QSOUND, GBF_SCRFIGHT, 0,
+        NULL, DinowtwRomInfo, DinowtwRomName, NULL, NULL, NULL, NULL, DinoInputInfo, DinoDIPInfo,
+        TwelveMhzInit, DrvExit, Cps1Frame, CpsRedraw, CpsAreaScan,
+        &CpsRecalcPal, 0x1000, 384, 224, 4, 3
+};
+
+// GOTVG 恐龙快打 魔神乱舞版【原武将版】	Cadillacs & Dinosaurs (Majin Ranbu 20190117)
+static struct BurnRomInfo DinowjRomDesc[] = {
+        { "mslw.dec",    0x180000, 0xbb57412b, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_NO_BYTESWAP },
+
+        { "cd-1m.3a",      0x080000, 0x8da4f917, BRF_GRA | CPS1_TILES },
+        { "cd-3m.5a",      0x080000, 0x6c40f603, BRF_GRA | CPS1_TILES },
+        { "cd-2m.4a",      0x080000, 0x09c8fc2d, BRF_GRA | CPS1_TILES },
+        { "cd-4m.6a",      0x080000, 0x637ff38f, BRF_GRA | CPS1_TILES },
+        { "cd-5m.7a",      0x080000, 0x470befee, BRF_GRA | CPS1_TILES },
+        { "cd-7m.9a",      0x080000, 0x22bfb7a3, BRF_GRA | CPS1_TILES },
+        { "cd-6m.8a",      0x080000, 0xe7599ac4, BRF_GRA | CPS1_TILES },
+        { "cd-8m.10a",     0x080000, 0x211b4b15, BRF_GRA | CPS1_TILES },
+
+        { "cd_q.5k",       0x020000, 0x605fdb0b, BRF_PRG | CPS1_Z80_PROGRAM },
+
+        { "cd-q1.1k",      0x080000, 0x60927775, BRF_SND | CPS1_QSOUND_SAMPLES },
+        { "cd-q2.2k",      0x080000, 0x770f4c47, BRF_SND | CPS1_QSOUND_SAMPLES },
+        { "cd-q3.3k",      0x080000, 0x2f273ffc, BRF_SND | CPS1_QSOUND_SAMPLES },
+        { "cd-q4.4k",      0x080000, 0x2c67821d, BRF_SND | CPS1_QSOUND_SAMPLES },
+
+        A_BOARD_QSOUND_PLDS
+
+        { "cd63b.1a",      0x000117, 0xef72e902, BRF_OPT },	// b-board PLDs
+        { "iob1.12d",      0x000117, 0x3abc0700, BRF_OPT },
+        { "bprg1.11d",     0x000117, 0x31793da7, BRF_OPT },
+        { "ioc1.ic1",      0x000104, 0xa399772d, BRF_OPT },	// c-board PLDs
+        { "d7l1.7l",       0x000117, 0x27b7410d, BRF_OPT },	// d-board PLDs
+        { "d8l1.8l",       0x000117, 0x539fc7da, BRF_OPT },
+        { "d9k2.9k",       0x000117, 0xcd85a156, BRF_OPT },
+        { "d10f1.10f",     0x000117, 0x6619c494, BRF_OPT },
+};
+
+STD_ROM_PICK(Dinowj)
+STD_ROM_FN(Dinowj)
+
+struct BurnDriver BurnDrvCpsDinowj = {
+        "dinowj", "dino", NULL, NULL, "2019",
+        "Cadillacs & Dinosaurs (Majin Ranbu 20190117)\0", NULL, "JieJiSanQi", "CPS1 / QSound",
+        NULL, NULL, NULL, NULL,
+        BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 3, HARDWARE_CAPCOM_CPS1_QSOUND, GBF_SCRFIGHT, 0,
+        NULL, DinowjRomInfo, DinowjRomName, NULL, NULL, NULL, NULL, DinoInputInfo, DinoDIPInfo,
+        TwelveMhzInit, DrvExit, Cps1Frame, CpsRedraw, CpsAreaScan,
+        &CpsRecalcPal, 0x1000, 384, 224, 4, 3
+};
+
+// GOTVG 恐龙快打 斗神版	Cadillacs & Dinosaurs (Fighting God Version 20190114)
+static struct BurnRomInfo DinojdsRomDesc[] = {
+        { "kljds.shr",    0x200000, 0x38da2130, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_NO_BYTESWAP },
+
+        { "cd-1m.3a",      0x080000, 0x8da4f917, BRF_GRA | CPS1_TILES },
+        { "cd-3m.5a",      0x080000, 0x6c40f603, BRF_GRA | CPS1_TILES },
+        { "cd-2m.4a",      0x080000, 0x09c8fc2d, BRF_GRA | CPS1_TILES },
+        { "cd-4m.6a",      0x080000, 0x637ff38f, BRF_GRA | CPS1_TILES },
+        { "cd-5m.7a",      0x080000, 0x470befee, BRF_GRA | CPS1_TILES },
+        { "cd-7m.9a",      0x080000, 0x22bfb7a3, BRF_GRA | CPS1_TILES },
+        { "cd-6m.8a",      0x080000, 0xe7599ac4, BRF_GRA | CPS1_TILES },
+        { "cd-8m.10a",     0x080000, 0x211b4b15, BRF_GRA | CPS1_TILES },
+
+        { "cd_q.5k",       0x020000, 0x605fdb0b, BRF_PRG | CPS1_Z80_PROGRAM },
+
+        { "cd-q1.1k",      0x080000, 0x60927775, BRF_SND | CPS1_QSOUND_SAMPLES },
+        { "cd-q2.2k",      0x080000, 0x770f4c47, BRF_SND | CPS1_QSOUND_SAMPLES },
+        { "cd-q3.3k",      0x080000, 0x2f273ffc, BRF_SND | CPS1_QSOUND_SAMPLES },
+        { "cd-q4.4k",      0x080000, 0x2c67821d, BRF_SND | CPS1_QSOUND_SAMPLES },
+
+        A_BOARD_QSOUND_PLDS
+
+        { "cd63b.1a",      0x000117, 0xef72e902, BRF_OPT },	// b-board PLDs
+        { "iob1.12d",      0x000117, 0x3abc0700, BRF_OPT },
+        { "bprg1.11d",     0x000117, 0x31793da7, BRF_OPT },
+        { "ioc1.ic1",      0x000104, 0xa399772d, BRF_OPT },	// c-board PLDs
+        { "d7l1.7l",       0x000117, 0x27b7410d, BRF_OPT },	// d-board PLDs
+        { "d8l1.8l",       0x000117, 0x539fc7da, BRF_OPT },
+        { "d9k2.9k",       0x000117, 0xcd85a156, BRF_OPT },
+        { "d10f1.10f",     0x000117, 0x6619c494, BRF_OPT },
+};
+
+STD_ROM_PICK(Dinojds)
+STD_ROM_FN(Dinojds)
+
+struct BurnDriver BurnDrvCpsDinojds = {
+        "dinojds", "dino", NULL, NULL, "2019",
+        "Cadillacs & Dinosaurs (Fighting God Version 20190114)\0", NULL, "NanGongSheng", "CPS1 / QSound",
+        NULL, NULL, NULL, NULL,
+        BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 3, HARDWARE_CAPCOM_CPS1_QSOUND, GBF_SCRFIGHT, 0,
+        NULL, DinojdsRomInfo, DinojdsRomName, NULL, NULL, NULL, NULL, DinoInputInfo, DinoDIPInfo,
+        TwelveMhzInit, DrvExit, Cps1Frame, CpsRedraw, CpsAreaScan,
+        &CpsRecalcPal, 0x1000, 384, 224, 4, 3
+};
+
+
+// FBA4DROID 恐龙新世纪 2019 无双版 Cadillacs & Dinosaurs (Unrivalled Version 2019 20190107)
+static struct BurnRomInfo Dinows2019RomDesc[] = {
+        { "23.rom",    0x080000, 0x73f203b7, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_NO_BYTESWAP },
+        { "22.rom",    0x080000, 0xf9e264dc, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_NO_BYTESWAP },
+        { "21.rom",    0x080000, 0x94d44390, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_NO_BYTESWAP },
+
+        { "cd-1m.3a",      0x080000, 0x8da4f917, BRF_GRA | CPS1_TILES },
+        { "cd-3m.5a",      0x080000, 0x6c40f603, BRF_GRA | CPS1_TILES },
+        { "cd-2m.4a",      0x080000, 0x09c8fc2d, BRF_GRA | CPS1_TILES },
+        { "cd-4m.6a",      0x080000, 0x637ff38f, BRF_GRA | CPS1_TILES },
+        { "cd-5m.7a",      0x080000, 0x470befee, BRF_GRA | CPS1_TILES },
+        { "cd-7m.9a",      0x080000, 0x22bfb7a3, BRF_GRA | CPS1_TILES },
+        { "cd-6m.8a",      0x080000, 0xe7599ac4, BRF_GRA | CPS1_TILES },
+        { "cd-8m.10a",     0x080000, 0x211b4b15, BRF_GRA | CPS1_TILES },
+
+        { "cd_q.5k",       0x020000, 0x605fdb0b, BRF_PRG | CPS1_Z80_PROGRAM },
+
+        { "cd-q1.1k",      0x080000, 0x60927775, BRF_SND | CPS1_QSOUND_SAMPLES },
+        { "cd-q2.2k",      0x080000, 0x770f4c47, BRF_SND | CPS1_QSOUND_SAMPLES },
+        { "cd-q3.3k",      0x080000, 0x2f273ffc, BRF_SND | CPS1_QSOUND_SAMPLES },
+        { "cd-q4.4k",      0x080000, 0x2c67821d, BRF_SND | CPS1_QSOUND_SAMPLES },
+
+        A_BOARD_QSOUND_PLDS
+
+        { "cd63b.1a",      0x000117, 0xef72e902, BRF_OPT },	// b-board PLDs
+        { "iob1.12d",      0x000117, 0x3abc0700, BRF_OPT },
+        { "bprg1.11d",     0x000117, 0x31793da7, BRF_OPT },
+        { "ioc1.ic1",      0x000104, 0xa399772d, BRF_OPT },	// c-board PLDs
+        { "d7l1.7l",       0x000117, 0x27b7410d, BRF_OPT },	// d-board PLDs
+        { "d8l1.8l",       0x000117, 0x539fc7da, BRF_OPT },
+        { "d9k2.9k",       0x000117, 0xcd85a156, BRF_OPT },
+        { "d10f1.10f",     0x000117, 0x6619c494, BRF_OPT },
+};
+
+STD_ROM_PICK(Dinows2019)
+STD_ROM_FN(Dinows2019)
+
+struct BurnDriver BurnDrvCpsDinows2019 = {
+        "dinows2019", "dino", NULL, NULL, "2019",
+        "Cadillacs & Dinosaurs (Unrivalled Version 2019 20190107)\0", NULL, "LiXili", "CPS1 / QSound",
+        NULL, NULL, NULL, NULL,
+        BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 3, HARDWARE_CAPCOM_CPS1_QSOUND, GBF_SCRFIGHT, 0,
+        NULL, Dinows2019RomInfo, Dinows2019RomName, NULL, NULL, NULL, NULL, DinoInputInfo, DinoDIPInfo,
+        TwelveMhzInit, DrvExit, Cps1Frame, CpsRedraw, CpsAreaScan,
+        &CpsRecalcPal, 0x1000, 384, 224, 4, 3
+};
+
+
+// GOTVG 龙王 1V3版 The King of Dragons (1VS3 20150506)
+// koduhc03 in HBMAME.
+static struct BurnRomInfo kod1v3RomDesc[] = {
+        { "kdu-30b.bin",   0x020000, 0x825817f9, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_BYTESWAP },
+        { "kdu-37b.bin",   0x020000, 0xd2422dfb, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_BYTESWAP },
+        { "kdu-31b.bin",   0x020000, 0x34c88772, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_BYTESWAP },
+        { "kdu-38b.bin",   0x020000, 0xbe8405a1, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_BYTESWAP },
+        { "kd_28.9e",      0x020000, 0x9367bcd9, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_BYTESWAP },
+        { "kd_35.9f",      0x020000, 0x4ca6a48a, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_BYTESWAP },
+        { "kd_29.10e",     0x020000, 0x0360fa72, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_BYTESWAP },
+        { "kd_36a.10f",    0x020000, 0x95a3cef8, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_BYTESWAP },
+
+        { "kd-5m.4a",      0x080000, 0xe45b8701, BRF_GRA | CPS1_TILES },
+        { "kd-7m.6a",      0x080000, 0xa7750322, BRF_GRA | CPS1_TILES },
+        { "kd-1m.3a",      0x080000, 0x5f74bf78, BRF_GRA | CPS1_TILES },
+        { "kd-3m.5a",      0x080000, 0x5e5303bf, BRF_GRA | CPS1_TILES },
+        { "kd-6m.4c",      0x080000, 0x113358f3, BRF_GRA | CPS1_TILES },
+        { "kd-8m.6c",      0x080000, 0x38853c44, BRF_GRA | CPS1_TILES },
+        { "kd-2m.3c",      0x080000, 0x9ef36604, BRF_GRA | CPS1_TILES },
+        { "kd-4m.5c",      0x080000, 0x402b9b4f, BRF_GRA | CPS1_TILES },
+
+        { "kd_9.12a",      0x010000, 0xbac6ec26, BRF_PRG | CPS1_Z80_PROGRAM },
+
+        { "kd_18.11c",     0x020000, 0x4c63181d, BRF_SND | CPS1_OKIM6295_SAMPLES },
+        { "kd_19.12c",     0x020000, 0x92941b80, BRF_SND | CPS1_OKIM6295_SAMPLES },
+};
+
+STD_ROM_PICK(kod1v3)
+STD_ROM_FN(kod1v3)
+
+struct BurnDriver BurnDrvCpskod1v3 = {
+        "kod1v3", "kod", NULL, NULL, "2015",
+        "The King of Dragons (1VS3 20150506)\0", NULL, "hack", "CPS1",
+        NULL, NULL, NULL, NULL,
+        BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 3, HARDWARE_CAPCOM_CPS1, GBF_SCRFIGHT, 0,
+        NULL, kod1v3RomInfo, kod1v3RomName, NULL, NULL, NULL, NULL, KodInputInfo, Kodr1DIPInfo,
+        DrvInit, DrvExit, Cps1Frame, CpsRedraw, CpsAreaScan,
+        &CpsRecalcPal, 0x1000, 384, 224, 4, 3
+};
+
+// GOTVG 龙王 BOSS版 The King of Dragons (Boss Hack 20150527)
+// koduhc02 in HBMAME.
+static struct BurnRomInfo kodbsRomDesc[] = {
+        { "kdu-30b.bin",   0x020000, 0x13dff227, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_BYTESWAP },
+        { "kdu-37b.bin",   0x020000, 0x007d6dd9, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_BYTESWAP },
+        { "kdu-31b.bin",   0x020000, 0x3b89dd96, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_BYTESWAP },
+        { "kdu-38b.bin",   0x020000, 0x3eceba92, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_BYTESWAP },
+        { "kd_28.9e",      0x020000, 0x9367bcd9, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_BYTESWAP },
+        { "kd_35.9f",      0x020000, 0x4ca6a48a, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_BYTESWAP },
+        { "kd_29.10e",     0x020000, 0x0360fa72, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_BYTESWAP },
+        { "kd_36a.10f",    0x020000, 0x95a3cef8, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_BYTESWAP },
+
+        { "kd-5m.4a",      0x080000, 0xe45b8701, BRF_GRA | CPS1_TILES },
+        { "kd-7m.6a",      0x080000, 0xa7750322, BRF_GRA | CPS1_TILES },
+        { "kd-1m.3a",      0x080000, 0x5f74bf78, BRF_GRA | CPS1_TILES },
+        { "kd-3m.5a",      0x080000, 0x5e5303bf, BRF_GRA | CPS1_TILES },
+        { "kd-6m.4c",      0x080000, 0x113358f3, BRF_GRA | CPS1_TILES },
+        { "kd-8m.6c",      0x080000, 0x38853c44, BRF_GRA | CPS1_TILES },
+        { "kd-2m.3c",      0x080000, 0x9ef36604, BRF_GRA | CPS1_TILES },
+        { "kd-4m.5c",      0x080000, 0x402b9b4f, BRF_GRA | CPS1_TILES },
+
+        { "kd_9.12a",      0x010000, 0xbac6ec26, BRF_PRG | CPS1_Z80_PROGRAM },
+
+        { "kd_18.11c",     0x020000, 0x4c63181d, BRF_SND | CPS1_OKIM6295_SAMPLES },
+        { "kd_19.12c",     0x020000, 0x92941b80, BRF_SND | CPS1_OKIM6295_SAMPLES },
+};
+
+STD_ROM_PICK(kodbs)
+STD_ROM_FN(kodbs)
+
+struct BurnDriver BurnDrvCpskodbs = {
+        "kodbs", "kod", NULL, NULL, "2015",
+        "The King of Dragons (Boss Hack 20150527)\0", NULL, "hack", "CPS1",
+        NULL, NULL, NULL, NULL,
+        BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 3, HARDWARE_CAPCOM_CPS1, GBF_SCRFIGHT, 0,
+        NULL, kodbsRomInfo, kodbsRomName, NULL, NULL, NULL, NULL, KodInputInfo, Kodr1DIPInfo,
+        DrvInit, DrvExit, Cps1Frame, CpsRedraw, CpsAreaScan,
+        &CpsRecalcPal, 0x1000, 384, 224, 4, 3
+};
+
+// GOTVG 龙王 无双版 The King of Dragons (Unrivalled Version 20150526)
+// koduhc04 in HBMAME.
+static struct BurnRomInfo koddwRomDesc[] = {
+        { "kdu-30b.bin",   0x020000, 0xddfa159a, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_BYTESWAP },
+        { "kdu-37b.bin",   0x020000, 0x3c8b145a, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_BYTESWAP },
+        { "kdu-31b.bin",   0x020000, 0x21b985cb, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_BYTESWAP },
+        { "kdu-38b.bin",   0x020000, 0xfd6c6a53, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_BYTESWAP },
+        { "kd_28.9e",      0x020000, 0x9367bcd9, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_BYTESWAP },
+        { "kd_35.9f",      0x020000, 0x4ca6a48a, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_BYTESWAP },
+        { "kd_29.10e",     0x020000, 0x0360fa72, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_BYTESWAP },
+        { "kd_36a.10f",    0x020000, 0x95a3cef8, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_BYTESWAP },
+
+        { "kd-5m.4a",      0x080000, 0xe45b8701, BRF_GRA | CPS1_TILES },
+        { "kd-7m.6a",      0x080000, 0xa7750322, BRF_GRA | CPS1_TILES },
+        { "kd-1m.3a",      0x080000, 0x5f74bf78, BRF_GRA | CPS1_TILES },
+        { "kd-3m.5a",      0x080000, 0x5e5303bf, BRF_GRA | CPS1_TILES },
+        { "kd-6m.4c",      0x080000, 0x113358f3, BRF_GRA | CPS1_TILES },
+        { "kd-8m.6c",      0x080000, 0x38853c44, BRF_GRA | CPS1_TILES },
+        { "kd-2m.3c",      0x080000, 0x9ef36604, BRF_GRA | CPS1_TILES },
+        { "kd-4m.5c",      0x080000, 0x402b9b4f, BRF_GRA | CPS1_TILES },
+
+        { "kd_9.12a",      0x010000, 0xbac6ec26, BRF_PRG | CPS1_Z80_PROGRAM },
+
+        { "kd_18.11c",     0x020000, 0x4c63181d, BRF_SND | CPS1_OKIM6295_SAMPLES },
+        { "kd_19.12c",     0x020000, 0x92941b80, BRF_SND | CPS1_OKIM6295_SAMPLES },
+};
+
+STD_ROM_PICK(koddw)
+STD_ROM_FN(koddw)
+
+struct BurnDriver BurnDrvCpskoddw = {
+        "koddw", "kod", NULL, NULL, "2015",
+        "The King of Dragons (Unrivalled Version 20150526)\0", NULL, "hack", "CPS1",
+        NULL, NULL, NULL, NULL,
+        BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 3, HARDWARE_CAPCOM_CPS1, GBF_SCRFIGHT, 0,
+        NULL, koddwRomInfo, koddwRomName, NULL, NULL, NULL, NULL, KodInputInfo, Kodr1DIPInfo,
+        DrvInit, DrvExit, Cps1Frame, CpsRedraw, CpsAreaScan,
+        &CpsRecalcPal, 0x1000, 384, 224, 4, 3
+};
+
+// GOTVG 快打旋风 无双版 Final Fight (Unrivalled Version 20160817)
+static struct BurnRomInfo ffightj2uRomDesc[] = {
+        { "ffj_36a.12f",   0x020000, 0xcb024f54, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_BYTESWAP },
+        { "ffj_42a.12h",   0x020000, 0x516fc7a6, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_BYTESWAP },
+        { "ffj_37a.13f",   0x020000, 0xe1bd4c19, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_BYTESWAP },
+        { "ffj_43a.13h",   0x020000, 0x066c44ba, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_BYTESWAP },
+        { "ff_34.10f",     0x020000, 0x0c8dc3fc, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_BYTESWAP },
+        { "ff_40.10h",     0x020000, 0x8075bab9, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_BYTESWAP },
+        { "ff_35.11f",     0x020000, 0x4a934121, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_BYTESWAP },
+        { "ff_41.11h",     0x020000, 0x2af68154, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_BYTESWAP },
+
+        { "ff_09.4b",      0x020000, 0x5b116d0d, BRF_GRA | CPS1_TILES },
+        { "ff_01.4a",      0x020000, 0x815b1797, BRF_GRA | CPS1_TILES },
+        { "ff_13.9b",      0x020000, 0x8721a7da, BRF_GRA | CPS1_TILES },
+        { "ff_05.9a",      0x020000, 0xd0fcd4b5, BRF_GRA | CPS1_TILES },
+        { "ff_24.5e",      0x020000, 0xa1ab607a, BRF_GRA | CPS1_TILES },
+        { "ff_17.5c",      0x020000, 0x2dc18cf4, BRF_GRA | CPS1_TILES },
+        { "ff_38.8h",      0x020000, 0x6535a57f, BRF_GRA | CPS1_TILES },
+        { "ff_32.8f",      0x020000, 0xc8bc4a57, BRF_GRA | CPS1_TILES },
+        { "ff_10.5b",      0x020000, 0x624a924a, BRF_GRA | CPS1_TILES },
+        { "ff_02.5a",      0x020000, 0x5d91f694, BRF_GRA | CPS1_TILES },
+        { "ff_14.10b",     0x020000, 0x0a2e9101, BRF_GRA | CPS1_TILES },
+        { "ff_06.10a",     0x020000, 0x1c18f042, BRF_GRA | CPS1_TILES },
+        { "ff_25.7e",      0x020000, 0x6e8181ea, BRF_GRA | CPS1_TILES },
+        { "ff_18.7c",      0x020000, 0xb19ede59, BRF_GRA | CPS1_TILES },
+        { "ff_39.9h",      0x020000, 0x9416b477, BRF_GRA | CPS1_TILES },
+        { "ff_33.9f",      0x020000, 0x7369fa07, BRF_GRA | CPS1_TILES },
+
+        { "ff_23.13c",     0x010000, 0xb8367eb5, BRF_PRG | CPS1_Z80_PROGRAM },
+
+        { "ff_30.12e",     0x020000, 0x375c66e7, BRF_SND | CPS1_OKIM6295_SAMPLES },
+        { "ff_31.13e",     0x020000, 0x1ef137f9, BRF_SND | CPS1_OKIM6295_SAMPLES },
+
+        A_BOARD_PLDS
+
+        { "s222b.1a",      0x000117, 0x6d86b45e, BRF_OPT }, // b-board PLDs
+        { "lwio.12c",      0x000117, 0xad52b90c, BRF_OPT },
+};
+
+STD_ROM_PICK(ffightj2u)
+STD_ROM_FN(ffightj2u)
+
+struct BurnDriver BurnDrvCpsffightj2u = {
+        "ffightj2u", "ffight", NULL, NULL, "2016",
+        "Final Fight (Unrivalled Version 20160817)\0", NULL, "Capcom", "CPS1",
+        NULL, NULL, NULL, NULL,
+        BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 2, HARDWARE_CAPCOM_CPS1, GBF_SCRFIGHT, 0,
+        NULL, ffightj2uRomInfo, ffightj2uRomName, NULL, NULL, NULL, NULL, FfightInputInfo, FfightDIPInfo,
+        DrvInit, DrvExit, Cps1Frame, CpsRedraw, CpsAreaScan,
+        &CpsRecalcPal, 0x1000, 384, 224, 4, 3
+};
+
+// GOTVG 快打旋风 1V2版 Final Fight (1VS2 20171126)
+static struct BurnRomInfo ffight1v2RomDesc[] = {
+        { "36v2",          0x020000, 0x37708588, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_BYTESWAP },
+        { "ffj_42.11h",    0x020000, 0x48986323, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_BYTESWAP },
+        { "ffj_37.13f",    0x020000, 0xc371c667, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_BYTESWAP },
+        { "ffj_43.13h",    0x020000, 0x6f81f194, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_BYTESWAP },
+        { "ffj_34.10f",    0x020000, 0x0c8dc3fc, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_BYTESWAP },
+        { "ffj_40.10h",    0x020000, 0x8075bab9, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_BYTESWAP },
+        { "ffj_35.11f",    0x020000, 0x4a934121, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_BYTESWAP },
+        { "ffj_41.11h",    0x020000, 0x2af68154, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_BYTESWAP },
+
+        { "ffj_09.4b",     0x020000, 0x5b116d0d, BRF_GRA | CPS1_TILES },
+        { "ffj_01.4a",     0x020000, 0x815b1797, BRF_GRA | CPS1_TILES },
+        { "ffj_13.9b",     0x020000, 0x8721a7da, BRF_GRA | CPS1_TILES },
+        { "ffj_05.9a",     0x020000, 0xd0fcd4b5, BRF_GRA | CPS1_TILES },
+        { "ffj_24.5e",     0x020000, 0xa1ab607a, BRF_GRA | CPS1_TILES },
+        { "ffj_17.5c",     0x020000, 0x2dc18cf4, BRF_GRA | CPS1_TILES },
+        { "ffj_38.8h",     0x020000, 0x6535a57f, BRF_GRA | CPS1_TILES },
+        { "ffj_32.8f",     0x020000, 0xc8bc4a57, BRF_GRA | CPS1_TILES },
+        { "ffj_10.5b",     0x020000, 0x624a924a, BRF_GRA | CPS1_TILES },
+        { "ffj_02.5a",     0x020000, 0x5d91f694, BRF_GRA | CPS1_TILES },
+        { "ffj_14.10b",    0x020000, 0x0a2e9101, BRF_GRA | CPS1_TILES },
+        { "ffj_06.10a",    0x020000, 0x1c18f042, BRF_GRA | CPS1_TILES },
+        { "ffj_25.7e",     0x020000, 0x6e8181ea, BRF_GRA | CPS1_TILES },
+        { "ffj_18.7c",     0x020000, 0xb19ede59, BRF_GRA | CPS1_TILES },
+        { "ffj_39.9h",     0x020000, 0x9416b477, BRF_GRA | CPS1_TILES },
+        { "ffj_33.9f",     0x020000, 0x7369fa07, BRF_GRA | CPS1_TILES },
+
+        { "ff_23.13b",     0x010000, 0xb8367eb5, BRF_PRG | CPS1_Z80_PROGRAM },
+
+        { "ffj_30.12c",    0x020000, 0x375c66e7, BRF_SND | CPS1_OKIM6295_SAMPLES },
+        { "ffj_31.13c",    0x020000, 0x1ef137f9, BRF_SND | CPS1_OKIM6295_SAMPLES },
+
+        A_BOARD_PLDS
+
+        { "s222b.1a",      0x000117, 0x6d86b45e, BRF_OPT }, // b-board PLDs
+        { "lwio.12e",      0x000117, 0xad52b90c, BRF_OPT },
+};
+
+STD_ROM_PICK(ffight1v2)
+STD_ROM_FN(ffight1v2)
+
+struct BurnDriver BurnDrvCpsffight1v2 = {
+        "ffight1v2", "ffight", NULL, NULL, "2017",
+        "Final Fight (1VS2 20171126)\0", NULL, "Capcom", "CPS1",
+        NULL, NULL, NULL, NULL,
+        BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 2, HARDWARE_CAPCOM_CPS1, GBF_SCRFIGHT, 0,
+        NULL, ffight1v2RomInfo, ffight1v2RomName, NULL, NULL, NULL, NULL, FfightInputInfo, FfightDIPInfo,
+        DrvInit, DrvExit, Cps1Frame, CpsRedraw, CpsAreaScan,
+        &CpsRecalcPal, 0x1000, 384, 224, 4, 3
+};
+
+// GOTVG 名将 1V4版	Captain Commando (1VS4 20180120)
+static struct BurnRomInfo captcommr1v4RomDesc[] = {
+        { "mj.1v4",        0x300000, 0xc908702c, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_NO_BYTESWAP },
+
+        { "cc-5m.3a",      0x080000, 0x7261d8ba, BRF_GRA | CPS1_TILES },
+        { "cc-7m.5a",      0x080000, 0x6a60f949, BRF_GRA | CPS1_TILES },
+        { "cc-1m.4a",      0x080000, 0x00637302, BRF_GRA | CPS1_TILES },
+        { "cc-3m.6a",      0x080000, 0xcc87cf61, BRF_GRA | CPS1_TILES },
+        { "cc-6m.7a",      0x080000, 0x28718bed, BRF_GRA | CPS1_TILES },
+        { "cc-8m.9a",      0x080000, 0xd4acc53a, BRF_GRA | CPS1_TILES },
+        { "cc-2m.8a",      0x080000, 0x0c69f151, BRF_GRA | CPS1_TILES },
+        { "cc-4m.10a",     0x080000, 0x1f9ebb97, BRF_GRA | CPS1_TILES },
+
+        { "cc_09.11a",     0x010000, 0x698e8b58, BRF_PRG | CPS1_Z80_PROGRAM },
+
+        { "cc_18.11c",     0x020000, 0x6de2c2db, BRF_SND | CPS1_OKIM6295_SAMPLES },
+        { "cc_19.12c",     0x020000, 0xb99091ae, BRF_SND | CPS1_OKIM6295_SAMPLES },
+
+        A_BOARD_PLDS
+
+        { "cc63b.1a",      0x000117, 0xcae8f0f9, BRF_OPT },
+        { "iob1.12d",      0x000117, 0x3abc0700, BRF_OPT },
+        { "ccprg.11d",     0x000117, 0xe1c225c4, BRF_OPT },
+        { "ioc1.ic7",      0x000104, 0xa399772d, BRF_OPT },
+        { "c632.ic1",      0x000117, 0x0fbd9270, BRF_OPT },
+};
+
+STD_ROM_PICK(captcommr1v4)
+STD_ROM_FN(captcommr1v4)
+
+struct BurnDriver BurnDrvCpscaptcommr1v4 = {
+        "captcommr1v4", "captcomm", NULL, NULL, "2018",
+        "Captain Commando (1VS4 20180120)\0", NULL, "BinDi", "CPS1",
+        NULL, NULL, NULL, NULL,
+        BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 4, HARDWARE_CAPCOM_CPS1, GBF_SCRFIGHT, 0,
+        NULL, captcommr1v4RomInfo, captcommr1v4RomName, NULL, NULL, NULL, NULL, CaptcommInputInfo, CaptcommDIPInfo,
+        DrvInit, DrvExit, Cps1Frame, CpsRedraw, CpsAreaScan,
+        &CpsRecalcPal, 0x1000, 384, 224, 4, 3
+};
+
+// GOTVG 名将 加强版 Captain Commando (Plus 20161128)
+// 23d&22d are ripped from RAM due to encryption.
+static struct BurnRomInfo captcommpRomDesc[] = {
+        { "23d_22d.dec",   0x100000, 0x09f5433a, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_NO_BYTESWAP },
+        { "cc_24d.rom",    0x020000, 0x680e543f, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_BYTESWAP },
+        { "cc_28d.rom",    0x020000, 0x8820039f, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_BYTESWAP },
+
+        { "cc-5m.3a",      0x080000, 0x7261d8ba, BRF_GRA | CPS1_TILES },
+        { "cc-7m.5a",      0x080000, 0x6a60f949, BRF_GRA | CPS1_TILES },
+        { "cc-1m.4a",      0x080000, 0x00637302, BRF_GRA | CPS1_TILES },
+        { "cc-3m.6a",      0x080000, 0xcc87cf61, BRF_GRA | CPS1_TILES },
+        { "cc-6m.7a",      0x080000, 0x28718bed, BRF_GRA | CPS1_TILES },
+        { "cc-8m.9a",      0x080000, 0xd4acc53a, BRF_GRA | CPS1_TILES },
+        { "cc-2m.8a",      0x080000, 0x0c69f151, BRF_GRA | CPS1_TILES },
+        { "cc-4m.10a",     0x080000, 0x1f9ebb97, BRF_GRA | CPS1_TILES },
+
+        { "cc_09.11a",     0x010000, 0x698e8b58, BRF_PRG | CPS1_Z80_PROGRAM },
+
+        { "cc_18.11c",     0x020000, 0x6de2c2db, BRF_SND | CPS1_OKIM6295_SAMPLES },
+        { "cc_19.12c",     0x020000, 0xb99091ae, BRF_SND | CPS1_OKIM6295_SAMPLES },
+
+        A_BOARD_PLDS
+
+        { "cc63b.1a",      0x000117, 0xcae8f0f9, BRF_OPT },	// b-board PLDs
+        { "iob1.12d",      0x000117, 0x3abc0700, BRF_OPT },
+        { "ccprg.11d",     0x000117, 0xe1c225c4, BRF_OPT },
+        { "ioc1.ic7",      0x000104, 0xa399772d, BRF_OPT },	// c-board PLDs
+        { "c632.ic1",      0x000117, 0x0fbd9270, BRF_OPT },
+};
+
+STD_ROM_PICK(captcommp)
+STD_ROM_FN(captcommp)
+
+struct BurnDriver BurnDrvCpscaptcommp = {
+        "captcommp", "captcomm", NULL, NULL, "2016",
+        "Captain Commando (Plus 20161128)\0", NULL, "hack", "CPS1",
+        NULL, NULL, NULL, NULL,
+        BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 4, HARDWARE_CAPCOM_CPS1, GBF_SCRFIGHT, 0,
+        NULL, captcommpRomInfo, captcommpRomName, NULL, NULL, NULL, NULL, CaptcommInputInfo, CaptcommDIPInfo,
+        DrvInit, DrvExit, Cps1Frame, CpsRedraw, CpsAreaScan,
+        &CpsRecalcPal, 0x1000, 384, 224, 4, 3
+};
+
+// GOTVG 恐龙快打 极速加强版 Cadillacs & Dinosaurs (Topspeed Plus 20171017)
+static struct BurnRomInfo dinoplusRomDesc[] = {
+        { "cde_23a.rom",    0x080000, 0x45e40cd0, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_NO_BYTESWAP },
+        { "cde_22a.rom",    0x080000, 0x7eeff2c6, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_NO_BYTESWAP },
+        { "cde_21a.rom",    0x080000, 0xa8191282, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_NO_BYTESWAP },
+
+        { "cd-1m.3a",      0x080000, 0x8da4f917, BRF_GRA | CPS1_TILES },
+        { "cd-3m.5a",      0x080000, 0x6c40f603, BRF_GRA | CPS1_TILES },
+        { "cd-2m.4a",      0x080000, 0x09c8fc2d, BRF_GRA | CPS1_TILES },
+        { "cd-4m.6a",      0x080000, 0x637ff38f, BRF_GRA | CPS1_TILES },
+        { "cd-5m.7a",      0x080000, 0x470befee, BRF_GRA | CPS1_TILES },
+        { "cd-7m.9a",      0x080000, 0x22bfb7a3, BRF_GRA | CPS1_TILES },
+        { "cd-6m.8a",      0x080000, 0xe7599ac4, BRF_GRA | CPS1_TILES },
+        { "cd-8m.10a",     0x080000, 0x211b4b15, BRF_GRA | CPS1_TILES },
+
+        { "cd_q.5k",       0x020000, 0x605fdb0b, BRF_PRG | CPS1_Z80_PROGRAM },
+
+        { "cd-q1.1k",      0x080000, 0x60927775, BRF_SND | CPS1_QSOUND_SAMPLES },
+        { "cd-q2.2k",      0x080000, 0x770f4c47, BRF_SND | CPS1_QSOUND_SAMPLES },
+        { "cd-q3.3k",      0x080000, 0x2f273ffc, BRF_SND | CPS1_QSOUND_SAMPLES },
+        { "cd-q4.4k",      0x080000, 0x2c67821d, BRF_SND | CPS1_QSOUND_SAMPLES },
+
+};
+
+STD_ROM_PICK(dinoplus)
+STD_ROM_FN(dinoplus)
+
+struct BurnDriver BurnDrvCpsdinoplus = {
+        "dinoplus", "dino", NULL, NULL, "2017",
+        "Cadillacs & Dinosaurs (Topspeed Plus 20171017)\0", NULL, "hack", "CPS1 / QSound",
+        NULL, NULL, NULL, NULL,
+        BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 3, HARDWARE_CAPCOM_CPS1_QSOUND, GBF_SCRFIGHT, 0,
+        NULL, dinoplusRomInfo, dinoplusRomName, NULL, NULL, NULL, NULL, DinoInputInfo, DinoDIPInfo,
+        TwelveMhzInit, DrvExit, Cps1Frame, CpsRedraw, CpsAreaScan,
+        &CpsRecalcPal, 0x1000, 384, 224, 4, 3
+};
+
+// GOTVG 恐龙快打 勇士版 Cadillacs & Dinosaurs (Warriors 20181221)
+static struct BurnRomInfo dinoyzRomDesc[] = {
+        { "kl.ww",    0x400000, 0xbd5ee2c7, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_NO_BYTESWAP },
+
+        { "cd-1m.3a",      0x080000, 0x8da4f917, BRF_GRA | CPS1_TILES },
+        { "cd-3m.5a",      0x080000, 0x6c40f603, BRF_GRA | CPS1_TILES },
+        { "cd-2m.4a",      0x080000, 0x09c8fc2d, BRF_GRA | CPS1_TILES },
+        { "cd-4m.6a",      0x080000, 0x637ff38f, BRF_GRA | CPS1_TILES },
+        { "cd-5m.7a",      0x080000, 0x470befee, BRF_GRA | CPS1_TILES },
+        { "cd-7m.9a",      0x080000, 0x22bfb7a3, BRF_GRA | CPS1_TILES },
+        { "cd-6m.8a",      0x080000, 0xe7599ac4, BRF_GRA | CPS1_TILES },
+        { "cd-8m.10a",     0x080000, 0x211b4b15, BRF_GRA | CPS1_TILES },
+
+        { "cd_q.5k",       0x020000, 0x605fdb0b, BRF_PRG | CPS1_Z80_PROGRAM },
+
+        { "cd-q1.1k",      0x080000, 0x60927775, BRF_SND | CPS1_QSOUND_SAMPLES },
+        { "cd-q2.2k",      0x080000, 0x770f4c47, BRF_SND | CPS1_QSOUND_SAMPLES },
+        { "cd-q3.3k",      0x080000, 0x2f273ffc, BRF_SND | CPS1_QSOUND_SAMPLES },
+        { "cd-q4.4k",      0x080000, 0x2c67821d, BRF_SND | CPS1_QSOUND_SAMPLES },
+
+};
+
+STD_ROM_PICK(dinoyz)
+STD_ROM_FN(dinoyz)
+
+struct BurnDriver BurnDrvCpsdinoyz = {
+        "dinoyz", "dino", NULL, NULL, "2018",
+        "Cadillacs & Dinosaurs (Warriors 20181221)\0", NULL, "hack", "CPS1 / QSound",
+        NULL, NULL, NULL, NULL,
+        BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 3, HARDWARE_CAPCOM_CPS1_QSOUND, GBF_SCRFIGHT, 0,
+        NULL, dinoyzRomInfo, dinoyzRomName, NULL, NULL, NULL, NULL, DinoInputInfo, DinoDIPInfo,
+        TwelveMhzInit, DrvExit, Cps1Frame, CpsRedraw, CpsAreaScan,
+        &CpsRecalcPal, 0x1000, 384, 224, 4, 3
+};
+
+// GOTVG 恐龙快打 1V3版 Cadillacs & Dinosaurs (1VS3 20100303)
+static struct BurnRomInfo dino1v3RomDesc[] = {
+        { "cde_23a.rom",   0x080000, 0x1bf35c82, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_NO_BYTESWAP },
+        { "cde_22a.7f",    0x080000, 0x9278aa12, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_NO_BYTESWAP },
+        { "cde_21a.6f",    0x080000, 0x66d23de2, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_NO_BYTESWAP },
+
+        { "cd-1m.3a",      0x080000, 0x8da4f917, BRF_GRA | CPS1_TILES },
+        { "cd-3m.5a",      0x080000, 0x6c40f603, BRF_GRA | CPS1_TILES },
+        { "cd-2m.4a",      0x080000, 0x09c8fc2d, BRF_GRA | CPS1_TILES },
+        { "cd-4m.6a",      0x080000, 0x637ff38f, BRF_GRA | CPS1_TILES },
+        { "cd-5m.7a",      0x080000, 0x470befee, BRF_GRA | CPS1_TILES },
+        { "cd-7m.9a",      0x080000, 0x22bfb7a3, BRF_GRA | CPS1_TILES },
+        { "cd-6m.8a",      0x080000, 0xe7599ac4, BRF_GRA | CPS1_TILES },
+        { "cd-8m.10a",     0x080000, 0x211b4b15, BRF_GRA | CPS1_TILES },
+
+        { "cd_q.5k",       0x020000, 0x605fdb0b, BRF_PRG | CPS1_Z80_PROGRAM },
+
+        { "cd-q1.1k",      0x080000, 0x60927775, BRF_SND | CPS1_QSOUND_SAMPLES },
+        { "cd-q2.2k",      0x080000, 0x770f4c47, BRF_SND | CPS1_QSOUND_SAMPLES },
+        { "cd-q3.3k",      0x080000, 0x2f273ffc, BRF_SND | CPS1_QSOUND_SAMPLES },
+        { "cd-q4.4k",      0x080000, 0x2c67821d, BRF_SND | CPS1_QSOUND_SAMPLES },
+};
+
+STD_ROM_PICK(dino1v3)
+STD_ROM_FN(dino1v3)
+
+struct BurnDriver BurnDrvCpsdino1v3 = {
+        "dino1v3", "dino", NULL, NULL, "2010",
+        "Cadillacs & Dinosaurs (Warriors 20100303)\0", NULL, "hack", "CPS1 / QSound",
+        NULL, NULL, NULL, NULL,
+        BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 3, HARDWARE_CAPCOM_CPS1_QSOUND, GBF_SCRFIGHT, 0,
+        NULL, dino1v3RomInfo, dino1v3RomName, NULL, NULL, NULL, NULL, DinoInputInfo, DinoDIPInfo,
+        TwelveMhzInit, DrvExit, Cps1Frame, CpsRedraw, CpsAreaScan,
+        &CpsRecalcPal, 0x1000, 384, 224, 4, 3
+};
+
+// GOTVG 恐龙快打 无双版 Cadillacs & Dinosaurs (Unrivalled Version 20120122)
+static struct BurnRomInfo dinodwRomDesc[] = {
+        { "cde_23a.8f",    0x080000, 0x836a492c, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_NO_BYTESWAP },
+        { "cde_22a.7f",    0x080000, 0x0c6d3004, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_NO_BYTESWAP },
+        { "cde_21a.6f",    0x080000, 0x7e092acb, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_NO_BYTESWAP },
+
+        { "cd-1m.3a",      0x080000, 0x8da4f917, BRF_GRA | CPS1_TILES },
+        { "cd-3m.5a",      0x080000, 0x6c40f603, BRF_GRA | CPS1_TILES },
+        { "cd-2m.4a",      0x080000, 0x09c8fc2d, BRF_GRA | CPS1_TILES },
+        { "cd-4m.6a",      0x080000, 0x637ff38f, BRF_GRA | CPS1_TILES },
+        { "cd-5m.7a",      0x080000, 0x470befee, BRF_GRA | CPS1_TILES },
+        { "cd-7m.9a",      0x080000, 0x22bfb7a3, BRF_GRA | CPS1_TILES },
+        { "cd-6m.8a",      0x080000, 0xe7599ac4, BRF_GRA | CPS1_TILES },
+        { "cd-8m.10a",     0x080000, 0x211b4b15, BRF_GRA | CPS1_TILES },
+
+        { "cd_q.5k",       0x020000, 0x605fdb0b, BRF_PRG | CPS1_Z80_PROGRAM },
+
+        { "cd-q1.1k",      0x080000, 0x60927775, BRF_SND | CPS1_QSOUND_SAMPLES },
+        { "cd-q2.2k",      0x080000, 0x770f4c47, BRF_SND | CPS1_QSOUND_SAMPLES },
+        { "cd-q3.3k",      0x080000, 0x2f273ffc, BRF_SND | CPS1_QSOUND_SAMPLES },
+        { "cd-q4.4k",      0x080000, 0x2c67821d, BRF_SND | CPS1_QSOUND_SAMPLES },
+};
+
+STD_ROM_PICK(dinodw)
+STD_ROM_FN(dinodw)
+
+struct BurnDriver BurnDrvCpsdinodw = {
+        "dinodw", "dino", NULL, NULL, "2012",
+        "Cadillacs & Dinosaurs (Unrivalled Version 20120122)\0", NULL, "hack", "CPS1 / QSound",
+        NULL, NULL, NULL, NULL,
+        BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 3, HARDWARE_CAPCOM_CPS1_QSOUND, GBF_SCRFIGHT, 0,
+        NULL, dinodwRomInfo, dinodwRomName, NULL, NULL, NULL, NULL, DinoInputInfo, DinoDIPInfo,
+        TwelveMhzInit, DrvExit, Cps1Frame, CpsRedraw, CpsAreaScan,
+        &CpsRecalcPal, 0x1000, 384, 224, 4, 3
+};
+
+
+// GOTVG 圆桌骑士 加强版 Knights of the Round (Plus 20160714)
+static struct BurnRomInfo knightspRomDesc[] = {
+        { "kr_23e.pdec",   0x080000, 0x1c73393a, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_NO_BYTESWAP },
+        { "kr_22.7f",      0x080000, 0xd0b671a9, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_NO_BYTESWAP },
+
+        { "kr-5m.3a",      0x080000, 0x9e36c1a4, BRF_GRA | CPS1_TILES },
+        { "kr-7m.5a",      0x080000, 0xc5832cae, BRF_GRA | CPS1_TILES },
+        { "kr-1m.4a",      0x080000, 0xf095be2d, BRF_GRA | CPS1_TILES },
+        { "kr-3m.6a",      0x080000, 0x179dfd96, BRF_GRA | CPS1_TILES },
+        { "kr-6m.7a",      0x080000, 0x1f4298d2, BRF_GRA | CPS1_TILES },
+        { "kr-8m.9a",      0x080000, 0x37fa8751, BRF_GRA | CPS1_TILES },
+        { "kr-2m.8a",      0x080000, 0x0200bc3d, BRF_GRA | CPS1_TILES },
+        { "kr-4m.10a",     0x080000, 0x0bb2b4e7, BRF_GRA | CPS1_TILES },
+
+        { "kr_09.11a",     0x010000, 0x5e44d9ee, BRF_PRG | CPS1_Z80_PROGRAM },
+
+        { "kr_18.11c",     0x020000, 0xda69d15f, BRF_SND | CPS1_OKIM6295_SAMPLES },
+        { "kr_19.12c",     0x020000, 0xbfc654e9, BRF_SND | CPS1_OKIM6295_SAMPLES },
+
+        A_BOARD_PLDS
+
+        { "kr63b.1a",      0x000117, 0xfd5b6522, BRF_OPT },	// b-board PLDs
+        { "iob1.12d",      0x000117, 0x3abc0700, BRF_OPT },
+        { "bprg1.11d",     0x000117, 0x31793da7, BRF_OPT },
+        { "ioc1.ic7",      0x000104, 0xa399772d, BRF_OPT },	// c-board PLDs
+        { "c632.ic1",      0x000117, 0x0fbd9270, BRF_OPT },
+};
+
+STD_ROM_PICK(knightsp)
+STD_ROM_FN(knightsp)
+
+struct BurnDriver BurnDrvCpsknightsp = {
+        "knightsp", "knights", NULL, NULL, "2016",
+        "Knights of the Round (Plus 20160714)\0", NULL, "hack", "CPS1",
+        NULL, NULL, NULL, NULL,
+        BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 3, HARDWARE_CAPCOM_CPS1, GBF_SCRFIGHT, 0,
+        NULL, knightspRomInfo, knightspRomName, NULL, NULL, NULL, NULL, KnightsInputInfo, KnightsDIPInfo,
+        DrvInit, DrvExit, Cps1Frame, CpsRedraw, CpsAreaScan,
+        &CpsRecalcPal, 0x1000, 384, 224, 4, 3
+};
+
+
+// GOTVG 惩罚者 1V2版 The Punisher (1VS2 20180331)
+// punishers04 in HBMAME. P ROM may be NO_BYTESWAP?
+static struct BurnRomInfo punisher1v2RomDesc[] = {
+        { "pse_26.rom",    0x020000, 0x81cd5484, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_BYTESWAP },
+        { "pse_30.rom",    0x020000, 0x5e2b19f6, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_BYTESWAP },
+        { "pse_27.rom",    0x020000, 0x75580ff8, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_BYTESWAP },
+        { "pse_31.rom",    0x020000, 0x75e6e262, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_BYTESWAP },
+        { "pse_24.rom",    0x020000, 0xc25ef92e, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_BYTESWAP },
+        { "pse_28.rom",    0x020000, 0xf3ff48fc, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_BYTESWAP },
+        { "pse_25.rom",    0x020000, 0xae1fb98e, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_BYTESWAP },
+        { "pse_29.rom",    0x020000, 0x4a2ea384, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_BYTESWAP },
+        { "ps_21.rom",     0x080000, 0xfc83f71d, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_NO_BYTESWAP },
+
+        { "ps_gfx1.rom",      0x080000, 0x726dbd2c, BRF_GRA | CPS1_TILES },
+        { "ps_gfx3.rom",      0x080000, 0x907ffea8, BRF_GRA | CPS1_TILES },
+        { "ps_gfx2.rom",      0x080000, 0x61202953, BRF_GRA | CPS1_TILES },
+        { "ps_gfx4.rom",      0x080000, 0xf187ce6b, BRF_GRA | CPS1_TILES },
+        { "ps-5m.7a",      0x080000, 0xc54ea839, BRF_GRA | CPS1_TILES },
+        { "ps-7m.9a",      0x080000, 0x04c5acbd, BRF_GRA | CPS1_TILES },
+        { "ps-6m.8a",      0x080000, 0xa544f4cc, BRF_GRA | CPS1_TILES },
+        { "ps-8m.10a",     0x080000, 0x8f02f436, BRF_GRA | CPS1_TILES },
+
+        { "ps_q.5k",       0x020000, 0x49ff4446, BRF_PRG | CPS1_Z80_PROGRAM },
+
+        { "ps-q1.1k",      0x080000, 0x31fd8726, BRF_SND | CPS1_QSOUND_SAMPLES },
+        { "ps-q2.2k",      0x080000, 0x980a9eef, BRF_SND | CPS1_QSOUND_SAMPLES },
+        { "ps-q3.3k",      0x080000, 0x0dd44491, BRF_SND | CPS1_QSOUND_SAMPLES },
+        { "ps-q4.4k",      0x080000, 0xbed42f03, BRF_SND | CPS1_QSOUND_SAMPLES },
+
+};
+
+STD_ROM_PICK(punisher1v2)
+STD_ROM_FN(punisher1v2)
+
+struct BurnDriver BurnDrvCpspunisher1v2 = {
+        "punisher1v2", "punisher", NULL, NULL, "2018",
+        "The Punisher (1VS2 20180331)\0", NULL, "hack", "CPS1 / QSound",
+        NULL, NULL, NULL, NULL,
+        BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 2, HARDWARE_CAPCOM_CPS1_QSOUND, GBF_SCRFIGHT, 0,
+        NULL, punisher1v2RomInfo, punisher1v2RomName, NULL, NULL, NULL, NULL, PunisherInputInfo, PunisherDIPInfo,
+        TwelveMhzInit, DrvExit, Cps1Frame, CpsRedraw, CpsAreaScan,
+        &CpsRecalcPal, 0x1000, 384, 224, 4, 3
+};
+
+// GOTVG 惩罚者 无双版 The Punisher (Unrivalled Version 20090613)
+// punisherjha in HBMAME.
+static struct BurnRomInfo punisherdwRomDesc[] = {
+        { "psj_23.8f",     0x080000, 0xfa084bab, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_NO_BYTESWAP },
+        { "psj_22.7f",     0x080000, 0x69433b02, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_NO_BYTESWAP },
+        { "psj_21.6f",     0x080000, 0xe4e15e4a, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_NO_BYTESWAP },
+
+        { "ps_01.3a",      0x080000, 0x77b7ccab, BRF_GRA | CPS1_TILES },
+        { "ps_02.4a",      0x080000, 0x0122720b, BRF_GRA | CPS1_TILES },
+        { "ps_03.5a",      0x080000, 0x64fa58d4, BRF_GRA | CPS1_TILES },
+        { "ps_04.6a",      0x080000, 0x60da42c8, BRF_GRA | CPS1_TILES },
+        { "ps_05.7a",      0x080000, 0xc54ea839, BRF_GRA | CPS1_TILES },
+        { "ps_06.8a",      0x080000, 0x04c5acbd, BRF_GRA | CPS1_TILES },
+        { "ps_07.9a",      0x080000, 0xa544f4cc, BRF_GRA | CPS1_TILES },
+        { "ps_08.10a",     0x080000, 0x8f02f436, BRF_GRA | CPS1_TILES },
+
+        { "ps_q.5k",       0x020000, 0x49ff4446, BRF_PRG | CPS1_Z80_PROGRAM },
+
+        { "ps-q1.1k",      0x080000, 0x31fd8726, BRF_SND | CPS1_QSOUND_SAMPLES },
+        { "ps-q2.2k",      0x080000, 0x980a9eef, BRF_SND | CPS1_QSOUND_SAMPLES },
+        { "ps-q3.3k",      0x080000, 0x0dd44491, BRF_SND | CPS1_QSOUND_SAMPLES },
+        { "ps-q4.4k",      0x080000, 0xbed42f03, BRF_SND | CPS1_QSOUND_SAMPLES },
+
+};
+
+STD_ROM_PICK(punisherdw)
+STD_ROM_FN(punisherdw)
+
+struct BurnDriver BurnDrvCpspunisherdw = {
+        "punisherdw", "punisher", NULL, NULL, "2009",
+        "The Punisher (Unrivalled Version 20090613)\0", NULL, "hack", "CPS1 / QSound",
+        NULL, NULL, NULL, NULL,
+        BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 2, HARDWARE_CAPCOM_CPS1_QSOUND, GBF_SCRFIGHT, 0,
+        NULL, punisherdwRomInfo, punisherdwRomName, NULL, NULL, NULL, NULL, PunisherInputInfo, PunisherDIPInfo,
+        TwelveMhzInit, DrvExit, Cps1Frame, CpsRedraw, CpsAreaScan,
+        &CpsRecalcPal, 0x1000, 384, 224, 4, 3
+};
+
+// GOTVG 惩罚者 比赛版 The Punisher (Match Version 20180920)
+// P ROM is decrypted.
+static struct BurnRomInfo punisherbsRomDesc[] = {
+        { "punisherbs.p",      0x180000, 0x10EA3B27, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_NO_BYTESWAP },
+
+        { "ps_gfx1.rom",      0x080000, 0xbdd7db37, BRF_GRA | CPS1_TILES },
+        { "ps_gfx3.rom",      0x080000, 0x9682d033, BRF_GRA | CPS1_TILES },
+        { "ps_gfx2.rom",      0x080000, 0xae9a4f48, BRF_GRA | CPS1_TILES },
+        { "ps_gfx4.rom",      0x080000, 0xf77ae0f0, BRF_GRA | CPS1_TILES },
+        { "ps-5m.7a",      0x080000, 0xc54ea839, BRF_GRA | CPS1_TILES },
+        { "ps-7m.9a",      0x080000, 0x04c5acbd, BRF_GRA | CPS1_TILES },
+        { "ps-6m.8a",      0x080000, 0xa544f4cc, BRF_GRA | CPS1_TILES },
+        { "ps-8m.10a",     0x080000, 0x8f02f436, BRF_GRA | CPS1_TILES },
+
+        { "ps_q.5k",       0x020000, 0x49ff4446, BRF_PRG | CPS1_Z80_PROGRAM },
+
+        { "ps-q1.1k",      0x080000, 0x31fd8726, BRF_SND | CPS1_QSOUND_SAMPLES },
+        { "ps-q2.2k",      0x080000, 0x980a9eef, BRF_SND | CPS1_QSOUND_SAMPLES },
+        { "ps-q3.3k",      0x080000, 0x0dd44491, BRF_SND | CPS1_QSOUND_SAMPLES },
+        { "ps-q4.4k",      0x080000, 0xbed42f03, BRF_SND | CPS1_QSOUND_SAMPLES },
+
+};
+
+STD_ROM_PICK(punisherbs)
+STD_ROM_FN(punisherbs)
+
+struct BurnDriver BurnDrvCpspunisherbs = {
+        "punisherbs", "punisher", NULL, NULL, "2018",
+        "The Punisher (Match Version 20180920)\0", NULL, "hack", "CPS1 / QSound",
+        NULL, NULL, NULL, NULL,
+        BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 2, HARDWARE_CAPCOM_CPS1_QSOUND, GBF_SCRFIGHT, 0,
+        NULL, punisherbsRomInfo, punisherbsRomName, NULL, NULL, NULL, NULL, PunisherInputInfo, PunisherDIPInfo,
+        TwelveMhzInit, DrvExit, Cps1Frame, CpsRedraw, CpsAreaScan,
+        &CpsRecalcPal, 0x1000, 384, 224, 4, 3
+};
+
+
+// FBA4DROID 恐龙新世纪 乱步无双 2018 Cadillacs & Dinosaurs (Random Unrivalled Version 2018 20180816)
+static struct BurnRomInfo dinolbwsRomDesc[] = {
+        { "23.rom",    0x080000, 0x2327d53e, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_NO_BYTESWAP },
+        { "22.rom",    0x080000, 0x8890573f, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_NO_BYTESWAP },
+        { "21.rom",    0x080000, 0x9ce27308, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_NO_BYTESWAP },
+
+        { "cd-1m.3a",      0x080000, 0x8da4f917, BRF_GRA | CPS1_TILES },
+        { "cd-3m.5a",      0x080000, 0x6c40f603, BRF_GRA | CPS1_TILES },
+        { "cd-2m.4a",      0x080000, 0x09c8fc2d, BRF_GRA | CPS1_TILES },
+        { "cd-4m.6a",      0x080000, 0x637ff38f, BRF_GRA | CPS1_TILES },
+        { "cd-5m.7a",      0x080000, 0x470befee, BRF_GRA | CPS1_TILES },
+        { "cd-7m.9a",      0x080000, 0x22bfb7a3, BRF_GRA | CPS1_TILES },
+        { "cd-6m.8a",      0x080000, 0xe7599ac4, BRF_GRA | CPS1_TILES },
+        { "cd-8m.10a",     0x080000, 0x211b4b15, BRF_GRA | CPS1_TILES },
+
+        { "cd_q.5k",       0x020000, 0x605fdb0b, BRF_PRG | CPS1_Z80_PROGRAM },
+
+        { "cd-q1.1k",      0x080000, 0x60927775, BRF_SND | CPS1_QSOUND_SAMPLES },
+        { "cd-q2.2k",      0x080000, 0x770f4c47, BRF_SND | CPS1_QSOUND_SAMPLES },
+        { "cd-q3.3k",      0x080000, 0x2f273ffc, BRF_SND | CPS1_QSOUND_SAMPLES },
+        { "cd-q4.4k",      0x080000, 0x2c67821d, BRF_SND | CPS1_QSOUND_SAMPLES },
+};
+
+STD_ROM_PICK(dinolbws)
+STD_ROM_FN(dinolbws)
+
+struct BurnDriver BurnDrvCpsdinolbws = {
+        "dinolbws", "dino", NULL, NULL, "2018",
+        "Cadillacs & Dinosaurs (Random Unrivalled Version 2018 20180816)\0", NULL, "hack", "CPS1 / QSound",
+        NULL, NULL, NULL, NULL,
+        BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 3, HARDWARE_CAPCOM_CPS1_QSOUND, GBF_SCRFIGHT, 0,
+        NULL, dinolbwsRomInfo, dinolbwsRomName, NULL, NULL, NULL, NULL, DinoInputInfo, DinoDIPInfo,
+        TwelveMhzInit, DrvExit, Cps1Frame, CpsRedraw, CpsAreaScan,
+        &CpsRecalcPal, 0x1000, 384, 224, 4, 3
+};
+
+// FBA4DROID 恐龙新世纪 97恐龙二代 无双版 2017 Cadillacs & Dinosaurs (Unrivalled Version 2017 20171119)
+static struct BurnRomInfo dino2015wsRomDesc[] = {
+        { "cde_23a.8f",    0x080000, 0x22a63a9f, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_NO_BYTESWAP },
+        { "cde_22a.7f",    0x080000, 0x10c16933, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_NO_BYTESWAP },
+        { "cde_21a.6f",    0x080000, 0x9a532f75, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_NO_BYTESWAP },
+
+        { "cd-1m.3a",      0x080000, 0xda7d2d64, BRF_GRA | CPS1_TILES },
+        { "cd-3m.5a",      0x080000, 0xa6444fa8, BRF_GRA | CPS1_TILES },
+        { "cd-2m.4a",      0x080000, 0x5e11285e, BRF_GRA | CPS1_TILES },
+        { "cd-4m.6a",      0x080000, 0xa97b4a24, BRF_GRA | CPS1_TILES },
+        { "cd-5m.7a",      0x080000, 0x175d0862, BRF_GRA | CPS1_TILES },
+        { "cd-7m.9a",      0x080000, 0x59c069b4, BRF_GRA | CPS1_TILES },
+        { "cd-6m.8a",      0x080000, 0x31d2b4e9, BRF_GRA | CPS1_TILES },
+        { "cd-8m.10a",     0x080000, 0xc923b1b8, BRF_GRA | CPS1_TILES },
+
+        { "cd_q.5k",       0x020000, 0x605fdb0b, BRF_PRG | CPS1_Z80_PROGRAM },
+
+        { "cd-q1.1k",      0x080000, 0x60927775, BRF_SND | CPS1_QSOUND_SAMPLES },
+        { "cd-q2.2k",      0x080000, 0x770f4c47, BRF_SND | CPS1_QSOUND_SAMPLES },
+        { "cd-q3.3k",      0x080000, 0x2f273ffc, BRF_SND | CPS1_QSOUND_SAMPLES },
+        { "cd-q4.4k",      0x080000, 0x2c67821d, BRF_SND | CPS1_QSOUND_SAMPLES },
+};
+
+STD_ROM_PICK(dino2015ws)
+STD_ROM_FN(dino2015ws)
+
+struct BurnDriver BurnDrvCpsdino2015ws = {
+        "dino2015ws", "dino", NULL, NULL, "2017",
+        "Cadillacs & Dinosaurs (Unrivalled Version 2017 20171119)\0", NULL, "hack", "CPS1 / QSound",
+        NULL, NULL, NULL, NULL,
+        BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 3, HARDWARE_CAPCOM_CPS1_QSOUND, GBF_SCRFIGHT, 0,
+        NULL, dino2015wsRomInfo, dino2015wsRomName, NULL, NULL, NULL, NULL, DinoInputInfo, DinoDIPInfo,
+        TwelveMhzInit, DrvExit, Cps1Frame, CpsRedraw, CpsAreaScan,
+        &CpsRecalcPal, 0x1000, 384, 224, 4, 3
+};
+
+// FBA4DROID 恐龙新世纪 2017 屠夫之怒 Cadillacs & Dinosaurs (Anger Of Butcher 2017 20171123)
+// 屠夫之怒最终版(无双死斗)
+static struct BurnRomInfo dinotfznRomDesc[] = {
+        { "cde_23a.8f",    0x080000, 0x0122db0a, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_NO_BYTESWAP },
+        { "cde_22a.7f",    0x080000, 0xc52c8b29, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_NO_BYTESWAP },
+        { "cde_21a.6f",    0x080000, 0x40c8621c, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_NO_BYTESWAP },
+
+        { "cd-1m.3a",      0x080000, 0x8da4f917, BRF_GRA | CPS1_TILES },
+        { "cd-3m.5a",      0x080000, 0x6c40f603, BRF_GRA | CPS1_TILES },
+        { "cd-2m.4a",      0x080000, 0x09c8fc2d, BRF_GRA | CPS1_TILES },
+        { "cd-4m.6a",      0x080000, 0x637ff38f, BRF_GRA | CPS1_TILES },
+        { "cd-5m.7a",      0x080000, 0x470befee, BRF_GRA | CPS1_TILES },
+        { "cd-7m.9a",      0x080000, 0x22bfb7a3, BRF_GRA | CPS1_TILES },
+        { "cd-6m.8a",      0x080000, 0xe7599ac4, BRF_GRA | CPS1_TILES },
+        { "cd-8m.10a",     0x080000, 0x211b4b15, BRF_GRA | CPS1_TILES },
+
+        { "cd_q.5k",       0x020000, 0x605fdb0b, BRF_PRG | CPS1_Z80_PROGRAM },
+
+        { "cd-q1.1k",      0x080000, 0x60927775, BRF_SND | CPS1_QSOUND_SAMPLES },
+        { "cd-q2.2k",      0x080000, 0x770f4c47, BRF_SND | CPS1_QSOUND_SAMPLES },
+        { "cd-q3.3k",      0x080000, 0x2f273ffc, BRF_SND | CPS1_QSOUND_SAMPLES },
+        { "cd-q4.4k",      0x080000, 0x2c67821d, BRF_SND | CPS1_QSOUND_SAMPLES },
+};
+
+STD_ROM_PICK(dinotfzn)
+STD_ROM_FN(dinotfzn)
+
+struct BurnDriver BurnDrvCpsdinotfzn = {
+        "dinotfzn", "dino", NULL, NULL, "2017",
+        "Cadillacs & Dinosaurs (Anger Of Butcher 2017 20171123)\0", NULL, "hack", "CPS1 / QSound",
+        NULL, NULL, NULL, NULL,
+        BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 3, HARDWARE_CAPCOM_CPS1_QSOUND, GBF_SCRFIGHT, 0,
+        NULL, dinotfznRomInfo, dinotfznRomName, NULL, NULL, NULL, NULL, DinoInputInfo, DinoDIPInfo,
+        TwelveMhzInit, DrvExit, Cps1Frame, CpsRedraw, CpsAreaScan,
+        &CpsRecalcPal, 0x1000, 384, 224, 4, 3
+};
+
+// FBA4DROID 恐龙新世纪 BOSS 幻影无双 Cadillacs & Dinosaurs (Unrivalled Phantom Boss 20171129)
+static struct BurnRomInfo dinoslicewsRomDesc[] = {
+        { "cde.bin",    0x200000, 0x5fb39c2a, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_NO_BYTESWAP },
+
+        { "cd-1m.3a",      0x080000, 0x8da4f917, BRF_GRA | CPS1_TILES },
+        { "cd-3m.5a",      0x080000, 0x6c40f603, BRF_GRA | CPS1_TILES },
+        { "cd-2m.4a",      0x080000, 0x09c8fc2d, BRF_GRA | CPS1_TILES },
+        { "cd-4m.6a",      0x080000, 0x637ff38f, BRF_GRA | CPS1_TILES },
+        { "cd-5m.7a",      0x080000, 0x470befee, BRF_GRA | CPS1_TILES },
+        { "cd-7m.9a",      0x080000, 0x22bfb7a3, BRF_GRA | CPS1_TILES },
+        { "cd-6m.8a",      0x080000, 0xe7599ac4, BRF_GRA | CPS1_TILES },
+        { "cd-8m.10a",     0x080000, 0x211b4b15, BRF_GRA | CPS1_TILES },
+
+        { "cd_q.5k",       0x020000, 0x605fdb0b, BRF_PRG | CPS1_Z80_PROGRAM },
+
+        { "cd-q1.1k",      0x080000, 0x60927775, BRF_SND | CPS1_QSOUND_SAMPLES },
+        { "cd-q2.2k",      0x080000, 0x770f4c47, BRF_SND | CPS1_QSOUND_SAMPLES },
+        { "cd-q3.3k",      0x080000, 0x2f273ffc, BRF_SND | CPS1_QSOUND_SAMPLES },
+        { "cd-q4.4k",      0x080000, 0x2c67821d, BRF_SND | CPS1_QSOUND_SAMPLES },
+};
+
+STD_ROM_PICK(dinoslicews)
+STD_ROM_FN(dinoslicews)
+
+struct BurnDriver BurnDrvCpsdinoslicews = {
+        "dinoslicews", "dino", NULL, NULL, "2017",
+        "Cadillacs & Dinosaurs (Unrivalled Phantom Boss 20171129)\0", NULL, "hack", "CPS1 / QSound",
+        NULL, NULL, NULL, NULL,
+        BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 3, HARDWARE_CAPCOM_CPS1_QSOUND, GBF_SCRFIGHT, 0,
+        NULL, dinoslicewsRomInfo, dinoslicewsRomName, NULL, NULL, NULL, NULL, DinoInputInfo, DinoDIPInfo,
+        TwelveMhzInit, DrvExit, Cps1Frame, CpsRedraw, CpsAreaScan,
+        &CpsRecalcPal, 0x1000, 384, 224, 4, 3
+};
+
+// FBA4DROID 恐龙新世纪 2018 绝世无双 Cadillacs & Dinosaurs (Unrivalled in the World 2018 20170604)
+static struct BurnRomInfo dinowszhRomDesc[] = {
+        { "cde.bin",    0x200000, 0xe4f13863, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_NO_BYTESWAP },
+
+        { "cd-1m.3a",      0x080000, 0x8da4f917, BRF_GRA | CPS1_TILES },
+        { "cd-3m.5a",      0x080000, 0x6c40f603, BRF_GRA | CPS1_TILES },
+        { "cd-2m.4a",      0x080000, 0x09c8fc2d, BRF_GRA | CPS1_TILES },
+        { "cd-4m.6a",      0x080000, 0x637ff38f, BRF_GRA | CPS1_TILES },
+        { "cd-5m.7a",      0x080000, 0x470befee, BRF_GRA | CPS1_TILES },
+        { "cd-7m.9a",      0x080000, 0x22bfb7a3, BRF_GRA | CPS1_TILES },
+        { "cd-6m.8a",      0x080000, 0xe7599ac4, BRF_GRA | CPS1_TILES },
+        { "cd-8m.10a",     0x080000, 0x211b4b15, BRF_GRA | CPS1_TILES },
+
+        { "cd_q.5k",       0x020000, 0x605fdb0b, BRF_PRG | CPS1_Z80_PROGRAM },
+
+        { "cd-q1.1k",      0x080000, 0x60927775, BRF_SND | CPS1_QSOUND_SAMPLES },
+        { "cd-q2.2k",      0x080000, 0x770f4c47, BRF_SND | CPS1_QSOUND_SAMPLES },
+        { "cd-q3.3k",      0x080000, 0x2f273ffc, BRF_SND | CPS1_QSOUND_SAMPLES },
+        { "cd-q4.4k",      0x080000, 0x2c67821d, BRF_SND | CPS1_QSOUND_SAMPLES },
+};
+
+STD_ROM_PICK(dinowszh)
+STD_ROM_FN(dinowszh)
+
+struct BurnDriver BurnDrvCpsdinowszh = {
+        "dinowszh", "dino", NULL, NULL, "2017",
+        "Cadillacs & Dinosaurs (Unrivalled in the World 2018 20170604)\0", NULL, "hack", "CPS1 / QSound",
+        NULL, NULL, NULL, NULL,
+        BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 3, HARDWARE_CAPCOM_CPS1_QSOUND, GBF_SCRFIGHT, 0,
+        NULL, dinowszhRomInfo, dinowszhRomName, NULL, NULL, NULL, NULL, DinoInputInfo, DinoDIPInfo,
+        TwelveMhzInit, DrvExit, Cps1Frame, CpsRedraw, CpsAreaScan,
+        &CpsRecalcPal, 0x1000, 384, 224, 4, 3
+};
+
+// FBA4DROID 恐龙新世纪 97恐龙二代 骑士版 2017 Cadillacs & Dinosaurs (Riders Version 2017 20171119)
+static struct BurnRomInfo dinoxaRomDesc[] = {
+        { "cde_23a.8f",    0x080000, 0xe15c6b88, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_NO_BYTESWAP },
+        { "cde_22a.7f",    0x080000, 0x3e8d0903, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_NO_BYTESWAP },
+        { "cde_21a.6f",    0x080000, 0x6c1a4291, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_NO_BYTESWAP },
+
+        { "cd-1m.3a",      0x080000, 0xda7d2d64, BRF_GRA | CPS1_TILES },
+        { "cd-3m.5a",      0x080000, 0xa6444fa8, BRF_GRA | CPS1_TILES },
+        { "cd-2m.4a",      0x080000, 0x5e11285e, BRF_GRA | CPS1_TILES },
+        { "cd-4m.6a",      0x080000, 0xa97b4a24, BRF_GRA | CPS1_TILES },
+        { "cd-5m.7a",      0x080000, 0x175d0862, BRF_GRA | CPS1_TILES },
+        { "cd-7m.9a",      0x080000, 0x59c069b4, BRF_GRA | CPS1_TILES },
+        { "cd-6m.8a",      0x080000, 0x31d2b4e9, BRF_GRA | CPS1_TILES },
+        { "cd-8m.10a",     0x080000, 0xc923b1b8, BRF_GRA | CPS1_TILES },
+
+        { "cd_q.5k",       0x020000, 0x605fdb0b, BRF_PRG | CPS1_Z80_PROGRAM },
+
+        { "cd-q1.1k",      0x080000, 0x60927775, BRF_SND | CPS1_QSOUND_SAMPLES },
+        { "cd-q2.2k",      0x080000, 0x770f4c47, BRF_SND | CPS1_QSOUND_SAMPLES },
+        { "cd-q3.3k",      0x080000, 0x2f273ffc, BRF_SND | CPS1_QSOUND_SAMPLES },
+        { "cd-q4.4k",      0x080000, 0x2c67821d, BRF_SND | CPS1_QSOUND_SAMPLES },
+};
+
+STD_ROM_PICK(dinoxa)
+STD_ROM_FN(dinoxa)
+
+struct BurnDriver BurnDrvCpsdinoxa = {
+        "dinoxa", "dino", NULL, NULL, "2017",
+        "Cadillacs & Dinosaurs (Riders Version 2017 20171119)\0", NULL, "hack", "CPS1 / QSound",
+        NULL, NULL, NULL, NULL,
+        BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 3, HARDWARE_CAPCOM_CPS1_QSOUND, GBF_SCRFIGHT, 0,
+        NULL, dinoxaRomInfo, dinoxaRomName, NULL, NULL, NULL, NULL, DinoInputInfo, DinoDIPInfo,
+        TwelveMhzInit, DrvExit, Cps1Frame, CpsRedraw, CpsAreaScan,
+        &CpsRecalcPal, 0x1000, 384, 224, 4, 3
+};
+
+
+// FBA4DROID 恐龙新世纪 2011 无双版 第1套 Cadillacs & Dinosaurs (Unrivalled Version 2011 Set 1 20180213)
+// 恐龙新世纪2011无双最终破解版
+static struct BurnRomInfo dino2011wsRomDesc[] = {
+        { "cde_23a.8f",    0x080000, 0xf4193752, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_NO_BYTESWAP },
+        { "cde_22a.7f",    0x080000, 0xfd2d3d51, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_NO_BYTESWAP },
+        { "cde_21a.6f",    0x080000, 0xa3c26851, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_NO_BYTESWAP },
+
+        { "cd-1m.3a",      0x080000, 0x8da4f917, BRF_GRA | CPS1_TILES },
+        { "cd-3m.5a",      0x080000, 0x6c40f603, BRF_GRA | CPS1_TILES },
+        { "cd-2m.4a",      0x080000, 0x09c8fc2d, BRF_GRA | CPS1_TILES },
+        { "cd-4m.6a",      0x080000, 0x637ff38f, BRF_GRA | CPS1_TILES },
+        { "cd-5m.7a",      0x080000, 0x470befee, BRF_GRA | CPS1_TILES },
+        { "cd-7m.9a",      0x080000, 0x22bfb7a3, BRF_GRA | CPS1_TILES },
+        { "cd-6m.8a",      0x080000, 0xe7599ac4, BRF_GRA | CPS1_TILES },
+        { "cd-8m.10a",     0x080000, 0x211b4b15, BRF_GRA | CPS1_TILES },
+
+        { "cd_q.5k",       0x020000, 0x605fdb0b, BRF_PRG | CPS1_Z80_PROGRAM },
+
+        { "cd-q1.1k",      0x080000, 0x60927775, BRF_SND | CPS1_QSOUND_SAMPLES },
+        { "cd-q2.2k",      0x080000, 0x770f4c47, BRF_SND | CPS1_QSOUND_SAMPLES },
+        { "cd-q3.3k",      0x080000, 0x2f273ffc, BRF_SND | CPS1_QSOUND_SAMPLES },
+        { "cd-q4.4k",      0x080000, 0x2c67821d, BRF_SND | CPS1_QSOUND_SAMPLES },
+};
+
+STD_ROM_PICK(dino2011ws)
+STD_ROM_FN(dino2011ws)
+
+struct BurnDriver BurnDrvCpsdino2011ws = {
+        "dino2011ws", "dino", NULL, NULL, "2017",
+        "Cadillacs & Dinosaurs (Unrivalled Version 2011 Set 1 20180213)\0", NULL, "hack", "CPS1 / QSound",
+        NULL, NULL, NULL, NULL,
+        BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 3, HARDWARE_CAPCOM_CPS1_QSOUND, GBF_SCRFIGHT, 0,
+        NULL, dino2011wsRomInfo, dino2011wsRomName, NULL, NULL, NULL, NULL, DinoInputInfo, DinoDIPInfo,
+        TwelveMhzInit, DrvExit, Cps1Frame, CpsRedraw, CpsAreaScan,
+        &CpsRecalcPal, 0x1000, 384, 224, 4, 3
+};
+
+
+/* FBA4DROID 恐龙新世纪 恐龙猎人 挑战版 2017 Cadillacs & Dinosaurs (Challenge Edition 2017 20171116)
+// Based on dinohunt.
+static struct BurnRomInfo dinoxcRomDesc[] = {
+	{ "cde_23a.8f",    0x080000, 0xa5c8cd20, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_NO_BYTESWAP },
+	{ "cde_22a.7f",    0x080000, 0x3a8ed567, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_NO_BYTESWAP },
+	{ "cde_21a.6f",    0x080000, 0x74c155b8, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_NO_BYTESWAP },
+
+	{ "cd-1m.3a",      0x080000, 0xa01a9fb5, BRF_GRA | CPS1_TILES },
+	{ "cd-3m.5a",      0x080000, 0xbdf02c17, BRF_GRA | CPS1_TILES },
+	{ "cd-2m.4a",      0x080000, 0x058beefa, BRF_GRA | CPS1_TILES },
+	{ "cd-4m.6a",      0x080000, 0x5028a9f1, BRF_GRA | CPS1_TILES },
+	{ "cd-5m.7a",      0x080000, 0xd77f89ea, BRF_GRA | CPS1_TILES },
+	{ "cd-7m.9a",      0x080000, 0xbfbcb034, BRF_GRA | CPS1_TILES },
+	{ "cd-6m.8a",      0x080000, 0xa2544d4e, BRF_GRA | CPS1_TILES },
+	{ "cd-8m.10a",     0x080000, 0x8869bbb1, BRF_GRA | CPS1_TILES },
+
+	{ "cd_q.5k",       0x020000, 0x605fdb0b, BRF_PRG | CPS1_Z80_PROGRAM },
+
+	{ "cd-q1.1k",      0x080000, 0x60927775, BRF_SND | CPS1_QSOUND_SAMPLES },
+	{ "cd-q2.2k",      0x080000, 0x770f4c47, BRF_SND | CPS1_QSOUND_SAMPLES },
+	{ "cd-q3.3k",      0x080000, 0x2f273ffc, BRF_SND | CPS1_QSOUND_SAMPLES },
+	{ "cd-q4.4k",      0x080000, 0x2c67821d, BRF_SND | CPS1_QSOUND_SAMPLES },
+};
+
+STD_ROM_PICK(dinoxc)
+STD_ROM_FN(dinoxc)
+
+struct BurnDriver BurnDrvCpsdinoxc = {
+	"dinoxc", "dino", NULL, NULL, "2017",
+	"Cadillacs & Dinosaurs (Challenge Edition 2017 20171116)\0", NULL, "hack", "CPS1 / QSound",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_BOOTLEG | BDF_HISCORE_SUPPORTED, 3, HARDWARE_CAPCOM_CPS1, GBF_SCRFIGHT, 0,
+	NULL, dinoxcRomInfo, dinoxcRomName, NULL, NULL, NULL, NULL, DinoInputInfo, DinoDIPInfo,
+	DinohuntInit, DrvExit, Cps1Frame, CpsRedraw, CpsAreaScan,
+	&CpsRecalcPal, 0x1000, 384, 224, 4, 3
+};
+*/
 
 #include "d_kenseim.h"
 
