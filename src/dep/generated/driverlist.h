@@ -2543,7 +2543,6 @@ DRV		BurnDrvCpsCaptcommb3;
 DRV		BurnDrvCpsCaptcommpjy;
 DRV		BurnDrvCpsCaptcommp4;
 DRV		BurnDrvCpsCaptcomm2y;
-DRV		BurnDrvCpsCaptcommpmy;
 DRV		BurnDrvCpsCaptcommc;
 DRV		BurnDrvCpsCaptcommpwx;
 DRV		BurnDrvCpsCaptre;
@@ -9840,7 +9839,6 @@ DRV		BurnDrvmslug1v2;
 DRV		BurnDrvmslug;
 DRV		BurnDrvmslug21v2;
 DRV		BurnDrvmslug2dd;
-DRV		BurnDrvmslug2r;
 DRV		BurnDrvmslug2eg;
 DRV		BurnDrvmslug2fm;
 DRV		BurnDrvmslug2dg;
@@ -17247,8 +17245,6 @@ DRV		BurnDrvCpsPunipic;
 DRV		BurnDrvCpsPunipic2;
 DRV		BurnDrvCpsPunipic3;
 DRV		BurnDrvCpsPunisherb;
-DRV		BurnDrvCpsPunisherly;
-DRV		BurnDrvCpsPunisherhr;
 DRV		BurnDrvGhostb2a;
 DRV		BurnDrvGhostb;
 #if defined FBNEO_DEBUG
@@ -19540,7 +19536,6 @@ DRV     BurnDrvCpsdinoyz;
 DRV     BurnDrvCpsdino1v3;
 DRV     BurnDrvCpsdinodw;
 DRV     BurnDrvCpsknightsp;
-DRV     BurnDrvCpsknightsc;
 DRV     BurnDrvCpspunisherly;
 DRV     BurnDrvCpspunisherhr;
 DRV     BurnDrvCpspunisher1v2;
@@ -19553,7 +19548,6 @@ DRV     BurnDrvCpsdinoslicews;
 DRV     BurnDrvCpsdinowszh;
 DRV     BurnDrvCpsdinoxa;
 DRV     BurnDrvCpsdino2011ws;
-DRV     BurnDrvCpsdinoxc;
 DRV     BurnDrvKof94p;
 DRV     BurnDrvKof97orh;
 DRV     BurnDrvKof97sw2;
@@ -19562,11 +19556,6 @@ DRV     BurnDrvKof98a1;
 DRV     BurnDrvKof98eck;
 DRV     BurnDrvKof98eckp;
 DRV     BurnDrvMSlug2r;
-DRV     BurnDrvNeoGeoMV1;
-DRV     BurnDrvNeoGeoMV1F;
-DRV     BurnDrvNeoGeoMV1FZ;
-DRV     BurnDrvNeoGeoMV2F;
-DRV     BurnDrvNeoGeoMV4F;
 DRV     BurnDrvkf2k1bs;
 DRV     BurnDrvkf2k1cm;
 DRV     BurnDrvkf2k2mp3;
@@ -19633,7 +19622,6 @@ DRV     BurnDrvkovplusxb2;
 DRV     BurnDrvkovplusxb2ds;
 DRV     BurnDrvkovplusxb2wj;
 DRV     BurnDrvkovplusxt;
-DRV     BurnDrvkovshp101a;
 DRV     BurnDrvkovshp1v4;
 DRV     BurnDrvkovshp1v4s;
 DRV     BurnDrvkovshp1v4x;
@@ -39190,7 +39178,6 @@ static struct BurnDriver* pDriver[] = {
     &BurnDrvCpsCaptcommr1bs,                //BurnDrvCpsCaptcommr1bs
     &BurnDrvCpsCaptcommpzs,                 //BurnDrvCpsCaptcommpzs
     &BurnDrvCpsCaptcommr1dw,                //BurnDrvCpsCaptcommr1dw
-    &BurnDrvCpscaptcommpmy,                 //BurnDrvCpscaptcommpmy
     &BurnDrvCpsDinoxzb,                     //BurnDrvCpsDinoxzb
     &BurnDrvCpsDinojps,                     //BurnDrvCpsDinojps
     &BurnDrvCpsDinowtw,                     //BurnDrvCpsDinowtw
@@ -39209,9 +39196,6 @@ static struct BurnDriver* pDriver[] = {
     &BurnDrvCpsdino1v3,                     //BurnDrvCpsdino1v3
     &BurnDrvCpsdinodw,                      //BurnDrvCpsdinodw
     &BurnDrvCpsknightsp,                    //BurnDrvCpsknightsp
-    &BurnDrvCpsknightsc,                    //BurnDrvCpsknightsc
-    &BurnDrvCpspunisherly,                  //BurnDrvCpspunisherly
-    &BurnDrvCpspunisherhr,                  //BurnDrvCpspunisherhr
     &BurnDrvCpspunisher1v2,                 //BurnDrvCpspunisher1v2
     &BurnDrvCpspunisherdw,                  //BurnDrvCpspunisherdw
     &BurnDrvCpspunisherbs,                  //BurnDrvCpspunisherbs
@@ -39222,7 +39206,6 @@ static struct BurnDriver* pDriver[] = {
     &BurnDrvCpsdinowszh,                    //BurnDrvCpsdinowszh
     &BurnDrvCpsdinoxa,                      //BurnDrvCpsdinoxa
     &BurnDrvCpsdino2011ws,                  //BurnDrvCpsdino2011ws
-    &BurnDrvCpsdinoxc,                      //BurnDrvCpsdinoxc
     &BurnDrvKof94p,                 //BurnDrvKof94p
     &BurnDrvKof97orh,                       //BurnDrvKof97orh
     &BurnDrvKof97sw2,                       //BurnDrvKof97sw2
@@ -39230,12 +39213,6 @@ static struct BurnDriver* pDriver[] = {
     &BurnDrvKof98a1,                        //BurnDrvKof98a1
     &BurnDrvKof98eck,                       //BurnDrvKof98eck
     &BurnDrvKof98eckp,                      //BurnDrvKof98eckp
-    &BurnDrvMSlug2r,                        //BurnDrvMSlug2r
-    &BurnDrvNeoGeoMV1,                      //BurnDrvNeoGeoMV1
-    &BurnDrvNeoGeoMV1F,                     //BurnDrvNeoGeoMV1F
-    &BurnDrvNeoGeoMV1FZ,                    //BurnDrvNeoGeoMV1FZ
-    &BurnDrvNeoGeoMV2F,                     //BurnDrvNeoGeoMV2F
-    &BurnDrvNeoGeoMV4F,                     //BurnDrvNeoGeoMV4F
     &BurnDrvkf2k1bs,                        //BurnDrvkf2k1bs
     &BurnDrvkf2k1cm,                        //BurnDrvkf2k1cm
     &BurnDrvkf2k2mp3,                       //BurnDrvkf2k2mp3
@@ -39302,7 +39279,6 @@ static struct BurnDriver* pDriver[] = {
     &BurnDrvkovplusxb2ds,                   //BurnDrvkovplusxb2ds
     &BurnDrvkovplusxb2wj,                   //BurnDrvkovplusxb2wj
     &BurnDrvkovplusxt,                      //BurnDrvkovplusxt
-    &BurnDrvkovshp101a,                     //BurnDrvkovshp101a
     &BurnDrvkovshp1v4,                      //BurnDrvkovshp1v4
     &BurnDrvkovshp1v4s,                     //BurnDrvkovshp1v4s
     &BurnDrvkovshp1v4x,                     //BurnDrvkovshp1v4x
