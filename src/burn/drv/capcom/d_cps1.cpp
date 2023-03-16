@@ -26322,7 +26322,6 @@ struct BurnDriver BurnDrvCpsMercsc = {
 	&CpsRecalcPal, 0x1000, 224, 384, 3, 4
 };
 
-/*
 // Knights of the Round (T-Chi)
 
 static struct BurnRomInfo KnightscRomDesc[] = {
@@ -26364,7 +26363,6 @@ struct BurnDriver BurnDrvCpsKnightsc = {
 	DrvInit, DrvExit, Cps1Frame, CpsRedraw, CpsAreaScan,
 	&CpsRecalcPal, 0x1000, 384, 224, 4, 3
 };
-*/
 
 // Sangokushi II (T-Chi)
 // Modified by �ե��˥å���
@@ -27793,49 +27791,6 @@ struct BurnDriver BurnDrvCpsknightsp = {
         DrvInit, DrvExit, Cps1Frame, CpsRedraw, CpsAreaScan,
         &CpsRecalcPal, 0x1000, 384, 224, 4, 3
 };
-
-
-// GOTVG 圆桌骑士 计数版 Knights of the Round (With A Counter 20161128)
-static struct BurnRomInfo knightscRomDesc[] = {
-        { "kr_23e.cdec",   0x080000, 0x98d0618b, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_NO_BYTESWAP },
-        { "kr_22.7f",      0x080000, 0xd0b671a9, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_NO_BYTESWAP },
-
-        { "kr-5m.3a",      0x080000, 0x9e36c1a4, BRF_GRA | CPS1_TILES },
-        { "kr-7m.5a",      0x080000, 0xc5832cae, BRF_GRA | CPS1_TILES },
-        { "kr-1m.4a",      0x080000, 0xf095be2d, BRF_GRA | CPS1_TILES },
-        { "kr-3m.6a",      0x080000, 0x179dfd96, BRF_GRA | CPS1_TILES },
-        { "kr-6m.7a",      0x080000, 0x1f4298d2, BRF_GRA | CPS1_TILES },
-        { "kr-8m.9a",      0x080000, 0x37fa8751, BRF_GRA | CPS1_TILES },
-        { "kr-2m.8a",      0x080000, 0x0200bc3d, BRF_GRA | CPS1_TILES },
-        { "kr-4m.10a",     0x080000, 0x0bb2b4e7, BRF_GRA | CPS1_TILES },
-
-        { "kr_09.11a",     0x010000, 0x5e44d9ee, BRF_PRG | CPS1_Z80_PROGRAM },
-
-        { "kr_18.11c",     0x020000, 0xda69d15f, BRF_SND | CPS1_OKIM6295_SAMPLES },
-        { "kr_19.12c",     0x020000, 0xbfc654e9, BRF_SND | CPS1_OKIM6295_SAMPLES },
-
-        A_BOARD_PLDS
-
-        { "kr63b.1a",      0x000117, 0xfd5b6522, BRF_OPT },	// b-board PLDs
-        { "iob1.12d",      0x000117, 0x3abc0700, BRF_OPT },
-        { "bprg1.11d",     0x000117, 0x31793da7, BRF_OPT },
-        { "ioc1.ic7",      0x000104, 0xa399772d, BRF_OPT },	// c-board PLDs
-        { "c632.ic1",      0x000117, 0x0fbd9270, BRF_OPT },
-};
-
-STD_ROM_PICK(knightsc)
-STD_ROM_FN(knightsc)
-
-struct BurnDriver BurnDrvCpsknightsc = {
-        "knightsc", "knights", NULL, NULL, "2016",
-        "Knights of the Round (With A Counter 20161128)\0", NULL, "hack", "CPS1",
-        NULL, NULL, NULL, NULL,
-        BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 3, HARDWARE_CAPCOM_CPS1, GBF_SCRFIGHT, 0,
-        NULL, knightscRomInfo, knightscRomName, NULL, NULL, NULL, NULL, KnightsInputInfo, KnightsDIPInfo,
-        DrvInit, DrvExit, Cps1Frame, CpsRedraw, CpsAreaScan,
-        &CpsRecalcPal, 0x1000, 384, 224, 4, 3
-};
-
 
 // GOTVG 惩罚者 烈焰版 The Punisher (Blaze 20180813)
 // P ROM is decrypted.
