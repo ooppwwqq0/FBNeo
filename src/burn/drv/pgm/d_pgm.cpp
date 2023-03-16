@@ -9622,8 +9622,8 @@ struct BurnDriver BurnDrvkovshpp19 = {
         "Knights of Valour Super Heroes Plus (Plus 20190105)\0", "Imperfect Protection Emulation", "IGS", "PolyGameMaster",
         NULL, NULL, NULL, NULL,
         BDF_GAME_WORKING | BDF_CLONE, 4, HARDWARE_IGS_PGM | HARDWARE_IGS_USE_ARM_CPU, GBF_SCRFIGHT, 0,
-        NULL, kovshpp19RomInfo, kovshpp19RomName, NULL, NULL, NULL, NULL, pgmInputInfo, kovshxasDIPInfo,
-        kovshxasInit, pgmExit, pgmFrame, pgmDraw, pgmScan, &nPgmPalRecalc, 0x900,
+        NULL, kovshpp19RomInfo, kovshpp19RomName, NULL, NULL, NULL, NULL, pgmInputInfo, kovchsDIPInfo,
+        kovshbInit, pgmExit, pgmFrame, pgmDraw, pgmScan, &nPgmPalRecalc, 0x900,
         448, 224, 4, 3
 };
 
@@ -9651,8 +9651,8 @@ struct BurnDriver BurnDrvkovshpqxzqj = {
         "Knights of Valour Super Heroes Plus (Rerise of Heroes Gold 20190404)\0", "Imperfect Protection Emulation", "hack", "PolyGameMaster",
         NULL, NULL, NULL, NULL,
         BDF_GAME_WORKING | BDF_CLONE, 4, HARDWARE_IGS_PGM | HARDWARE_IGS_USE_ARM_CPU, GBF_SCRFIGHT, 0,
-        NULL, kovshpqxzqjRomInfo, kovshpqxzqjRomName, NULL, NULL, NULL, NULL, pgmInputInfo, kovshxasDIPInfo,
-        kovshxasInit, pgmExit, pgmFrame, pgmDraw, pgmScan, &nPgmPalRecalc, 0x900,
+        NULL, kovshpqxzqjRomInfo, kovshpqxzqjRomName, NULL, NULL, NULL, NULL, pgmInputInfo, kovchsDIPInfo,
+        kovshbInit, pgmExit, pgmFrame, pgmDraw, pgmScan, &nPgmPalRecalc, 0x900,
         448, 224, 4, 3
 };
 
@@ -9680,8 +9680,8 @@ struct BurnDriver BurnDrvkovshp1v4x = {
         "Knights of Valour Super Heroes Plus (Incredible God of War 20190312)\0", "Imperfect Protection Emulation", "IGS", "PolyGameMaster",
         NULL, NULL, NULL, NULL,
         BDF_GAME_WORKING | BDF_CLONE, 4, HARDWARE_IGS_PGM | HARDWARE_IGS_USE_ARM_CPU, GBF_SCRFIGHT, 0,
-        NULL, kovshp1v4xRomInfo, kovshp1v4xRomName, NULL, NULL, NULL, NULL, pgmInputInfo, kovshxasDIPInfo,
-        kovshxasInit, pgmExit, pgmFrame, pgmDraw, pgmScan, &nPgmPalRecalc, 0x900,
+        NULL, kovshp1v4xRomInfo, kovshp1v4xRomName, NULL, NULL, NULL, NULL, pgmInputInfo, kovchsDIPInfo,
+        kovshbInit, pgmExit, pgmFrame, pgmDraw, pgmScan, &nPgmPalRecalc, 0x900,
         448, 224, 4, 3
 };
 
@@ -9714,8 +9714,8 @@ struct BurnDriver BurnDrvkovshpqxzq = {
         "Knights of Valour Super Heroes Plus / Sangoku Senki Super Heroes Plus (Rerise of Heroes 20190130)\0", "Imperfect Protection Emulation", "IGS", "PolyGameMaster",
         NULL, NULL, NULL, NULL,
         BDF_GAME_WORKING | BDF_CLONE, 4, HARDWARE_IGS_PGM | HARDWARE_IGS_USE_ARM_CPU, GBF_SCRFIGHT, 0,
-        NULL, kovshpqxzqRomInfo, kovshpqxzqRomName, NULL, NULL, NULL, NULL, pgmInputInfo, kovshxasDIPInfo,
-        kovshxasInit, pgmExit, pgmFrame, pgmDraw, pgmScan, &nPgmPalRecalc, 0x900,
+        NULL, kovshpqxzqRomInfo, kovshpqxzqRomName, NULL, NULL, NULL, NULL, pgmInputInfo, kovchsDIPInfo,
+        kovshbInit, pgmExit, pgmFrame, pgmDraw, pgmScan, &nPgmPalRecalc, 0x900,
         448, 224, 4, 3
 };
 
@@ -9746,7 +9746,7 @@ struct BurnDriver BurnDrvkovytzyp = {
         "Knights of Valour  - Yi Tong Zhong Yuan (Plus 20190216)\0", "Imperfect Protection Emulation", "IGS", "PolyGameMaster",
         NULL, NULL, NULL, NULL,
         BDF_GAME_WORKING, 4, HARDWARE_IGS_PGM | HARDWARE_IGS_USE_ARM_CPU, GBF_SCRFIGHT, 0,
-        NULL, kovytzypRomInfo, kovytzypRomName, NULL, NULL, NULL, NULL, pgmInputInfo, kovshxasDIPInfo,
+        NULL, kovytzypRomInfo, kovytzypRomName, NULL, NULL, NULL, NULL, pgmInputInfo, kovchsDIPInfo,
         kovshpInit, pgmExit, pgmFrame, pgmDraw, pgmScan, &nPgmPalRecalc, 0x900,
         448, 224, 4, 3
 };
@@ -9775,8 +9775,8 @@ struct BurnDriver BurnDrvkovshp1v4xtw = {
         "Knights of Valour Super Heroes Plus (Incredible God of War - Sky King 20190228)\0", "Imperfect Protection Emulation", "IGS", "PolyGameMaster",
         NULL, NULL, NULL, NULL,
         BDF_GAME_WORKING | BDF_CLONE, 4, HARDWARE_IGS_PGM | HARDWARE_IGS_USE_ARM_CPU, GBF_SCRFIGHT, 0,
-        NULL, kovshp1v4xtwRomInfo, kovshp1v4xtwRomName, NULL, NULL, NULL, NULL, pgmInputInfo, kovshxasDIPInfo,
-        kovshxasInit, pgmExit, pgmFrame, pgmDraw, pgmScan, &nPgmPalRecalc, 0x900,
+        NULL, kovshp1v4xtwRomInfo, kovshp1v4xtwRomName, NULL, NULL, NULL, NULL, pgmInputInfo, kovchsDIPInfo,
+        kovshbInit, pgmExit, pgmFrame, pgmDraw, pgmScan, &nPgmPalRecalc, 0x900,
         448, 224, 4, 3
 };
 
@@ -9804,8 +9804,8 @@ struct BurnDriver BurnDrvkovshptplscs = {
         "Knights of Valour Super Heroes Plus (Peace In Chaotic Times - Legend 20190321)\0", "Imperfect Protection Emulation", "hack", "PolyGameMaster",
         NULL, NULL, NULL, NULL,
         BDF_GAME_WORKING | BDF_CLONE, 4, HARDWARE_IGS_PGM | HARDWARE_IGS_USE_ARM_CPU, GBF_SCRFIGHT, 0,
-        NULL, kovshptplscsRomInfo, kovshptplscsRomName, NULL, NULL, NULL, NULL, pgmInputInfo, kovshxasDIPInfo,
-        kovshxasInit, pgmExit, pgmFrame, pgmDraw, pgmScan, &nPgmPalRecalc, 0x900,
+        NULL, kovshptplscsRomInfo, kovshptplscsRomName, NULL, NULL, NULL, NULL, pgmInputInfo, kovchsDIPInfo,
+        kovshbInit, pgmExit, pgmFrame, pgmDraw, pgmScan, &nPgmPalRecalc, 0x900,
         448, 224, 4, 3
 };
 
@@ -9833,8 +9833,8 @@ struct BurnDriver BurnDrvkovshpwsb = {
         "Knights of Valour Super Heroes Plus (Unrivalled Version 20190319)\0", "Imperfect Protection Emulation", "hack", "PolyGameMaster",
         NULL, NULL, NULL, NULL,
         BDF_GAME_WORKING | BDF_CLONE, 4, HARDWARE_IGS_PGM | HARDWARE_IGS_USE_ARM_CPU, GBF_SCRFIGHT, 0,
-        NULL, kovshpwsbRomInfo, kovshpwsbRomName, NULL, NULL, NULL, NULL, pgmInputInfo, kovshxasDIPInfo,
-        kovshxasInit, pgmExit, pgmFrame, pgmDraw, pgmScan, &nPgmPalRecalc, 0x900,
+        NULL, kovshpwsbRomInfo, kovshpwsbRomName, NULL, NULL, NULL, NULL, pgmInputInfo, kovchsDIPInfo,
+        kovshbInit, pgmExit, pgmFrame, pgmDraw, pgmScan, &nPgmPalRecalc, 0x900,
         448, 224, 4, 3
 };
 
@@ -10164,7 +10164,7 @@ struct BurnDriver BurnDrvkovytzyftxq = {
         "Knights of Valour - Yi Tong Zhong Yuan (Blue Version) (20181209)\0", "Imperfect Protection Emulation", "hack", "PolyGameMaster",
         NULL, NULL, NULL, NULL,
         BDF_GAME_WORKING, 4, HARDWARE_IGS_PGM | HARDWARE_IGS_USE_ARM_CPU, GBF_SCRFIGHT, 0,
-        NULL, kovytzyftxqRomInfo, kovytzyftxqRomName, NULL, NULL, NULL, NULL, pgmInputInfo, kovshxasDIPInfo,
+        NULL, kovytzyftxqRomInfo, kovytzyftxqRomName, NULL, NULL, NULL, NULL, pgmInputInfo, kovchsDIPInfo,
         kovshpInit, pgmExit, pgmFrame, pgmDraw, pgmScan, &nPgmPalRecalc, 0x900,
         448, 224, 4, 3
 };
