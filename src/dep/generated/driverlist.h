@@ -19554,6 +19554,118 @@ DRV     BurnDrvCpsdinowszh;
 DRV     BurnDrvCpsdinoxa;
 DRV     BurnDrvCpsdino2011ws;
 DRV     BurnDrvCpsdinoxc;
+DRV     BurnDrvKof94p;
+DRV     BurnDrvKof97orh;
+DRV     BurnDrvKof97sw2;
+DRV     BurnDrvKof97sw2s;
+DRV     BurnDrvKof98a1;
+DRV     BurnDrvKof98eck;
+DRV     BurnDrvKof98eckp;
+DRV     BurnDrvMSlug2r;
+DRV     BurnDrvNeoGeoMV1;
+DRV     BurnDrvNeoGeoMV1F;
+DRV     BurnDrvNeoGeoMV1FZ;
+DRV     BurnDrvNeoGeoMV2F;
+DRV     BurnDrvNeoGeoMV4F;
+DRV     BurnDrvkf2k1bs;
+DRV     BurnDrvkf2k1cm;
+DRV     BurnDrvkf2k2mp3;
+DRV     BurnDrvkf2k2mp3s;
+DRV     BurnDrvkf2k2tt;
+DRV     BurnDrvkof02ic;
+DRV     BurnDrvkof2000t;
+DRV     BurnDrvkof2k2c2;
+DRV     BurnDrvkof2knd;
+DRV     BurnDrvkof96p;
+DRV     BurnDrvkof97m;
+DRV     BurnDrvkof97plss20;
+DRV     BurnDrvkof97ru;
+DRV     BurnDrvkof97rugal;
+DRV     BurnDrvkof97st;
+DRV     BurnDrvkof97tsb;
+DRV     BurnDrvkof97u;
+DRV     BurnDrvkof97xlb;
+DRV     BurnDrvkof97ys;
+DRV     BurnDrvkof99nd;
+DRV     BurnDrvkof99pr;
+DRV     BurnDrvkof99rpg;
+DRV     BurnDrvkof99t;
+DRV     BurnDrvms5f;
+DRV     BurnDrvmslug2gs;
+DRV     BurnDrvmslug2h;
+DRV     BurnDrvmslug3n6p;
+DRV     BurnDrvmslug3n6zp;
+DRV     BurnDrvmslug3nd;
+DRV     BurnDrvmslug3ngw;
+DRV     BurnDrvmslug3nsj;
+DRV     BurnDrvmslug3ntk;
+DRV     BurnDrvmslug3nzj;
+DRV     BurnDrvmslug3v2;
+DRV     BurnDrvmslug4dr;
+DRV     BurnDrvmslug4sp;
+DRV     BurnDrvmslug5dg2;
+DRV     BurnDrvmslug5dg3;
+DRV     BurnDrvmslug5dzh;
+DRV     BurnDrvmslug5g;
+DRV     BurnDrvmslug5wn;
+DRV     BurnDrvmslugxh;
+DRV     BurnDrvmslugxjdkj;
+DRV     BurnDrvmslugxplus;
+DRV     BurnDrvkillbldqy;
+DRV     BurnDrvkov2pcthl;
+DRV     BurnDrvkov2pfwly;
+DRV     BurnDrvkov2pjlcq;
+DRV     BurnDrvkov2pmess;
+DRV     BurnDrvkov2pplus;
+DRV     BurnDrvkov2ppws;
+DRV     BurnDrvkov2ppws2016;
+DRV     BurnDrvkov2pswcq;
+DRV     BurnDrvkov8;
+DRV     BurnDrvkovplus2012dw;
+DRV     BurnDrvkovplus2012em;
+DRV     BurnDrvkovplus2012m;
+DRV     BurnDrvkovplus2012st;
+DRV     BurnDrvkovplus2017;
+DRV     BurnDrvkovplusdjjz;
+DRV     BurnDrvkovplusdszl;
+DRV     BurnDrvkovplusxb1;
+DRV     BurnDrvkovplusxb2;
+DRV     BurnDrvkovplusxb2ds;
+DRV     BurnDrvkovplusxb2wj;
+DRV     BurnDrvkovplusxt;
+DRV     BurnDrvkovshp101a;
+DRV     BurnDrvkovshp1v4;
+DRV     BurnDrvkovshp1v4s;
+DRV     BurnDrvkovshp1v4x;
+DRV     BurnDrvkovshp1v4xtw;
+DRV     BurnDrvkovshpb;
+DRV     BurnDrvkovshpd19;
+DRV     BurnDrvkovshpd3tw;
+DRV     BurnDrvkovshpd3x;
+DRV     BurnDrvkovshpdx;
+DRV     BurnDrvkovshpp19;
+DRV     BurnDrvkovshpqxzq;
+DRV     BurnDrvkovshpqxzqj;
+DRV     BurnDrvkovshptplscs;
+DRV     BurnDrvkovshptx;
+DRV     BurnDrvkovshpwsb;
+DRV     BurnDrvkovshsjcs;
+DRV     BurnDrvkovshwsgl;
+DRV     BurnDrvkovshzlzy;
+DRV     BurnDrvkovshzlzyjz;
+DRV     BurnDrvkovshzlzymy;
+DRV     BurnDrvkovshzlzywj;
+DRV     BurnDrvkovytzyftxq;
+DRV     BurnDrvkovytzyp;
+DRV     BurnDrvolds100adsgl;
+DRV     BurnDrvolds100aem;
+DRV     BurnDrvolds100aem2015;
+DRV     BurnDrvolds100aem2016;
+DRV     BurnDrvolds100afybh;
+DRV     BurnDrvolds100asrp;
+DRV     BurnDrvolds100aylzx;
+DRV     BurnDrvoldsplushmf;
+DRV     BurnDrvorlegndcmm;
 #undef DRV
 
 // Structure containing addresses of all drivers
@@ -39111,4 +39223,116 @@ static struct BurnDriver* pDriver[] = {
     &BurnDrvCpsdinoxa,                      //BurnDrvCpsdinoxa
     &BurnDrvCpsdino2011ws,                  //BurnDrvCpsdino2011ws
     &BurnDrvCpsdinoxc,                      //BurnDrvCpsdinoxc
+    &BurnDrvKof94p,                 //BurnDrvKof94p
+    &BurnDrvKof97orh,                       //BurnDrvKof97orh
+    &BurnDrvKof97sw2,                       //BurnDrvKof97sw2
+    &BurnDrvKof97sw2s,                      //BurnDrvKof97sw2s
+    &BurnDrvKof98a1,                        //BurnDrvKof98a1
+    &BurnDrvKof98eck,                       //BurnDrvKof98eck
+    &BurnDrvKof98eckp,                      //BurnDrvKof98eckp
+    &BurnDrvMSlug2r,                        //BurnDrvMSlug2r
+    &BurnDrvNeoGeoMV1,                      //BurnDrvNeoGeoMV1
+    &BurnDrvNeoGeoMV1F,                     //BurnDrvNeoGeoMV1F
+    &BurnDrvNeoGeoMV1FZ,                    //BurnDrvNeoGeoMV1FZ
+    &BurnDrvNeoGeoMV2F,                     //BurnDrvNeoGeoMV2F
+    &BurnDrvNeoGeoMV4F,                     //BurnDrvNeoGeoMV4F
+    &BurnDrvkf2k1bs,                        //BurnDrvkf2k1bs
+    &BurnDrvkf2k1cm,                        //BurnDrvkf2k1cm
+    &BurnDrvkf2k2mp3,                       //BurnDrvkf2k2mp3
+    &BurnDrvkf2k2mp3s,                      //BurnDrvkf2k2mp3s
+    &BurnDrvkf2k2tt,                        //BurnDrvkf2k2tt
+    &BurnDrvkof02ic,                        //BurnDrvkof02ic
+    &BurnDrvkof2000t,                       //BurnDrvkof2000t
+    &BurnDrvkof2k2c2,                       //BurnDrvkof2k2c2
+    &BurnDrvkof2knd,                        //BurnDrvkof2knd
+    &BurnDrvkof96p,                 //BurnDrvkof96p
+    &BurnDrvkof97m,                 //BurnDrvkof97m
+    &BurnDrvkof97plss20,                    //BurnDrvkof97plss20
+    &BurnDrvkof97ru,                        //BurnDrvkof97ru
+    &BurnDrvkof97rugal,                     //BurnDrvkof97rugal
+    &BurnDrvkof97st,                        //BurnDrvkof97st
+    &BurnDrvkof97tsb,                       //BurnDrvkof97tsb
+    &BurnDrvkof97u,                 //BurnDrvkof97u
+    &BurnDrvkof97xlb,                       //BurnDrvkof97xlb
+    &BurnDrvkof97ys,                        //BurnDrvkof97ys
+    &BurnDrvkof99nd,                        //BurnDrvkof99nd
+    &BurnDrvkof99pr,                        //BurnDrvkof99pr
+    &BurnDrvkof99rpg,                       //BurnDrvkof99rpg
+    &BurnDrvkof99t,                 //BurnDrvkof99t
+    &BurnDrvms5f,                   //BurnDrvms5f
+    &BurnDrvmslug2gs,                       //BurnDrvmslug2gs
+    &BurnDrvmslug2h,                        //BurnDrvmslug2h
+    &BurnDrvmslug3n6p,                      //BurnDrvmslug3n6p
+    &BurnDrvmslug3n6zp,                     //BurnDrvmslug3n6zp
+    &BurnDrvmslug3nd,                       //BurnDrvmslug3nd
+    &BurnDrvmslug3ngw,                      //BurnDrvmslug3ngw
+    &BurnDrvmslug3nsj,                      //BurnDrvmslug3nsj
+    &BurnDrvmslug3ntk,                      //BurnDrvmslug3ntk
+    &BurnDrvmslug3nzj,                      //BurnDrvmslug3nzj
+    &BurnDrvmslug3v2,                       //BurnDrvmslug3v2
+    &BurnDrvmslug4dr,                       //BurnDrvmslug4dr
+    &BurnDrvmslug4sp,                       //BurnDrvmslug4sp
+    &BurnDrvmslug5dg2,                      //BurnDrvmslug5dg2
+    &BurnDrvmslug5dg3,                      //BurnDrvmslug5dg3
+    &BurnDrvmslug5dzh,                      //BurnDrvmslug5dzh
+    &BurnDrvmslug5g,                        //BurnDrvmslug5g
+    &BurnDrvmslug5wn,                       //BurnDrvmslug5wn
+    &BurnDrvmslugxh,                        //BurnDrvmslugxh
+    &BurnDrvmslugxjdkj,                     //BurnDrvmslugxjdkj
+    &BurnDrvmslugxplus,                     //BurnDrvmslugxplus
+    &BurnDrvkillbldqy,                      //BurnDrvkillbldqy
+    &BurnDrvkov2pcthl,                      //BurnDrvkov2pcthl
+    &BurnDrvkov2pfwly,                      //BurnDrvkov2pfwly
+    &BurnDrvkov2pjlcq,                      //BurnDrvkov2pjlcq
+    &BurnDrvkov2pmess,                      //BurnDrvkov2pmess
+    &BurnDrvkov2pplus,                      //BurnDrvkov2pplus
+    &BurnDrvkov2ppws,                       //BurnDrvkov2ppws
+    &BurnDrvkov2ppws2016,                   //BurnDrvkov2ppws2016
+    &BurnDrvkov2pswcq,                      //BurnDrvkov2pswcq
+    &BurnDrvkov8,                   //BurnDrvkov8
+    &BurnDrvkovplus2012dw,                  //BurnDrvkovplus2012dw
+    &BurnDrvkovplus2012em,                  //BurnDrvkovplus2012em
+    &BurnDrvkovplus2012m,                   //BurnDrvkovplus2012m
+    &BurnDrvkovplus2012st,                  //BurnDrvkovplus2012st
+    &BurnDrvkovplus2017,                    //BurnDrvkovplus2017
+    &BurnDrvkovplusdjjz,                    //BurnDrvkovplusdjjz
+    &BurnDrvkovplusdszl,                    //BurnDrvkovplusdszl
+    &BurnDrvkovplusxb1,                     //BurnDrvkovplusxb1
+    &BurnDrvkovplusxb2,                     //BurnDrvkovplusxb2
+    &BurnDrvkovplusxb2ds,                   //BurnDrvkovplusxb2ds
+    &BurnDrvkovplusxb2wj,                   //BurnDrvkovplusxb2wj
+    &BurnDrvkovplusxt,                      //BurnDrvkovplusxt
+    &BurnDrvkovshp101a,                     //BurnDrvkovshp101a
+    &BurnDrvkovshp1v4,                      //BurnDrvkovshp1v4
+    &BurnDrvkovshp1v4s,                     //BurnDrvkovshp1v4s
+    &BurnDrvkovshp1v4x,                     //BurnDrvkovshp1v4x
+    &BurnDrvkovshp1v4xtw,                   //BurnDrvkovshp1v4xtw
+    &BurnDrvkovshpb,                        //BurnDrvkovshpb
+    &BurnDrvkovshpd19,                      //BurnDrvkovshpd19
+    &BurnDrvkovshpd3tw,                     //BurnDrvkovshpd3tw
+    &BurnDrvkovshpd3x,                      //BurnDrvkovshpd3x
+    &BurnDrvkovshpdx,                       //BurnDrvkovshpdx
+    &BurnDrvkovshpp19,                      //BurnDrvkovshpp19
+    &BurnDrvkovshpqxzq,                     //BurnDrvkovshpqxzq
+    &BurnDrvkovshpqxzqj,                    //BurnDrvkovshpqxzqj
+    &BurnDrvkovshptplscs,                   //BurnDrvkovshptplscs
+    &BurnDrvkovshptx,                       //BurnDrvkovshptx
+    &BurnDrvkovshpwsb,                      //BurnDrvkovshpwsb
+    &BurnDrvkovshsjcs,                      //BurnDrvkovshsjcs
+    &BurnDrvkovshwsgl,                      //BurnDrvkovshwsgl
+    &BurnDrvkovshzlzy,                      //BurnDrvkovshzlzy
+    &BurnDrvkovshzlzyjz,                    //BurnDrvkovshzlzyjz
+    &BurnDrvkovshzlzymy,                    //BurnDrvkovshzlzymy
+    &BurnDrvkovshzlzywj,                    //BurnDrvkovshzlzywj
+    &BurnDrvkovytzyftxq,                    //BurnDrvkovytzyftxq
+    &BurnDrvkovytzyp,                       //BurnDrvkovytzyp
+    &BurnDrvolds100adsgl,                   //BurnDrvolds100adsgl
+    &BurnDrvolds100aem,                     //BurnDrvolds100aem
+    &BurnDrvolds100aem2015,                 //BurnDrvolds100aem2015
+    &BurnDrvolds100aem2016,                 //BurnDrvolds100aem2016
+    &BurnDrvolds100afybh,                   //BurnDrvolds100afybh
+    &BurnDrvolds100asrp,                    //BurnDrvolds100asrp
+    &BurnDrvolds100aylzx,                   //BurnDrvolds100aylzx
+    &BurnDrvoldsplushmf,                    //BurnDrvoldsplushmf
+    &BurnDrvorlegndcmm,                     //BurnDrvorlegndcmm
 };
