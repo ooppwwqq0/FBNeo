@@ -19510,6 +19510,50 @@ DRV		BurnSpeczybex;
 DRV		BurnSpeczynaps;
 DRV		BurnDrvZzyzzyxx;
 DRV		BurnDrvZzyzzyxx2;
+DRV     BurnDrvCpsWofr19;
+DRV     BurnDrvCpsWofjps;
+DRV     BurnDrvCpswof1v3;
+DRV     BurnDrvCpswofmz;
+DRV     BurnDrvCpswofzl;
+DRV     BurnDrvCpswofdwp;
+DRV     BurnDrvCpswof3m;
+DRV     BurnDrvCpsCaptcommrds;
+DRV     BurnDrvCpsCaptcommr1bs;
+DRV     BurnDrvCpsCaptcommpzs;
+DRV     BurnDrvCpsCaptcommr1dw;
+DRV     BurnDrvCpscaptcommpmy;
+DRV     BurnDrvCpsDinoxzb;
+DRV     BurnDrvCpsDinojps;
+DRV     BurnDrvCpsDinowtw;
+DRV     BurnDrvCpsDinowj;
+DRV     BurnDrvCpsDinojds;
+DRV     BurnDrvCpsDinows2019;
+DRV     BurnDrvCpskod1v3;
+DRV     BurnDrvCpskodbs;
+DRV     BurnDrvCpskoddw;
+DRV     BurnDrvCpsffightj2u;
+DRV     BurnDrvCpsffight1v2;
+DRV     BurnDrvCpscaptcommr1v4;
+DRV     BurnDrvCpscaptcommp;
+DRV     BurnDrvCpsdinoplus;
+DRV     BurnDrvCpsdinoyz;
+DRV     BurnDrvCpsdino1v3;
+DRV     BurnDrvCpsdinodw;
+DRV     BurnDrvCpsknightsp;
+DRV     BurnDrvCpsknightsc;
+DRV     BurnDrvCpspunisherly;
+DRV     BurnDrvCpspunisherhr;
+DRV     BurnDrvCpspunisher1v2;
+DRV     BurnDrvCpspunisherdw;
+DRV     BurnDrvCpspunisherbs;
+DRV     BurnDrvCpsdinolbws;
+DRV     BurnDrvCpsdino2015ws;
+DRV     BurnDrvCpsdinotfzn;
+DRV     BurnDrvCpsdinoslicews;
+DRV     BurnDrvCpsdinowszh;
+DRV     BurnDrvCpsdinoxa;
+DRV     BurnDrvCpsdino2011ws;
+DRV     BurnDrvCpsdinoxc;
 #undef DRV
 
 // Structure containing addresses of all drivers
@@ -39023,4 +39067,48 @@ static struct BurnDriver* pDriver[] = {
 	&BurnSpeczynaps,			// Zynaps (48K)
 	&BurnDrvZzyzzyxx,			// Zzyzzyxx (set 1)
 	&BurnDrvZzyzzyxx2,			// Zzyzzyxx (set 2)
+    &BurnDrvCpsWofr19,                      //BurnDrvCpsWofr19
+    &BurnDrvCpsWofjps,                      //BurnDrvCpsWofjps
+    &BurnDrvCpswof1v3,                      //BurnDrvCpswof1v3
+    &BurnDrvCpswofmz,                       //BurnDrvCpswofmz
+    &BurnDrvCpswofzl,                       //BurnDrvCpswofzl
+    &BurnDrvCpswofdwp,                      //BurnDrvCpswofdwp
+    &BurnDrvCpswof3m,                       //BurnDrvCpswof3m
+    &BurnDrvCpsCaptcommrds,                 //BurnDrvCpsCaptcommrds
+    &BurnDrvCpsCaptcommr1bs,                //BurnDrvCpsCaptcommr1bs
+    &BurnDrvCpsCaptcommpzs,                 //BurnDrvCpsCaptcommpzs
+    &BurnDrvCpsCaptcommr1dw,                //BurnDrvCpsCaptcommr1dw
+    &BurnDrvCpscaptcommpmy,                 //BurnDrvCpscaptcommpmy
+    &BurnDrvCpsDinoxzb,                     //BurnDrvCpsDinoxzb
+    &BurnDrvCpsDinojps,                     //BurnDrvCpsDinojps
+    &BurnDrvCpsDinowtw,                     //BurnDrvCpsDinowtw
+    &BurnDrvCpsDinowj,                      //BurnDrvCpsDinowj
+    &BurnDrvCpsDinojds,                     //BurnDrvCpsDinojds
+    &BurnDrvCpsDinows2019,                  //BurnDrvCpsDinows2019
+    &BurnDrvCpskod1v3,                      //BurnDrvCpskod1v3
+    &BurnDrvCpskodbs,                       //BurnDrvCpskodbs
+    &BurnDrvCpskoddw,                       //BurnDrvCpskoddw
+    &BurnDrvCpsffightj2u,                   //BurnDrvCpsffightj2u
+    &BurnDrvCpsffight1v2,                   //BurnDrvCpsffight1v2
+    &BurnDrvCpscaptcommr1v4,                //BurnDrvCpscaptcommr1v4
+    &BurnDrvCpscaptcommp,                   //BurnDrvCpscaptcommp
+    &BurnDrvCpsdinoplus,                    //BurnDrvCpsdinoplus
+    &BurnDrvCpsdinoyz,                      //BurnDrvCpsdinoyz
+    &BurnDrvCpsdino1v3,                     //BurnDrvCpsdino1v3
+    &BurnDrvCpsdinodw,                      //BurnDrvCpsdinodw
+    &BurnDrvCpsknightsp,                    //BurnDrvCpsknightsp
+    &BurnDrvCpsknightsc,                    //BurnDrvCpsknightsc
+    &BurnDrvCpspunisherly,                  //BurnDrvCpspunisherly
+    &BurnDrvCpspunisherhr,                  //BurnDrvCpspunisherhr
+    &BurnDrvCpspunisher1v2,                 //BurnDrvCpspunisher1v2
+    &BurnDrvCpspunisherdw,                  //BurnDrvCpspunisherdw
+    &BurnDrvCpspunisherbs,                  //BurnDrvCpspunisherbs
+    &BurnDrvCpsdinolbws,                    //BurnDrvCpsdinolbws
+    &BurnDrvCpsdino2015ws,                  //BurnDrvCpsdino2015ws
+    &BurnDrvCpsdinotfzn,                    //BurnDrvCpsdinotfzn
+    &BurnDrvCpsdinoslicews,                 //BurnDrvCpsdinoslicews
+    &BurnDrvCpsdinowszh,                    //BurnDrvCpsdinowszh
+    &BurnDrvCpsdinoxa,                      //BurnDrvCpsdinoxa
+    &BurnDrvCpsdino2011ws,                  //BurnDrvCpsdino2011ws
+    &BurnDrvCpsdinoxc,                      //BurnDrvCpsdinoxc
 };
