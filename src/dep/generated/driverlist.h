@@ -9839,6 +9839,7 @@ DRV		BurnDrvmslug1v2;
 DRV		BurnDrvmslug;
 DRV		BurnDrvmslug21v2;
 DRV		BurnDrvmslug2dd;
+DRV     BurnDrvmslug2r;
 DRV		BurnDrvmslug2eg;
 DRV		BurnDrvmslug2fm;
 DRV		BurnDrvmslug2dg;
