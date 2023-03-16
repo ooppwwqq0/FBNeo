@@ -19555,7 +19555,6 @@ DRV     BurnDrvKof97sw2s;
 DRV     BurnDrvKof98a1;
 DRV     BurnDrvKof98eck;
 DRV     BurnDrvKof98eckp;
-DRV     BurnDrvMSlug2r;
 DRV     BurnDrvkf2k1bs;
 DRV     BurnDrvkf2k1cm;
 DRV     BurnDrvkf2k2mp3;
@@ -19581,7 +19580,6 @@ DRV     BurnDrvkof99rpg;
 DRV     BurnDrvkof99t;
 DRV     BurnDrvms5f;
 DRV     BurnDrvmslug2gs;
-DRV     BurnDrvmslug2h;
 DRV     BurnDrvmslug3n6p;
 DRV     BurnDrvmslug3n6zp;
 DRV     BurnDrvmslug3nd;
@@ -22200,7 +22198,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvCpsCaptcommpjy,		// Captain Commando (Elite Competition)
 	&BurnDrvCpsCaptcommp4,		// Captain Commando (Enhanced edition 1 V 4, Hack)
 	&BurnDrvCpsCaptcomm2y,		// Captain Commando (Er Ye)
-	&BurnDrvCpsCaptcommpmy,		// Captain Commando (Incubus)
+	&BurnDrvCpscaptcommpmy,		// Captain Commando (Incubus)
 	&BurnDrvCpsCaptcommc,		// Captain Commando (T-Chi)
 	&BurnDrvCpsCaptcommpwx,		// Captain Commando (Unlimited Bullet)
 	&BurnDrvCpsCaptre,			// Captain Commando Readjusted (Hack, v1.1)
@@ -36904,8 +36902,8 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvCpsPunipic2,		// The Punisher (bootleg set 2 (with PIC16c57), 930422 etc)
 	&BurnDrvCpsPunipic3,		// The Punisher (bootleg set 3 (with PIC16c57), 930422 etc)
 	&BurnDrvCpsPunisherb,		// The Punisher (bootleg, 930422 etc)
-	&BurnDrvCpsPunisherly,		// The Punisher (Flame Edition, Hack)
-	&BurnDrvCpsPunisherhr,		// The Punisher (Red Man Edition, Hack)
+	&BurnDrvCpspunisherly,		// The Punisher (Flame Edition, Hack)
+	&BurnDrvCpspunisherhr,		// The Punisher (Red Man Edition, Hack)
 	&BurnDrvGhostb2a,			// The Real Ghostbusters (US 2 Players)
 	&BurnDrvGhostb,				// The Real Ghostbusters (US 2 Players, revision 2)
 #if defined FBNEO_DEBUG
@@ -39238,7 +39236,6 @@ static struct BurnDriver* pDriver[] = {
     &BurnDrvkof99t,                 //BurnDrvkof99t
     &BurnDrvms5f,                   //BurnDrvms5f
     &BurnDrvmslug2gs,                       //BurnDrvmslug2gs
-    &BurnDrvmslug2h,                        //BurnDrvmslug2h
     &BurnDrvmslug3n6p,                      //BurnDrvmslug3n6p
     &BurnDrvmslug3n6zp,                     //BurnDrvmslug3n6zp
     &BurnDrvmslug3nd,                       //BurnDrvmslug3nd
