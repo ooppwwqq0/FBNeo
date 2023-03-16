@@ -16114,10 +16114,7 @@ static const struct GameConfig ConfigTable[] =
 	{ "captcommb2"    , CPS_B_21_BT3, mapper_CC63B , 0, NULL                },
 	{ "captcommb3"    , CPS_B_21_BT3, mapper_CC63B , 0, NULL                },
 	{ "captcommp4"    , CPS_B_21_BT3, mapper_CC63B , 0, NULL                },
-	{ "captcommpwx"   , CPS_B_21_BT3, mapper_CC63B , 0, NULL                },
 	{ "captcomm2y"    , CPS_B_21_BT3, mapper_CC63B , 0, NULL                },
-	{ "captcommpjy"   , CPS_B_21_BT3, mapper_CC63B , 0, NULL                },
-	{ "captcommpmy"   , CPS_B_21_BT3, mapper_CC63B , 0, NULL                },
 	{ "captcommc"     , CPS_B_21_BT3, mapper_CC63B , 0, NULL                },
 	{ "captre"        , CPS_B_21_BT3, mapper_CC63B , 0, NULL                },
 	{ "cawing"        , CPS_B_16    , mapper_CA24B , 0, NULL                },
@@ -16203,7 +16200,6 @@ static const struct GameConfig ConfigTable[] =
 	{ "knightsb5"     , CPS_B_21_DEF, mapper_KR63B , 0, NULL                },
 	{ "knightsh"      , CPS_B_21_DEF, mapper_KR63B , 0, NULL                },
 	{ "knightsh2"     , CPS_B_21_DEF, mapper_KR63B , 0, NULL                },
-	{ "knightsc"      , CPS_B_21_BT4, mapper_KR63B , 0, NULL                },
 	{ "kod"           , CPS_B_21_BT2, mapper_KD29B , 0, NULL                },
 	{ "kodr1"         , CPS_B_21_BT2, mapper_KD29B , 0, NULL                },
 	{ "kodr2"         , CPS_B_21_BT2, mapper_KD29B , 0, NULL                },
@@ -16254,8 +16250,6 @@ static const struct GameConfig ConfigTable[] =
 	{ "punipic3"      , CPS_B_21_QS3, mapper_PS63B , 0, punisher_patch      }, // game controls layers at 0x98000c
 	{ "punisherbz"    , CPS_B_21_DEF, mapper_PS63B , 0, NULL                },
 	{ "punisherb"     , CPS_B_21_QS3, mapper_PS63B , 0, NULL                },
-	{ "punisherly"    , CPS_B_21_QS3, mapper_PS63B , 0, punisher_decode     },
-	{ "punisherhr"    , CPS_B_21_QS3, mapper_PS63B , 0, punisher_decode     },
 	{ "qad"           , CPS_B_21_BT7, mapper_QD22B , 0, NULL                },
 	{ "qadjr"         , CPS_B_21_DEF, mapper_QD63B , 0, NULL                },
 	{ "qtono2j"       , CPS_B_21_DEF, mapper_TN2292, 0, NULL                },
@@ -16484,6 +16478,9 @@ static const struct GameConfig ConfigTable[] =
     { "captcommr1bs" , CPS_B_21_BT3, mapper_CC63B , 0, NULL                },
     { "captcommpzs"  , CPS_B_21_BT3, mapper_CC63B , 0, NULL                },
     { "captcommr1dw" , CPS_B_21_BT3, mapper_CC63B , 0, NULL                },
+    { "captcommpjy"   , CPS_B_21_BT3, mapper_CC63B , 0, NULL                },
+    { "captcommpwx"   , CPS_B_21_BT3, mapper_CC63B , 0, NULL                },
+    { "captcommpmy"   , CPS_B_21_BT3, mapper_CC63B , 0, NULL                },
     { "dinoxzb"      , CPS_B_21_QS2, mapper_CD63B , 0, dino_decode         },
     { "dinojps"      , CPS_B_21_QS2, mapper_CD63B , 0, dino_decode         },
     { "dinowtw"      , CPS_B_21_QS2, mapper_CD63B , 0, dino_decode         },
@@ -16502,6 +16499,9 @@ static const struct GameConfig ConfigTable[] =
     { "dino1v3"      , CPS_B_21_QS2, mapper_CD63B , 0, dino_decode         },
     { "dinodw"       , CPS_B_21_QS2, mapper_CD63B , 0, dino_decode         },
     { "knightsp"     , CPS_B_21_BT4, mapper_KR63B , 0, NULL                },
+    { "knightsc"      , CPS_B_21_BT4, mapper_KR63B , 0, NULL                },
+    { "punisherly"    , CPS_B_21_QS3, mapper_PS63B , 0, punisher_decode     },
+    { "punisherhr"    , CPS_B_21_QS3, mapper_PS63B , 0, punisher_decode     },
     { "punisher1v2"  , CPS_B_21_QS3, mapper_PS63B , 0, punisher_decode     },
     { "punisherdw"   , CPS_B_21_QS3, mapper_PS63B , 0, punisher_decode     },
     { "punisherbs"   , CPS_B_21_QS3, mapper_PS63B , 0, punisher_decode     },
@@ -25441,6 +25441,7 @@ struct BurnDriver BurnDrvCpsCaptcommp4 = {
 	&CpsRecalcPal, 0x1000, 384, 224, 4, 3
 };
 
+/*
 // Captain Commando (Unlimited Bullet)
 // Hack by JingGai
 // GOTVG 20210428
@@ -25484,6 +25485,7 @@ struct BurnDriver BurnDrvCpsCaptcommpwx = {
 	Cps1RasterInit, DrvExit, Cps1Frame, CpsRedraw, CpsAreaScan,
 	&CpsRecalcPal, 0x1000, 384, 224, 4, 3
 };
+*/
 
 // Captain Commando (Er Ye)
 // Modified by JingGai
@@ -25528,6 +25530,7 @@ struct BurnDriver BurnDrvCpsCaptcomm2y = {
 	&CpsRecalcPal, 0x1000, 384, 224, 4, 3
 };
 
+/*
 // Captain Commando (Elite Competition)
 // Modified by JingGai
 // GOTVG 20230226
@@ -25570,7 +25573,9 @@ struct BurnDriver BurnDrvCpsCaptcommpjy = {
 	Cps1RasterInit, DrvExit, Cps1Frame, CpsRedraw, CpsAreaScan,
 	&CpsRecalcPal, 0x1000, 384, 224, 4, 3
 };
+*/
 
+/*
 // Captain Commando (Incubus)
 // Modified by JingGai
 // GOTVG 20230224
@@ -25613,6 +25618,7 @@ struct BurnDriver BurnDrvCpsCaptcommpmy = {
 	Cps1RasterInit, DrvExit, Cps1Frame, CpsRedraw, CpsAreaScan,
 	&CpsRecalcPal, 0x1000, 384, 224, 4, 3
 };
+*/
 
 // Captain Commando Readjusted, hacked by GameHackFan 
 // source: https://gamehackfan.github.io/captre/
@@ -26092,6 +26098,7 @@ struct BurnDriver BurnDrvCpssf2mix = {
 	&CpsRecalcPal, 0x1000, 384, 224, 4, 3
 };
 
+/*
 // The Punisherly (Flame Edition, Hack)
 // Hacked by �λ����
 // GOTVG 2018/08/13
@@ -26148,7 +26155,9 @@ struct BurnDriver BurnDrvCpsPunisherly = {
 	TwelveMhzInit, DrvExit, Cps1Frame, CpsRedraw, CpsAreaScan,
 	&CpsRecalcPal, 0x1000, 384, 224, 4, 3
 };
+*/
 
+/*
 // The Punisherhr (Flame Edition, Hack)
 // Hacked by �λ����
 // GOTVG 2018/08/11
@@ -26205,6 +26214,7 @@ struct BurnDriver BurnDrvCpsPunisherhr = {
 	TwelveMhzInit, DrvExit, Cps1Frame, CpsRedraw, CpsAreaScan,
 	&CpsRecalcPal, 0x1000, 384, 224, 4, 3
 };
+*/
 
 // Captain Commando (T-Chi)
 
@@ -26312,6 +26322,7 @@ struct BurnDriver BurnDrvCpsMercsc = {
 	&CpsRecalcPal, 0x1000, 224, 384, 3, 4
 };
 
+/*
 // Knights of the Round (T-Chi)
 
 static struct BurnRomInfo KnightscRomDesc[] = {
@@ -26353,6 +26364,7 @@ struct BurnDriver BurnDrvCpsKnightsc = {
 	DrvInit, DrvExit, Cps1Frame, CpsRedraw, CpsAreaScan,
 	&CpsRecalcPal, 0x1000, 384, 224, 4, 3
 };
+*/
 
 // Sangokushi II (T-Chi)
 // Modified by �ե��˥å���
@@ -26898,6 +26910,120 @@ struct BurnDriver BurnDrvCpsCaptcommr1dw = {
         &CpsRecalcPal, 0x1000, 384, 224, 4, 3
 };
 
+
+// GOTVG 名将 精英版	Captain Commando (Elite Version 20181231)
+static struct BurnRomInfo CaptcommpjyRomDesc[] = {
+        { "mj.1v4",    0x300000, 0xea88728a, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_NO_BYTESWAP },
+
+        { "cc-5m.3a",      0x080000, 0x7261d8ba, BRF_GRA | CPS1_TILES },
+        { "cc-7m.5a",      0x080000, 0x6a60f949, BRF_GRA | CPS1_TILES },
+        { "cc-1m.4a",      0x080000, 0x00637302, BRF_GRA | CPS1_TILES },
+        { "cc-3m.6a",      0x080000, 0xcc87cf61, BRF_GRA | CPS1_TILES },
+        { "cc-6m.7a",      0x080000, 0x28718bed, BRF_GRA | CPS1_TILES },
+        { "cc-8m.9a",      0x080000, 0xd4acc53a, BRF_GRA | CPS1_TILES },
+        { "cc-2m.8a",      0x080000, 0x0c69f151, BRF_GRA | CPS1_TILES },
+        { "cc-4m.10a",     0x080000, 0x1f9ebb97, BRF_GRA | CPS1_TILES },
+
+        { "cc_09.11a",     0x010000, 0x698e8b58, BRF_PRG | CPS1_Z80_PROGRAM },
+
+        { "cc_18.11c",     0x020000, 0x6de2c2db, BRF_SND | CPS1_OKIM6295_SAMPLES },
+        { "cc_19.12c",     0x020000, 0xb99091ae, BRF_SND | CPS1_OKIM6295_SAMPLES },
+
+        A_BOARD_PLDS
+
+        { "cc63b.1a",      0x000117, 0xcae8f0f9, BRF_OPT },
+        { "iob1.12d",      0x000117, 0x3abc0700, BRF_OPT },
+        { "ccprg.11d",     0x000117, 0xe1c225c4, BRF_OPT },
+        { "ioc1.ic7",      0x000104, 0xa399772d, BRF_OPT },
+        { "c632.ic1",      0x000117, 0x0fbd9270, BRF_OPT },
+};
+
+STD_ROM_PICK(Captcommpjy)
+STD_ROM_FN(Captcommpjy)
+
+struct BurnDriver BurnDrvCpsCaptcommpjy = {
+        "captcommpjy", "captcomm", NULL, NULL, "2018",
+        "Captain Commando (Elite Version 20181231)\0", NULL, "TouJingGaiErDeZei", "CPS1",
+        NULL, NULL, NULL, NULL,
+        BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 4, HARDWARE_CAPCOM_CPS1, GBF_SCRFIGHT, 0,
+        NULL, CaptcommpjyRomInfo, CaptcommpjyRomName, NULL, NULL, NULL, NULL, CaptcommInputInfo, CaptcommDIPInfo,
+        DrvInit, DrvExit, Cps1Frame, CpsRedraw, CpsAreaScan,
+        &CpsRecalcPal, 0x1000, 384, 224, 4, 3
+};
+
+
+// GOTVG 名将 无限子弹版	Captain Commando (Infinite Bullet 20190121)
+static struct BurnRomInfo CaptcommpwxRomDesc[] = {
+        { "mj.mj",    0x302532, 0x9d863e1d, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_NO_BYTESWAP },  //P ROM is a little larger than 3MB. Nasty protection!
+
+        { "cc-5m.3a",      0x080000, 0x7261d8ba, BRF_GRA | CPS1_TILES },
+        { "cc-7m.5a",      0x080000, 0x6a60f949, BRF_GRA | CPS1_TILES },
+        { "cc-1m.4a",      0x080000, 0x00637302, BRF_GRA | CPS1_TILES },
+        { "cc-3m.6a",      0x080000, 0xcc87cf61, BRF_GRA | CPS1_TILES },
+        { "cc-6m.7a",      0x080000, 0x28718bed, BRF_GRA | CPS1_TILES },
+        { "cc-8m.9a",      0x080000, 0xd4acc53a, BRF_GRA | CPS1_TILES },
+        { "cc-2m.8a",      0x080000, 0x0c69f151, BRF_GRA | CPS1_TILES },
+        { "cc-4m.10a",     0x080000, 0x1f9ebb97, BRF_GRA | CPS1_TILES },
+
+        { "cc_09.11a",     0x010000, 0x698e8b58, BRF_PRG | CPS1_Z80_PROGRAM },
+
+        { "cc_18.11c",     0x020000, 0x6de2c2db, BRF_SND | CPS1_OKIM6295_SAMPLES },
+        { "cc_19.12c",     0x020000, 0xb99091ae, BRF_SND | CPS1_OKIM6295_SAMPLES },
+
+        A_BOARD_PLDS
+
+        { "cc63b.1a",      0x000117, 0xcae8f0f9, BRF_OPT },
+        { "iob1.12d",      0x000117, 0x3abc0700, BRF_OPT },
+        { "ccprg.11d",     0x000117, 0xe1c225c4, BRF_OPT },
+        { "ioc1.ic7",      0x000104, 0xa399772d, BRF_OPT },
+        { "c632.ic1",      0x000117, 0x0fbd9270, BRF_OPT },
+};
+
+STD_ROM_PICK(Captcommpwx)
+STD_ROM_FN(Captcommpwx)
+
+struct BurnDriver BurnDrvCpsCaptcommpwx = {
+        "captcommpwx", "captcomm", NULL, NULL, "2019",
+        "Captain Commando (Infinite Bullet 20190121)\0", NULL, "TouJingGaiErDeZei", "CPS1",
+        NULL, NULL, NULL, NULL,
+        BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 4, HARDWARE_CAPCOM_CPS1, GBF_SCRFIGHT, 0,
+        NULL, CaptcommpwxRomInfo, CaptcommpwxRomName, NULL, NULL, NULL, NULL, CaptcommInputInfo, CaptcommDIPInfo,
+        DrvInit, DrvExit, Cps1Frame, CpsRedraw, CpsAreaScan,
+        &CpsRecalcPal, 0x1000, 384, 224, 4, 3
+};
+
+
+// GOTVG 名将 梦魇版 Captain Commando (Nightmare 20190316)
+static struct BurnRomInfo captcommpmyRomDesc[] = {
+        { "mj.mj",    0x3024da, 0x6fa1af51, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_NO_BYTESWAP },
+
+        { "cc-5m.3a",      0x080000, 0x7261d8ba, BRF_GRA | CPS1_TILES },
+        { "cc-7m.5a",      0x080000, 0x6a60f949, BRF_GRA | CPS1_TILES },
+        { "cc-1m.4a",      0x080000, 0x00637302, BRF_GRA | CPS1_TILES },
+        { "cc-3m.6a",      0x080000, 0xcc87cf61, BRF_GRA | CPS1_TILES },
+        { "cc-6m.7a",      0x080000, 0x28718bed, BRF_GRA | CPS1_TILES },
+        { "cc-8m.9a",      0x080000, 0xd4acc53a, BRF_GRA | CPS1_TILES },
+        { "cc-2m.8a",      0x080000, 0x0c69f151, BRF_GRA | CPS1_TILES },
+        { "cc-4m.10a",     0x080000, 0x1f9ebb97, BRF_GRA | CPS1_TILES },
+
+        { "cc_09.11a",     0x010000, 0x698e8b58, BRF_PRG | CPS1_Z80_PROGRAM },
+
+        { "cc_18.11c",     0x020000, 0x6de2c2db, BRF_SND | CPS1_OKIM6295_SAMPLES },
+        { "cc_19.12c",     0x020000, 0xb99091ae, BRF_SND | CPS1_OKIM6295_SAMPLES },
+};
+
+STD_ROM_PICK(captcommpmy)
+STD_ROM_FN(captcommpmy)
+
+struct BurnDriver BurnDrvCpscaptcommpmy = {
+        "captcommpmy", "captcomm", NULL, NULL, "2019",
+        "Captain Commando (Nightmare 20190316)\0", NULL, "TouJingGaiErDeZei", "CPS1",
+        NULL, NULL, NULL, NULL,
+        BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 4, HARDWARE_CAPCOM_CPS1, GBF_SCRFIGHT, 0,
+        NULL, captcommpmyRomInfo, captcommpmyRomName, NULL, NULL, NULL, NULL, CaptcommInputInfo, CaptcommDIPInfo,
+        DrvInit, DrvExit, Cps1Frame, CpsRedraw, CpsAreaScan,
+        &CpsRecalcPal, 0x1000, 384, 224, 4, 3
+};
 
 // GOTVG 恐龙快打 战神版【原血战版】	Cadillacs & Dinosaurs (Warlord Version 20190119)
 static struct BurnRomInfo DinoxzbRomDesc[] = {
@@ -27668,6 +27794,130 @@ struct BurnDriver BurnDrvCpsknightsp = {
         &CpsRecalcPal, 0x1000, 384, 224, 4, 3
 };
 
+
+// GOTVG 圆桌骑士 计数版 Knights of the Round (With A Counter 20161128)
+static struct BurnRomInfo knightscRomDesc[] = {
+        { "kr_23e.cdec",   0x080000, 0x98d0618b, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_NO_BYTESWAP },
+        { "kr_22.7f",      0x080000, 0xd0b671a9, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_NO_BYTESWAP },
+
+        { "kr-5m.3a",      0x080000, 0x9e36c1a4, BRF_GRA | CPS1_TILES },
+        { "kr-7m.5a",      0x080000, 0xc5832cae, BRF_GRA | CPS1_TILES },
+        { "kr-1m.4a",      0x080000, 0xf095be2d, BRF_GRA | CPS1_TILES },
+        { "kr-3m.6a",      0x080000, 0x179dfd96, BRF_GRA | CPS1_TILES },
+        { "kr-6m.7a",      0x080000, 0x1f4298d2, BRF_GRA | CPS1_TILES },
+        { "kr-8m.9a",      0x080000, 0x37fa8751, BRF_GRA | CPS1_TILES },
+        { "kr-2m.8a",      0x080000, 0x0200bc3d, BRF_GRA | CPS1_TILES },
+        { "kr-4m.10a",     0x080000, 0x0bb2b4e7, BRF_GRA | CPS1_TILES },
+
+        { "kr_09.11a",     0x010000, 0x5e44d9ee, BRF_PRG | CPS1_Z80_PROGRAM },
+
+        { "kr_18.11c",     0x020000, 0xda69d15f, BRF_SND | CPS1_OKIM6295_SAMPLES },
+        { "kr_19.12c",     0x020000, 0xbfc654e9, BRF_SND | CPS1_OKIM6295_SAMPLES },
+
+        A_BOARD_PLDS
+
+        { "kr63b.1a",      0x000117, 0xfd5b6522, BRF_OPT },	// b-board PLDs
+        { "iob1.12d",      0x000117, 0x3abc0700, BRF_OPT },
+        { "bprg1.11d",     0x000117, 0x31793da7, BRF_OPT },
+        { "ioc1.ic7",      0x000104, 0xa399772d, BRF_OPT },	// c-board PLDs
+        { "c632.ic1",      0x000117, 0x0fbd9270, BRF_OPT },
+};
+
+STD_ROM_PICK(knightsc)
+STD_ROM_FN(knightsc)
+
+struct BurnDriver BurnDrvCpsknightsc = {
+        "knightsc", "knights", NULL, NULL, "2016",
+        "Knights of the Round (With A Counter 20161128)\0", NULL, "hack", "CPS1",
+        NULL, NULL, NULL, NULL,
+        BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 3, HARDWARE_CAPCOM_CPS1, GBF_SCRFIGHT, 0,
+        NULL, knightscRomInfo, knightscRomName, NULL, NULL, NULL, NULL, KnightsInputInfo, KnightsDIPInfo,
+        DrvInit, DrvExit, Cps1Frame, CpsRedraw, CpsAreaScan,
+        &CpsRecalcPal, 0x1000, 384, 224, 4, 3
+};
+
+
+// GOTVG 惩罚者 烈焰版 The Punisher (Blaze 20180813)
+// P ROM is decrypted.
+static struct BurnRomInfo punisherlyRomDesc[] = {
+        { "punisherly.p",      0x180000, 0x104ae2d6, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_NO_BYTESWAP },
+
+        { "ps-1m.3a",      0x080000, 0x4d4111de, BRF_GRA | CPS1_TILES },
+        { "ps-3m.5a",      0x080000, 0x2d346b82, BRF_GRA | CPS1_TILES },
+        { "ps-2m.4a",      0x080000, 0x5e0c85a1, BRF_GRA | CPS1_TILES },
+        { "ps-4m.6a",      0x080000, 0x4ccc5b41, BRF_GRA | CPS1_TILES },
+        { "ps-5m.7a",      0x080000, 0xc54ea839, BRF_GRA | CPS1_TILES },
+        { "ps-7m.9a",      0x080000, 0x04c5acbd, BRF_GRA | CPS1_TILES },
+        { "ps-6m.8a",      0x080000, 0xa544f4cc, BRF_GRA | CPS1_TILES },
+        { "ps-8m.10a",     0x080000, 0x8f02f436, BRF_GRA | CPS1_TILES },
+
+        { "ps_q.5k",       0x020000, 0x49ff4446, BRF_PRG | CPS1_Z80_PROGRAM },
+
+        { "ps-q1.1k",      0x080000, 0x31fd8726, BRF_SND | CPS1_QSOUND_SAMPLES },
+        { "ps-q2.2k",      0x080000, 0x980a9eef, BRF_SND | CPS1_QSOUND_SAMPLES },
+        { "ps-q3.3k",      0x080000, 0x0dd44491, BRF_SND | CPS1_QSOUND_SAMPLES },
+        { "ps-q4.4k",      0x080000, 0xbed42f03, BRF_SND | CPS1_QSOUND_SAMPLES },
+
+};
+
+STD_ROM_PICK(punisherly)
+STD_ROM_FN(punisherly)
+
+struct BurnDriver BurnDrvCpspunisherly = {
+        "punisherly", "punisher", NULL, NULL, "2018",
+        "The Punisher (Blaze 20180813)\0", NULL, "hack", "CPS1 / QSound",
+        NULL, NULL, NULL, NULL,
+        BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 2, HARDWARE_CAPCOM_CPS1_QSOUND, GBF_SCRFIGHT, 0,
+        NULL, punisherlyRomInfo, punisherlyRomName, NULL, NULL, NULL, NULL, PunisherInputInfo, PunisherDIPInfo,
+        TwelveMhzInit, DrvExit, Cps1Frame, CpsRedraw, CpsAreaScan,
+        &CpsRecalcPal, 0x1000, 384, 224, 4, 3
+};
+
+
+// GOTVG 惩罚者 红人版 The Punisher (Buggy Red Guy 20180411)
+// P ROM is decrypted. There may be a BYTESWAP issue？
+// punishers08 in HBMAME.
+static struct BurnRomInfo punisherhrRomDesc[] = {
+        { "pse_26.11e",    0x020000, 0x7730f07f, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_BYTESWAP },
+        { "pse_30.11f",    0x020000, 0xadc62a92, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_BYTESWAP },
+        { "pse_27.12e",    0x020000, 0xe3694c47, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_BYTESWAP },
+        { "pse_31.12f",    0x020000, 0xaa40c89d, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_BYTESWAP },
+        { "pse_24.9e",     0x020000, 0x876bf007, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_BYTESWAP },
+        { "pse_28.9f",     0x020000, 0x644392c9, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_BYTESWAP },
+        { "pse_25.10e",    0x020000, 0x7812ca13, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_BYTESWAP },
+        { "pse_29.10f",    0x020000, 0x9330cb5d, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_BYTESWAP },
+        { "ps_21.6f",      0x080000, 0x8affa5a9, BRF_ESS | BRF_PRG | CPS1_68K_PROGRAM_NO_BYTESWAP },
+
+        { "ps-1m.3a",      0x080000, 0x15bb2e4d, BRF_GRA | CPS1_TILES },
+        { "ps-3m.5a",      0x080000, 0x75ce5411, BRF_GRA | CPS1_TILES },
+        { "ps-2m.4a",      0x080000, 0x06f6ba32, BRF_GRA | CPS1_TILES },
+        { "ps-4m.6a",      0x080000, 0x143664d2, BRF_GRA | CPS1_TILES },
+        { "ps-5m.7a",      0x080000, 0xc54ea839, BRF_GRA | CPS1_TILES },
+        { "ps-7m.9a",      0x080000, 0x04c5acbd, BRF_GRA | CPS1_TILES },
+        { "ps-6m.8a",      0x080000, 0xa544f4cc, BRF_GRA | CPS1_TILES },
+        { "ps-8m.10a",     0x080000, 0x8f02f436, BRF_GRA | CPS1_TILES },
+
+        { "ps_q.5k",       0x020000, 0x49ff4446, BRF_PRG | CPS1_Z80_PROGRAM },
+
+        { "ps-q1.1k",      0x080000, 0x31fd8726, BRF_SND | CPS1_QSOUND_SAMPLES },
+        { "ps-q2.2k",      0x080000, 0x980a9eef, BRF_SND | CPS1_QSOUND_SAMPLES },
+        { "ps-q3.3k",      0x080000, 0x0dd44491, BRF_SND | CPS1_QSOUND_SAMPLES },
+        { "ps-q4.4k",      0x080000, 0xbed42f03, BRF_SND | CPS1_QSOUND_SAMPLES },
+
+};
+
+STD_ROM_PICK(punisherhr)
+STD_ROM_FN(punisherhr)
+
+struct BurnDriver BurnDrvCpspunisherhr = {
+        "punisherhr", "punisher", NULL, NULL, "2018",
+        "The Punisher (Buggy Red Guy 20180411)\0", NULL, "hack", "CPS1 / QSound",
+        NULL, NULL, NULL, NULL,
+        BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 2, HARDWARE_CAPCOM_CPS1_QSOUND, GBF_SCRFIGHT, 0,
+        NULL, punisherhrRomInfo, punisherhrRomName, NULL, NULL, NULL, NULL, PunisherInputInfo, PunisherDIPInfo,
+        TwelveMhzInit, DrvExit, Cps1Frame, CpsRedraw, CpsAreaScan,
+        &CpsRecalcPal, 0x1000, 384, 224, 4, 3
+};
 
 // GOTVG 惩罚者 1V2版 The Punisher (1VS2 20180331)
 // punishers04 in HBMAME. P ROM may be NO_BYTESWAP?

@@ -14435,7 +14435,7 @@ struct BurnDriver BurnDrvCpsGigaman2 = {
 };
 
 // Dungeons & Dragons - shadow over mystara (T-Chi)
-// Modified by �ե��˥å���
+// Modified by �ե��˥å���
 static struct BurnRomInfo DdsomjcRomDesc[] = {
 	{ "dd2jc.03g",		0x080000, 0xed73e646, CPS2_PRG_68K | BRF_ESS | BRF_PRG },
 	{ "dd2jc.04g",		0x080000, 0xc5a6e4b5, CPS2_PRG_68K | BRF_ESS | BRF_PRG },
@@ -14475,4 +14475,114 @@ struct BurnDriver BurnDrvCpsDdsomjc = {
 	NULL, DdsomjcRomInfo, DdsomjcRomName, NULL, NULL, NULL, NULL, DdsomInputInfo, NULL,
 	Cps2Init, DrvExit, Cps2Frame, CpsRedraw, CpsAreaScan,
 	&CpsRecalcPal, 0x1000, 384, 224, 4, 3
+};
+
+
+// GOTVG 龙与地下城：暗黑秘影 加强版 Dungeons & Dragons - shadow over mystara (Plus 20160825)
+// ddsoma4ppdec in HBMAME.
+static struct BurnRomInfo ddsoma4ppRomDesc[] = {
+        { "a4pp.dec",      0x400000, 0x6611a98b, CPS2_PRG_68K | BRF_ESS | BRF_PRG },
+
+        { "dd2.13m",       0x400000, 0xa46b4e6e, CPS2_GFX | BRF_GRA },
+        { "dd2.15m",       0x400000, 0xd5fc50fc, CPS2_GFX | BRF_GRA },
+        { "dd2.17m",       0x400000, 0x837c0867, CPS2_GFX | BRF_GRA },
+        { "dd2.19m",       0x400000, 0xbb0ec21c, CPS2_GFX | BRF_GRA },
+        { "dd2.14m",       0x200000, 0x6d824ce2, CPS2_GFX | BRF_GRA },
+        { "dd2.16m",       0x200000, 0x79682ae5, CPS2_GFX | BRF_GRA },
+        { "dd2.18m",       0x200000, 0xacddd149, CPS2_GFX | BRF_GRA },
+        { "dd2.20m",       0x200000, 0x117fb0c0, CPS2_GFX | BRF_GRA },
+
+        { "dd2.01",        0x020000, 0x99d657e5, CPS2_PRG_Z80 | BRF_ESS | BRF_PRG },
+        { "dd2.02",        0x020000, 0x117a3824, CPS2_PRG_Z80 | BRF_ESS | BRF_PRG },
+
+        { "dd2.11m",       0x200000, 0x98d0c325, CPS2_QSND | BRF_SND },
+        { "dd2.12m",       0x200000, 0x5ea2e7fa, CPS2_QSND | BRF_SND },
+
+        { "phoenix.key",   0x000014, 0x2cf772b0, CPS2_ENCRYPTION_KEY },
+};
+
+STD_ROM_PICK(ddsoma4pp)
+STD_ROM_FN(ddsoma4pp)
+
+struct BurnDriver BurnDrvCpsddsoma4pp = {
+        "ddsoma4pp", "ddsom", NULL, NULL, "2016",
+        "Dungeons & Dragons - shadow over mystara (Plus 20160825)\0", NULL, "SK", "CPS2",
+        NULL, NULL, NULL, NULL,
+        BDF_GAME_WORKING | BDF_CLONE | BDF_BOOTLEG | BDF_HISCORE_SUPPORTED, 4, HARDWARE_CAPCOM_CPS2, GBF_SCRFIGHT, 0,
+        NULL, ddsoma4ppRomInfo, ddsoma4ppRomName, NULL, NULL, NULL, NULL, DdsomInputInfo, NULL,
+        PhoenixInit, DrvExit, Cps2Frame, CpsRedraw, CpsAreaScan,
+        &CpsRecalcPal, 0x1000, 384, 224, 4, 3
+};
+
+// GOTVG 龙与地下城：毁灭之塔 加强版 Dungeons & Dragons - tower of doom (Plus 20160825)
+// ddtodpdec in HBMAME.
+static struct BurnRomInfo ddtodpRomDesc[] = {
+        { "p.dec",         0x280000, 0x2b2fcbb7, CPS2_PRG_68K | BRF_ESS | BRF_PRG },
+
+        { "dad.13m",       0x200000, 0xda3cb7d6, CPS2_GFX | BRF_GRA },
+        { "dad.15m",       0x200000, 0x92b63172, CPS2_GFX | BRF_GRA },
+        { "dad.17m",       0x200000, 0xb98757f5, CPS2_GFX | BRF_GRA },
+        { "dad.19m",       0x200000, 0x8121ce46, CPS2_GFX | BRF_GRA },
+        { "dad.14m",       0x100000, 0x837e6f3f, CPS2_GFX | BRF_GRA },
+        { "dad.16m",       0x100000, 0xf0916bdb, CPS2_GFX | BRF_GRA },
+        { "dad.18m",       0x100000, 0xcef393ef, CPS2_GFX | BRF_GRA },
+        { "dad.20m",       0x100000, 0x8953fe9e, CPS2_GFX | BRF_GRA },
+
+        { "dad.01",        0x020000, 0x3f5e2424, CPS2_PRG_Z80 | BRF_ESS | BRF_PRG },
+
+        { "dad.11m",       0x200000, 0x0c499b67, CPS2_QSND | BRF_SND },
+        { "dad.12m",       0x200000, 0x2f0b5a4e, CPS2_QSND | BRF_SND },
+
+        { "phoenix.key",   0x000014, 0x2cf772b0, CPS2_ENCRYPTION_KEY },
+};
+
+STD_ROM_PICK(ddtodp)
+STD_ROM_FN(ddtodp)
+
+struct BurnDriver BurnDrvCpsddtodp = {
+        "ddtodp", "ddtod", NULL, NULL, "2016",
+        "Dungeons & Dragons - tower of doom (Plus 20160825)\0", NULL, "SK", "CPS2",
+        NULL, NULL, NULL, NULL,
+        BDF_GAME_WORKING | BDF_CLONE | BDF_BOOTLEG | BDF_HISCORE_SUPPORTED, 4, HARDWARE_CAPCOM_CPS2, GBF_SCRFIGHT, 0,
+        NULL, ddtodpRomInfo, ddtodpRomName, NULL, NULL, NULL, NULL, DdtodInputInfo, NULL,
+        PhoenixInit, DrvExit, Cps2Frame, CpsRedraw, CpsAreaScan,
+        &CpsRecalcPal, 0x1000, 384, 224, 4, 3
+};
+
+// GOTVG 异形大战铁血战士 加强版 Alien vs Predator (Plus 20180226)
+// avspus02 in HBMAME.
+static struct BurnRomInfo avsppRomDesc[] = {
+        { "avpu.03d",      0x080000, 0xbb0f1eba, CPS2_PRG_68K | BRF_ESS | BRF_PRG },
+        { "avpu.04d",      0x080000, 0x78106911, CPS2_PRG_68K | BRF_ESS | BRF_PRG },
+        { "avp.05d",       0x080000, 0x0207cb19, CPS2_PRG_68K | BRF_ESS | BRF_PRG },
+        { "avp.06",        0x080000, 0x190b817f, CPS2_PRG_68K | BRF_ESS | BRF_PRG },
+
+        { "avp.13m",       0x200000, 0x8f8b5ae4, CPS2_GFX | BRF_GRA },
+        { "avp.15m",       0x200000, 0xb00280df, CPS2_GFX | BRF_GRA },
+        { "avp.17m",       0x200000, 0x94403195, CPS2_GFX | BRF_GRA },
+        { "avp.19m",       0x200000, 0xe1981245, CPS2_GFX | BRF_GRA },
+        { "avp.14m",       0x200000, 0xebba093e, CPS2_GFX | BRF_GRA },
+        { "avp.16m",       0x200000, 0xfb228297, CPS2_GFX | BRF_GRA },
+        { "avp.18m",       0x200000, 0x34fb7232, CPS2_GFX | BRF_GRA },
+        { "avp.20m",       0x200000, 0xf90baa21, CPS2_GFX | BRF_GRA },
+
+        { "avp.01",        0x020000, 0x2d3b4220, CPS2_PRG_Z80 | BRF_ESS | BRF_PRG },
+
+        { "avp.11m",       0x200000, 0x83499817, CPS2_QSND | BRF_SND },
+        { "avp.12m",       0x200000, 0xf4110d49, CPS2_QSND | BRF_SND },
+
+        { "avspu.key",     0x000014, 0x4e68e346, CPS2_ENCRYPTION_KEY },
+};
+
+STD_ROM_PICK(avspp)
+STD_ROM_FN(avspp)
+
+struct BurnDriver BurnDrvCpsavspp = {
+        "avspp", "avsp", NULL, NULL, "2018",
+        "Alien vs Predator (Plus 20180226)\0", NULL, "hack", "CPS2",
+        NULL, NULL, NULL, NULL,
+        BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 3, HARDWARE_CAPCOM_CPS2, GBF_SCRFIGHT, 0,
+        NULL, avsppRomInfo, avsppRomName, NULL, NULL, NULL, NULL, AvspInputInfo, NULL,
+        Cps2Init, DrvExit, Cps2Frame, CpsRedraw, CpsAreaScan,
+        &CpsRecalcPal, 0x1000, 384, 224, 4, 3
 };
