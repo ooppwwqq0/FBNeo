@@ -10882,3 +10882,35 @@ struct BurnDriver BurnDrvkillbldqy = {
         448, 224, 4, 3
 };
 
+// kovplus2020tx 030 三国战记2012群雄乱舞2020 20211207(特别修复版)
+
+static struct BurnRomInfo kovplus2020txRomDesc[] = {
+        { "2020tx_p0603_119.u1",     		0x0400000, 0x37362557, 1 | BRF_PRG | BRF_ESS }, //  0 68K Code
+
+        { "2020tx_t0600.u11",     			0x0800000, 0xb6b6f72f, 2 | BRF_GRA },			//  1 Tile data
+
+        { "2020tx_a0600.u2",     			0x0800000, 0x783df23c, 3 | BRF_GRA },			//  2 Sprite Color Data
+        { "pgm_a0601.u4",   			    0x0800000, 0x551e3563, 3 | BRF_GRA },			//  3
+        { "2020tx_a0602.u6",     			0x0800000, 0x58615616, 3 | BRF_GRA },			//  4
+        { "2020tx_a0603.u9",     			0x0400000, 0x4d755da5, 3 | BRF_GRA },			//  5
+
+        { "2020tx_b0600.u5",     			0x0800000, 0xe3bf000f, 4 | BRF_GRA },			//  6 Sprite Masks & Color Indexes
+        { "2020tx_b0601.u7",     			0x0400000, 0xc91abed0, 4 | BRF_GRA },			//  7
+
+        { "2020tx_m0600.u3",     			0x0400000, 0x68fa1b32, 5 | BRF_SND },			//  8 Samples
+
+//        { "kov_igs027a.bin", 			0x0004000, 0x00000000, 7 | BRF_PRG | BRF_ESS | BRF_NODUMP },  //  9 Internal ARM7 Rom
+};
+
+STDROMPICKEXT(kovplus2020tx, kovplus2020tx, pgm)
+STD_ROM_FN(kovplus2020tx)
+
+struct BurnDriver BurnDrvKovplus = {
+        "kovplus2020tx", "kovplus", "pgm", NULL, "2020",
+        "Knights of Valour Plus - Sangoku Senki Plus (V119)\0", "no PLUS on screen when set to KOREA", "IGS", "PolyGameMaster",
+        L"Knights of Valour Plus\0\u4E09\u56FD\u6226\u7D00 Plus\0\u4E09\u56FD\u6218\u7EAA Plus (V119)\0", NULL, NULL, NULL,
+        BDF_GAME_WORKING, 4, HARDWARE_IGS_PGM/* | HARDWARE_IGS_USE_ARM_CPU*/, GBF_SCRFIGHT, 0,
+        NULL, kovplusRomInfo, kovplusRomName, NULL, NULL, NULL, NULL, pgmInputInfo, kov115DIPInfo,
+        kovInit, pgmExit, pgmFrame, pgmDraw, pgmScan, &nPgmPalRecalc, 0x900,
+        448, 224, 4, 3
+};

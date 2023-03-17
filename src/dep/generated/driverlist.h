@@ -19656,6 +19656,7 @@ DRV     BurnDrvorlegndcmm;
 DRV     BurnDrvCpsddsoma4pp;
 DRV     BurnDrvCpsddtodp;
 DRV     BurnDrvCpsavspp;
+DRV     BurnDrvKovplus;
 #undef DRV
 
 // Structure containing addresses of all drivers
@@ -39315,4 +39316,5 @@ static struct BurnDriver* pDriver[] = {
     &BurnDrvCpsddsoma4pp,                     //BurnDrvCpsddsoma4pp
     &BurnDrvCpsddtodp,                     //BurnDrvCpsddtodp
     &BurnDrvCpsavspp,                     //BurnDrvCpsavsp
+    &BurnDrvKovplus, // 030 三国战记2012群雄乱舞2020 20211207(特别修复版)
 };
