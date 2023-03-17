@@ -26438,8 +26438,8 @@ struct BurnDriver BurnDrvmslug3sd = {
 // Modified by casstiel
 // 20230317
 static struct BurnRomInfo mslug3cqRomDesc[] = {
-        { "256-ph1.bin",  0x100000, 0x9c42ca85, 1 | BRF_ESS | BRF_PRG }, //  0 68K code
-        { "256-ph2.bin",  0x400000, 0x1f3d8ce8, 1 | BRF_ESS | BRF_PRG }, //  1
+        { "256-ph1.bin",  0x100000, 0xbb28f7df, 1 | BRF_ESS | BRF_PRG }, //  0 68K code
+        { "256-ph2.bin",  0x400000, 0x30a2619a, 1 | BRF_ESS | BRF_PRG }, //  1
 
         { "ms3n_c1.rom",  0x800000, 0x3540398c, 3 | BRF_GRA },		 //  2 Sprite data
         { "ms3n_c2.rom",  0x800000, 0xbdd220f0, 3 | BRF_GRA },		 //  3
@@ -26447,8 +26447,8 @@ static struct BurnRomInfo mslug3cqRomDesc[] = {
         { "ms3n_c4.rom",  0x800000, 0x1463add6, 3 | BRF_GRA },		 //  5
         { "ms3n_c5.rom",  0x800000, 0x48ca7f28, 3 | BRF_GRA },		 //  6
         { "ms3n_c6.rom",  0x800000, 0x806eb36f, 3 | BRF_GRA },		 //  7
-        { "ms3n_c7.rom",   0x800000, 0x9395b809, 3 | BRF_GRA },		 //  8
-        { "ms3n_c8.rom",   0x800000, 0xa369f9d4, 3 | BRF_GRA },		 //  9
+        { "ms3n_c7.rom",   0x800000, 0xB8E017DE, 3 | BRF_GRA },		 //  8
+        { "ms3n_c8.rom",   0x800000, 0xDEF95742, 3 | BRF_GRA },		 //  9
 
         { "256-m1.bin",   0x080000, 0xeaeec116, 4 | BRF_ESS | BRF_PRG }, // 10 Z80 code
 
