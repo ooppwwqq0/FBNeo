@@ -8557,7 +8557,7 @@ static struct BurnRomInfo kovplus20txRomDesc[] = {
 	
 	{ "20tx_m0600.u3",		0x0400000, 0x1abd4416, 5 | BRF_SND },                        //  8 Samples
 	
-	{ "kov_igs027a.bin",	0x0004000, 0x00000000, 7 | BRF_PRG | BRF_ESS | BRF_NODUMP }, //  9 Internal ARM7 Rom
+//	{ "kov_igs027a.bin",	0x0004000, 0x00000000, 7 | BRF_PRG | BRF_ESS | BRF_NODUMP }, //  9 Internal ARM7 Rom
 };
 
 STDROMPICKEXT(kovplus20tx, kovplus20tx, pgm)
