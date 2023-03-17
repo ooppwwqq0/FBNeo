@@ -8543,7 +8543,7 @@ struct BurnDriver BurnDrvoldsmx = {
 // GOTVG 20230304
 
 static struct BurnRomInfo kovplus20txRomDesc[] = {
-	{ "20tx_p0603_119.u1",	0x0400000, 0x8ede5eea, 1 | BRF_PRG | BRF_ESS },              //  0 68K Code
+	{ "20tx_p0603_119.u1",	0x0400000, 0x264cbbbb, 1 | BRF_PRG | BRF_ESS },              //  0 68K Code
 
 	{ "20tx_t0600.u11",		0x0800000, 0x2cf53a60, 2 | BRF_GRA },                        //  1 Tile data
 	
@@ -8555,7 +8555,7 @@ static struct BurnRomInfo kovplus20txRomDesc[] = {
 	{ "20tx_b0600.u5",		0x0800000, 0xe3bf000f, 4 | BRF_GRA },                        //  6 Sprite Masks & Color Indexes
 	{ "20tx_b0601.u7",		0x0400000, 0xc91abed0, 4 | BRF_GRA },                        //  7
 	
-	{ "20tx_m0600.u3",		0x0400000, 0x68fa1b32, 5 | BRF_SND },                        //  8 Samples
+	{ "20tx_m0600.u3",		0x0400000, 0x1abd4416, 5 | BRF_SND },                        //  8 Samples
 	
 	{ "kov_igs027a.bin",	0x0004000, 0x00000000, 7 | BRF_PRG | BRF_ESS | BRF_NODUMP }, //  9 Internal ARM7 Rom
 };
