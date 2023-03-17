@@ -26481,21 +26481,21 @@ static struct BurnRomInfo mslug3lwRomDesc[] = {
 
         /* The Encrypted Boards do not have an s1 rom, data for it comes from the Cx ROMs */
         /* Encrypted */
-//        { "256-c1.c1",		0x800000, 0x5a79c34e, 3 | BRF_GRA },           //  3 Sprite data
-//        { "256-c2.c2",		0x800000, 0x944c362c, 3 | BRF_GRA },           //  4
-//        { "256-c3.c3",		0x800000, 0x6e69d36f, 3 | BRF_GRA },           //  5
-//        { "256-c4.c4",		0x800000, 0xb755b4eb, 3 | BRF_GRA },           //  6
-//        { "256-c5.c5",		0x800000, 0x7aacab47, 3 | BRF_GRA },           //  7
-//        { "256-c6.c6",		0x800000, 0xc698fd5d, 3 | BRF_GRA },           //  8
-//        { "256-c7.c7",		0x800000, 0xcfceddd2, 3 | BRF_GRA },           //  9
-//        { "256-c8.c8",		0x800000, 0x4d9be34c, 3 | BRF_GRA },           // 10
-//
-//        { "256-m1.m1",		0x080000, 0xeaeec116, 4 | BRF_ESS | BRF_PRG }, // 11 Z80 code
-//
-//        { "256-v1.v1",		0x400000, 0xf2690241, 5 | BRF_SND },           // 12 Sound data
-//        { "256-v2.v2",		0x400000, 0x7e2a10bd, 5 | BRF_SND },           // 13
-//        { "256-v3.v3",		0x400000, 0x0eaec17c, 5 | BRF_SND },           // 14
-//        { "256-v4.v4",		0x400000, 0x9b4b22d4, 5 | BRF_SND },           // 15
+        { "256-c1.c1",		0x800000, 0x5a79c34e, 3 | BRF_GRA },           //  3 Sprite data
+        { "256-c2.c2",		0x800000, 0x944c362c, 3 | BRF_GRA },           //  4
+        { "256-c3.c3",		0x800000, 0x6e69d36f, 3 | BRF_GRA },           //  5
+        { "256-c4.c4",		0x800000, 0xb755b4eb, 3 | BRF_GRA },           //  6
+        { "256-c5.c5",		0x800000, 0x7aacab47, 3 | BRF_GRA },           //  7
+        { "256-c6.c6",		0x800000, 0xc698fd5d, 3 | BRF_GRA },           //  8
+        { "256-c7.c7",		0x800000, 0xcfceddd2, 3 | BRF_GRA },           //  9
+        { "256-c8.c8",		0x800000, 0x4d9be34c, 3 | BRF_GRA },           // 10
+
+        { "256-m1.m1",		0x080000, 0xeaeec116, 4 | BRF_ESS | BRF_PRG }, // 11 Z80 code
+
+        { "256-v1.v1",		0x400000, 0xf2690241, 5 | BRF_SND },           // 12 Sound data
+        { "256-v2.v2",		0x400000, 0x7e2a10bd, 5 | BRF_SND },           // 13
+        { "256-v3.v3",		0x400000, 0x0eaec17c, 5 | BRF_SND },           // 14
+        { "256-v4.v4",		0x400000, 0x9b4b22d4, 5 | BRF_SND },           // 15
 };
 
 STDROMPICKEXT(mslug3lw, mslug3lw, neogeo)

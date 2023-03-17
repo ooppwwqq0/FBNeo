@@ -8555,7 +8555,7 @@ static struct BurnRomInfo kovplus20txRomDesc[] = {
 	{ "20tx_b0600.u5",		0x0800000, 0xe3bf000f, 4 | BRF_GRA },                        //  6 Sprite Masks & Color Indexes
 	{ "20tx_b0601.u7",		0x0400000, 0xc91abed0, 4 | BRF_GRA },                        //  7
 	
-	{ "20tx_m0600.u3",		0x0400000, 0x1abd4416, 5 | BRF_SND },                        //  8 Samples
+//	{ "20tx_m0600.u3",		0x0400000, 0x1abd4416, 5 | BRF_SND },                        //  8 Samples
 	
 //	{ "kov_igs027a.bin",	0x0004000, 0x00000000, 7 | BRF_PRG | BRF_ESS | BRF_NODUMP }, //  9 Internal ARM7 Rom
 };
@@ -9629,8 +9629,8 @@ struct BurnDriver BurnDrvkovshpp19 = {
 
 // FBA4DROID 三国战纪 乱世枭雄 群雄再起 金版 Knights of Valour Super Heroes Plus (Rerise of Heroes Gold 20190404)
 static struct BurnRomInfo kovshpqxzqjRomDesc[] = {
-        { "m6001.rom",			0x300000, 0xcd97641b, 1 | BRF_PRG | BRF_ESS },  //  0-1 68K Code
-        { "m6002.rom",			0x300000, 0x9debf14d, 1 | BRF_PRG | BRF_ESS },  //  0-2 68K Code
+        { "m0601.rom",			0x300000, 0xe0c103f2, 1 | BRF_PRG | BRF_ESS },  //  0-1 68K Code
+        { "m0602.rom",			0x300000, 0x9debf14d, 1 | BRF_PRG | BRF_ESS },  //  0-2 68K Code
 
         { "t0600.rom",    		0x800000, 0x355eb28d, 2 | BRF_GRA },			//  1 Tile data
 
@@ -9659,7 +9659,7 @@ struct BurnDriver BurnDrvkovshpqxzqj = {
 // FBA4DROID 三国战纪 乱世枭雄 惊天战神 2019 Knights of Valour Super Heroes Plus (Incredible God of War 20190312)
 static struct BurnRomInfo kovshp1v4xRomDesc[] = {
         { "m0601.rom",			0x200000, 0xf513d89c, 1 | BRF_PRG | BRF_ESS },  //  0 68K Code
-        { "m0602.rom",			0x200000, 0x505c0fb9, 1 | BRF_PRG | BRF_ESS },  //  1 68K Code
+        { "m0602.rom",			0x200000, 0x19125f83, 1 | BRF_PRG | BRF_ESS },  //  1 68K Code
 
         { "t0600.rom",    		0x800000, 0x4acc1ad6, 2 | BRF_GRA },			//  2 Tile data
 
@@ -9782,14 +9782,14 @@ struct BurnDriver BurnDrvkovshp1v4xtw = {
 
 // FBA4DROID 三国战纪 乱世枭雄 太平乱世 传说版 Knights of Valour Super Heroes Plus (Peace In Chaotic Times - Legend 20190321)
 static struct BurnRomInfo kovshptplscsRomDesc[] = {
-        { "m0601.rom",		0x200000, 0x86322d6a, 1 | BRF_PRG | BRF_ESS },  //  0 68K Code
-        { "m0602.rom",		0x200000, 0xb673c954, 1 | BRF_PRG | BRF_ESS },  //  0 68K Code
+        { "m0601.rom",		0x200000, 0xa279f5f2, 1 | BRF_PRG | BRF_ESS },  //  0 68K Code
+        { "m0602.rom",		0x200000, 0x468e039a, 1 | BRF_PRG | BRF_ESS },  //  0 68K Code
 
         { "t0600.rom",    		0x800000, 0xa919ec0f, 2 | BRF_GRA },			//  1 Tile data
 
-        { "a0600x.rom",	   		0x2000000, 0xdab91337, 3 | BRF_GRA },			//  2-5 Sprite Color Data
+        { "a0600x.rom",	   		0x2000000, 0x26a884e8, 3 | BRF_GRA },			//  2-5 Sprite Color Data
 
-        { "b0600x.rom",	   		0x1000000, 0x22b3beb8, 4 | BRF_GRA },			//  6-7 Sprite Masks & Color Indexes
+        { "b0600x.rom",	   		0x1000000, 0x602f1e77, 4 | BRF_GRA },			//  6-7 Sprite Masks & Color Indexes
 
         { "p0600h.rom",	   		0x400000, 0x3ada4fd6, 5 | BRF_SND },			//  8 Samples
 
@@ -9811,8 +9811,8 @@ struct BurnDriver BurnDrvkovshptplscs = {
 
 // FBA4DROID 三国战纪 乱世枭雄 无双版 Knights of Valour Super Heroes Plus (Unrivalled Version 20190319)
 static struct BurnRomInfo kovshpwsbRomDesc[] = {
-        { "m0601.rom",		0x200000, 0x82579022, 1 | BRF_PRG | BRF_ESS },  //  0 68K Code
-        { "m0602.rom",		0x200000, 0x69c260ba, 1 | BRF_PRG | BRF_ESS },  //  1 68K Code
+        { "m0601.rom",		0x200000, 0x60992645, 1 | BRF_PRG | BRF_ESS },  //  0 68K Code
+        { "m0602.rom",		0x200000, 0xf73c8e82, 1 | BRF_PRG | BRF_ESS },  //  1 68K Code
 
         { "t0600.rom",    		0x800000, 0xa919ec0f, 2 | BRF_GRA },			//  2 Tile data
 
@@ -9840,17 +9840,17 @@ struct BurnDriver BurnDrvkovshpwsb = {
 
 // FBA4DROID 三国战纪 乱世枭雄 加强版 1.9 天王版 Knights of Valour Super Heroes Plus (Plus v1.9 - Sky King 20190320)
 static struct BurnRomInfo kovshpd19RomDesc[] = {
-        { "p0600hd.rom",		0x400000, 0x7cffefac, 1 | BRF_PRG | BRF_ESS },  //  0 68K Code
+        { "p0600hd.rom",		0x400000, 0xb993ca1b, 1 | BRF_PRG | BRF_ESS },  //  0 68K Code
 
         { "t0600.rom",    		0x800000, 0xa919ec0f, 2 | BRF_GRA },			//  1 Tile data
 
         { "a0600.rom",	   		0x800000, 0xeaa46772, 3 | BRF_GRA },			//  2 Sprite Color Data
         { "a0601.rom",	   		0x800000, 0xd94abe4b, 3 | BRF_GRA }, 	        //  3
         { "a0602.rom",	   		0x800000, 0xe7a32959, 3 | BRF_GRA }, 	        //  4
-        { "a0540.rom",	   		0x800000, 0x4f4ac911, 3 | BRF_GRA }, 	        //  5
+        { "a0540.rom",	   		0x800000, 0xfd1e6e0b, 3 | BRF_GRA }, 	        //  5
 
         { "b0600.rom",	   		0x800000, 0xf2a85ce6, 4 | BRF_GRA },			//  6 Sprite Masks & Color Indexes
-        { "b0540.rom",	   		0x800000, 0x94eb0579, 4 | BRF_GRA },			//  7
+        { "b0540.rom",	   		0x800000, 0x14bd80ef, 4 | BRF_GRA },			//  7
 
         { "m0600.rom",	   		0x400000, 0x3ada4fd6, 5 | BRF_SND },			//  8 Samples
 
@@ -9872,17 +9872,17 @@ struct BurnDriver BurnDrvkovshpd19 = {
 
 // FBA4DROID 三国战纪 乱世枭雄 血赵云版 103 Knights of Valour Super Heroes Plus (Zhao Yun Version 103 20180922)
 static struct BurnRomInfo kovshpbRomDesc[] = {
-        { "p0600h.rom",			0x400000, 0x46410a40, 1 | BRF_PRG | BRF_ESS },  //  0 68K Code
+        { "p0600h.rom",			0x400000, 0x929bffd8, 1 | BRF_PRG | BRF_ESS },  //  0 68K Code
 
         { "t0600.rom",    		0x800000, 0xa919ec0f, 2 | BRF_GRA },			//  1 Tile data
 
-        { "a0600.rom",	   		0x800000, 0x39d6f300, 3 | BRF_GRA },			//  2 Sprite Color Data
+        { "a0600.rom",	   		0x800000, 0xe3296767, 3 | BRF_GRA },			//  2 Sprite Color Data
         { "a0601.rom",	   		0x800000, 0xff7a4373, 3 | BRF_GRA }, 	        //  3
         { "a0602.rom",	   		0x800000, 0xe7a32959, 3 | BRF_GRA }, 	        //  4
-        { "a0540.rom",	   		0x800000, 0xeceac4bd, 3 | BRF_GRA }, 	        //  5
+        { "a0540.rom",	   		0x800000, 0x1669097c, 3 | BRF_GRA }, 	        //  5
 
-        { "b0600.rom",	   		0x800000, 0xc9601515, 4 | BRF_GRA },			//  6 Sprite Masks & Color Indexes
-        { "b0540.rom",	   		0x800000, 0x69c542b7, 4 | BRF_GRA },			//  7
+        { "b0600.rom",	   		0x800000, 0x6d71f012, 4 | BRF_GRA },			//  6 Sprite Masks & Color Indexes
+        { "b0540.rom",	   		0x800000, 0x7bcbf278, 4 | BRF_GRA },			//  7
 
         { "m0600.rom",	   		0x400000, 0x3ada4fd6, 5 | BRF_SND },			//  8 Samples
 
