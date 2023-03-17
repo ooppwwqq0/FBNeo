@@ -26447,8 +26447,8 @@ static struct BurnRomInfo mslug3cqRomDesc[] = {
         { "ms3n_c4.rom",  0x800000, 0x1463add6, 3 | BRF_GRA },		 //  5
         { "ms3n_c5.rom",  0x800000, 0x48ca7f28, 3 | BRF_GRA },		 //  6
         { "ms3n_c6.rom",  0x800000, 0x806eb36f, 3 | BRF_GRA },		 //  7
-        { "ms3n_c7.rom",   0x800000, 0xB8E017DE, 3 | BRF_GRA },		 //  8
-        { "ms3n_c8.rom",   0x800000, 0xDEF95742, 3 | BRF_GRA },		 //  9
+        { "ms3n_c7.rom",   0x800000, 0xb8e017de, 3 | BRF_GRA },		 //  8
+        { "ms3n_c8.rom",   0x800000, 0xdef95742, 3 | BRF_GRA },		 //  9
 
         { "256-m1.bin",   0x080000, 0xeaeec116, 4 | BRF_ESS | BRF_PRG }, // 10 Z80 code
 
@@ -26462,11 +26462,11 @@ STDROMPICKEXT(mslug3cq, mslug3cq, neogeo)
 STD_ROM_FN(mslug3cq)
 
 struct BurnDriver BurnDrvmslug3cq = {
-        "mslug3cq", "mslug3", "neogeo", NULL, "2023",
+        "mslug3cq", "mslug3nd", "neogeo", NULL, "2023",
         "Metal Slug 3 (Legend, Hack)\0", NULL, "hack", "Neo Geo MVS",
         NULL, NULL, NULL, NULL,
-        BDF_GAME_WORKING | BDF_CLONE | BDF_HACK, 2, HARDWARE_PREFIX_CARTRIDGE | HARDWARE_SNK_NEOGEO | HARDWARE_SNK_CMC42 | HARDWARE_SNK_SMA_PROTECTION, GBF_RUNGUN, FBF_MSLUG,
-        NULL, mslug3cqRomInfo, mslug3cqRomName, NULL, NULL, NULL, NULL, neogeoInputInfo, neogeoDIPInfo,
-        mslug3WOPInit, NeoExit, NeoFrame, NeoRender, NeoScan, &NeoRecalcPalette,
+        BDF_GAME_WORKING | BDF_CLONE, 2, HARDWARE_PREFIX_CARTRIDGE | HARDWARE_SNK_NEOGEO, GBF_RUNGUN, FBF_MSLUG,
+        NULL, mslug3ngwRomInfo, mslug3ngwRomName, NULL, NULL, NULL, NULL, neogeoInputInfo, neogeoDIPInfo,
+        mslug3hInit, NeoSMAExit, NeoFrame, NeoRender, NeoScan, &NeoRecalcPalette,
         0x1000, 304, 224, 4, 3
 };
