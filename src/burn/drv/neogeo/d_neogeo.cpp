@@ -26463,7 +26463,7 @@ STDROMPICKEXT(mslug3cq, mslug3cq, neogeo)
 STD_ROM_FN(mslug3cq)
 
 struct BurnDriver BurnDrvmslug3cq = {
-        "mslug3cq", NULL, "neogeo", NULL, "2023",
+        "mslug3cq", "mslug3", "neogeo", NULL, "2023",
         "Metal Slug 3 (Legend, Hack)\0", NULL, "hack", "Neo Geo MVS",
         NULL, NULL, NULL, NULL,
         BDF_GAME_WORKING | BDF_CLONE | BDF_HACK, 2, HARDWARE_PREFIX_CARTRIDGE | HARDWARE_SNK_NEOGEO | HARDWARE_SNK_CMC42 | HARDWARE_SNK_SMA_PROTECTION, GBF_RUNGUN, FBF_MSLUG,
